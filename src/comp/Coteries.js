@@ -7,11 +7,13 @@ function Coteries(props) {
     return <div>
         <h3>Liste des coteries</h3>
         <ul className='lstCoteries_ul'>
-                {lstCoteries.map((coterie, index) => (
-                    <li key={index} className='lstCoteries_li'>
-                        <img key={index} src={coterie.img} alt={coterie.titre} className='lstCoteries_img'/>
-                        <h4>{coterie.titre}</h4>
-                    </li>
+                {lstCoteries.map(({ titre, img, description }) => (
+					<Coterie
+						key={titre}
+						titre={titre}
+						img={img}
+						description={description}
+					/>
                 ))}
             </ul>
     </div>

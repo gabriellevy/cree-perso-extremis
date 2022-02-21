@@ -5,23 +5,3 @@
       flex-wrap: wrap;
       max-width: 1024px;
   }
-  
-  .lstCoteries_li {
-    margin: 4px;
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      flex-direction: column;
-      text-transform: capitalize;
-  }
-  
-  .lstCoteries_img {
-    border: solid 2px black;
-    border-radius: 10px;
-    width: 150px;
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
