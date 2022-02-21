@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/cree-perso-extremis/static/css/main.b6aa3556.css",
+    "main.js": "/cree-perso-extremis/static/js/main.77cd9b0d.js",
+    "static/js/787.f47d12c8.chunk.js": "/cree-perso-extremis/static/js/787.f47d12c8.chunk.js",
+    "static/media/portrait_15+.jpg": "/cree-perso-extremis/static/media/portrait_15+.eb967ec66cb935fdfb29.jpg",
+    "static/media/portrait_30_50_d.jpg": "/cree-perso-extremis/static/media/portrait_30_50_d.0a6e5fb33d7819dbb9fe.jpg",
+    "static/media/portrait15-30_2.jpg": "/cree-perso-extremis/static/media/portrait15-30_2.caea3e9d4fcef23fe680.jpg",
+    "static/media/portrait_20-50_b.jpg": "/cree-perso-extremis/static/media/portrait_20-50_b.ccc393000f34d84b1c48.jpg",
+    "static/media/20-45.jpg": "/cree-perso-extremis/static/media/20-45.4b399d783927ab74087d.jpg",
+    "static/media/20-40.jpg": "/cree-perso-extremis/static/media/20-40.b20cdce4b3d158e40d07.jpg",
+    "index.html": "/cree-perso-extremis/index.html",
+    "main.b6aa3556.css.map": "/cree-perso-extremis/static/css/main.b6aa3556.css.map",
+    "main.77cd9b0d.js.map": "/cree-perso-extremis/static/js/main.77cd9b0d.js.map",
+    "787.f47d12c8.chunk.js.map": "/cree-perso-extremis/static/js/787.f47d12c8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6aa3556.css",
+    "static/js/main.77cd9b0d.js"
+  ]
+}
