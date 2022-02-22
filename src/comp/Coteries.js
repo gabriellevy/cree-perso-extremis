@@ -8,11 +8,12 @@ function Coteries({descriptionCourante, majDescriptionCourante}) {
     return <div>
         <h3>Liste des coteries</h3>
         <ul className='lstCoteries_ul'>
-                {lstCoteries.map(({ titre, img, description }) => (
+                {lstCoteries.map(({ titre, portrait, bg, description }) => (
 					<Coterie
 						key={titre}
 						titre={titre}
-						img={img}
+						portrait={portrait}
+                        bg={bg}
 						description={description}
                         majDescriptionCourante={majDescriptionCourante}
 					/>

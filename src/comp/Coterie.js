@@ -1,10 +1,13 @@
 import '../styles/Coterie.css'
 import { useState } from 'react'
 
-function Coterie({ titre, img, description, majDescriptionCourante }) {
+function Coterie({ titre, portrait, bg, description, majDescriptionCourante }) {
 	return (
-		<li className='lstCoteries_li' onClick={() => majDescriptionCourante({texte: description})}>
-			<img className='lstCoteries_img' src={img} alt={`${titre} portrait`} />
+		<li className='lstCoteries_li' onClick={() => majDescriptionCourante({
+			texte: description,
+			bg: bg
+			})}>
+			<img className='lstCoteries_img' src={portrait} alt={`${titre} portrait`} />
 			{titre}
 		</li>
 	)
