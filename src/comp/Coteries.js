@@ -1,8 +1,9 @@
 import Coterie from './Coterie'
 import { lstCoteries } from '../donnees/lstCoteries'
 import '../styles/Coteries.css';
+import { useState } from 'react'
 
-function Coteries(props) {
+function Coteries({descriptionCourante, majDescriptionCourante}) {
 
     return <div>
         <h3>Liste des coteries</h3>
@@ -13,6 +14,7 @@ function Coteries(props) {
 						titre={titre}
 						img={img}
 						description={description}
+                        majDescriptionCourante={majDescriptionCourante}
 					/>
                 ))}
             </ul>

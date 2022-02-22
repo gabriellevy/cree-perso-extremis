@@ -1,14 +1,9 @@
 import '../styles/Coterie.css'
+import { useState } from 'react'
 
-function handleClick(description) {
-    // au lieu de cette alerte bidon il faudrait remonter cette info de description à un div qui afficherait un apperçu
-    // à côté de la liste des coteries et un bouton "choisir" qui valide le choix
-	alert(`description : ${description}`)
-}
-
-function Coterie({ titre, img, description }) {
+function Coterie({ titre, img, description, majDescriptionCourante }) {
 	return (
-		<li className='lstCoteries_li' onClick={() => handleClick(description)}>
+		<li className='lstCoteries_li' onClick={() => majDescriptionCourante({texte: description})}>
 			<img className='lstCoteries_img' src={img} alt={`${titre} portrait`} />
 			{titre}
 		</li>
