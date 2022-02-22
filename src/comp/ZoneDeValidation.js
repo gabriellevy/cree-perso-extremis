@@ -2,14 +2,17 @@ import { useState } from 'react'
 
 function ZoneDeValidation({descriptionCourante, majDescriptionCourante}) {
     return <div>
-        <div style={{ 
-            backgroundColor: "white", 
-            color: "black",
+         <div style={{ 
             padding: "15px"
             }}>
-            {descriptionCourante.texte} 
-        </div>
-        
+                 <div style={{ 
+                    backgroundColor: "white", 
+                    color: "black",
+                    padding: "8px"
+                    }}>
+                    {descriptionCourante.texte} 
+                </div>
+            </div>
     </div>
 }
 

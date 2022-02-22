@@ -8,12 +8,12 @@ function App() {
 
     return <div>
         <Banniere />
-          <ZoneDeChoix descriptionCourante={descriptionCourante} majDescriptionCourante={majDescriptionCourante} />
           <div style={{
             backgroundImage: `url(${descriptionCourante.bg})`,
             width: 1280,
             height: 720
             }}>
+            <ZoneDeChoix descriptionCourante={descriptionCourante} majDescriptionCourante={majDescriptionCourante} />
             <ZoneDeValidation descriptionCourante={descriptionCourante} majDescriptionCourante={majDescriptionCourante}/>
           </div>
       </div>

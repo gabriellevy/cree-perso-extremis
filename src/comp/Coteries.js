@@ -6,7 +6,6 @@ import { useState } from 'react'
 function Coteries({descriptionCourante, majDescriptionCourante}) {
 
     return <div>
-        <h3>Liste des coteries</h3>
         <ul className='lstCoteries_ul'>
                 {lstCoteries.map(({ titre, portrait, bg, description }) => (
 					<Coterie
