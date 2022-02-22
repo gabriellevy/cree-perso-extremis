@@ -1,8 +1,14 @@
 {
   "files": {
     "main.css": "/cree-perso-extremis/static/css/main.82a2b34c.css",
-    "main.js": "/cree-perso-extremis/static/js/main.3c640548.js",
+    "main.js": "/cree-perso-extremis/static/js/main.e4cc34fe.js",
     "static/js/787.f47d12c8.chunk.js": "/cree-perso-extremis/static/js/787.f47d12c8.chunk.js",
+    "static/media/bg_lettre_zapo.jpg": "/cree-perso-extremis/static/media/bg_lettre_zapo.d63e86ecf62d58aac7f0.jpg",
+    "static/media/bg_conquistadors_priant.jpg": "/cree-perso-extremis/static/media/bg_conquistadors_priant.ae043c0ef7ff4fd3bef9.jpg",
+    "static/media/bg_avion_ork.jpg": "/cree-perso-extremis/static/media/bg_avion_ork.5ffee19fe99dc738d5e2.jpg",
+    "static/media/bg_priant.jpg": "/cree-perso-extremis/static/media/bg_priant.7880607020004ddd1d8f.jpg",
+    "static/media/bg_musicien.jpg": "/cree-perso-extremis/static/media/bg_musicien.73cc56bd11ceb9fac05d.jpg",
+    "static/media/bg_univ_transhumanistes.jpg": "/cree-perso-extremis/static/media/bg_univ_transhumanistes.7f87c4e0c3056134fecf.jpg",
     "static/media/portrait_15+.jpg": "/cree-perso-extremis/static/media/portrait_15+.eb967ec66cb935fdfb29.jpg",
     "static/media/portrait_30_50_d.jpg": "/cree-perso-extremis/static/media/portrait_30_50_d.0a6e5fb33d7819dbb9fe.jpg",
     "static/media/portrait15-30_2.jpg": "/cree-perso-extremis/static/media/portrait15-30_2.caea3e9d4fcef23fe680.jpg",
@@ -11,11 +17,11 @@
     "static/media/20-40.jpg": "/cree-perso-extremis/static/media/20-40.b20cdce4b3d158e40d07.jpg",
     "index.html": "/cree-perso-extremis/index.html",
     "main.82a2b34c.css.map": "/cree-perso-extremis/static/css/main.82a2b34c.css.map",
-    "main.3c640548.js.map": "/cree-perso-extremis/static/js/main.3c640548.js.map",
+    "main.e4cc34fe.js.map": "/cree-perso-extremis/static/js/main.e4cc34fe.js.map",
     "787.f47d12c8.chunk.js.map": "/cree-perso-extremis/static/js/787.f47d12c8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.82a2b34c.css",
-    "static/js/main.3c640548.js"
+    "static/js/main.e4cc34fe.js"
   ]
 }
