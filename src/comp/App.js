@@ -1,12 +1,13 @@
 import Banniere from './Banniere'
+import '../styles/App.css';
 import ZoneDeChoix from './ZoneDeChoix'
 import ZoneDeValidation from './ZoneDeValidation'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function App() {
   const [descriptionCourante, majDescriptionCourante] = useState({texte: "", bg:"" })
 
-    return <div>
+    return <div className="App">
         <Banniere />
           <div style={{
             backgroundImage: `url(${descriptionCourante.bg})`,

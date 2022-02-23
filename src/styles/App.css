@@ -1,5 +1,12 @@
 .App {
-  text-align: center;
+  margin: auto;
+	max-width: 1280px;
+}
+
+.texteStandard {
+  padding: 8px;
+  background-color: white;
+  color: black;
 }
 
 .App-logo {

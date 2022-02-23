@@ -8,7 +8,9 @@ function Coterie({ titre, portrait, bg, description, majDescriptionCourante }) {
 			bg: bg
 			})}>
 			<img className='lstCoteries_img' src={portrait} alt={`${titre} portrait`} />
-			{titre}
+			<div className="textCoterie">
+				{titre}
+			</div>
 		</li>
 	)
 }
