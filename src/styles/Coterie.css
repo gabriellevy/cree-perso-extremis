@@ -8,7 +8,7 @@
   
 .lstCoteries_li {
 	padding: 0px 0px 30px 0px;
-	margin: 2px;
+	margin: 0px;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -19,7 +19,8 @@
 
 .lstCoteries_li_selection {
 	padding: 30px 0px 0px 0px;
-	margin: 4px;
+	margin-left: 4px;
+	margin-right: 4px;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;

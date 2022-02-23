@@ -1,10 +1,21 @@
 import '../styles/App.css';
 
-function ZoneDeValidation({descriptionCourante, majDescriptionCourante}) {
+function ZoneDeValidation({descriptionCourante, majDescriptionCourante, perso, majPerso}) {
+
+	function validerSelection() {
+        const persoL = {
+            coterie: descriptionCourante.titre
+        };
+		majPerso(persoL);
+	}
+
     return <div>
          <div style={{ padding: "0px 15px 0px 15px" }}>
             <div className="texteStandard">
-                {descriptionCourante.texte} 
+                {descriptionCourante.texte}
+                <button onClick={() => validerSelection()}>
+                    Sélectionner
+                </button>
             </div>
         </div>
     </div>
