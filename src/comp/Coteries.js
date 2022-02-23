@@ -14,6 +14,7 @@ function Coteries({descriptionCourante, majDescriptionCourante}) {
 						portrait={portrait}
                         bg={bg}
 						description={description}
+                        descriptionCourante={descriptionCourante}
                         majDescriptionCourante={majDescriptionCourante}
 					/>
                 ))}
