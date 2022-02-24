@@ -7,7 +7,6 @@ import { useState, useEffect } from 'react'
 function App() {
   const [descriptionCourante, majDescriptionCourante] = useState({texte: "", bg:"" , titre:""})
   const [perso, majPerso] = useState({})
-  console.log("App perso : " + perso.coterie);
 
 	useEffect(() => {
 		document.title = perso.coterie

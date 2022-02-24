@@ -1,0 +1,7 @@
+.portrait_img {
+    border-radius: 5px;
+    width: 150px;
+    height: 180px;
+    display: flex;
+    align-items: left;
+  }
