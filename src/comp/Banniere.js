@@ -11,9 +11,11 @@ function Banniere({perso, majPerso}) {
     
     if (persoSelectionne) {
         const age = getRandomInt(60)+15;
+        const male = getRandomInt(2) === 0;
         perso.nom="Marcello Marconi";
         perso.voie="Malandrin";
         perso.age=age;
+        perso.male=male;
     }
 
     return <div className='banniere'>
@@ -25,6 +27,7 @@ function Banniere({perso, majPerso}) {
                             {perso.coterie}<br/>
                             {perso.voie}<br/>
                             {perso.age}<br/>
+                            {perso.male?"Homme":"Femme"}<br/>
                         </div>
                     </div>
                 ):(
