@@ -12,8 +12,8 @@ function Portrait({perso}) {
 
     // filtrage des portraits dispos selon les caracs de persos
 
-    const portraitsRestants = lstPortraits.filter(
-        portrait => perso.coterie === portrait.coterie);
+    const portraitsRestants = lstPortrait
+        .filter( portrait => perso.coterie === portrait.coterie);
 
     const portrait=portraitsRestants[getRandomInt(portraitsRestants.length)].image;
 
