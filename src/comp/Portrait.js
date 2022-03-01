@@ -13,15 +13,21 @@ function Portrait({perso}) {
     // filtrage des portraits dispos selon les caracs de persos
 
     const portraitsRestants = lstPortraits
-        .filter( portrait => perso.coterie === portrait.coterie)
+        .filter( portrait => portrait.coterie === undefined || perso.coterie === portrait.coterie)
         .filter( portrait => perso.male === portrait.male)
-        .filter( portrait => perso.age >= portrait.ageMin)
+        .filter( portrait => portrait.ageMin === undefined || perso.age >= portrait.ageMin)
         .filter( portrait => portrait.ageMax === undefined || perso.age <= portrait.ageMax);
 
-    const portrait=portraitsRestants[getRandomInt(portraitsRestants.length)].image;
+    var portrait;
+    if (portraitsRestants.length > 0)
+        portrait=portraitsRestants[getRandomInt(portraitsRestants.length)].image;
 
     return <div>
-        <img className='portrait_img' src={portrait} alt='portrait' />
+        {(portraitsRestants.length > 0) ? (
+            <img className='portrait_img' src={portrait} alt='portrait' />
+        ) : (
+        <div>Pas de portrait pour ce perso</div>
+        )}
     </div>
 }
 

@@ -18,6 +18,9 @@ function Banniere({perso, majPerso}) {
         perso.male=male;
     }
 
+    console.log("perso.age : " + perso.age)
+    console.log("perso.male : " + perso.male)
+
     return <div className='banniere'>
                 {persoSelectionne ? (
                     <div>
