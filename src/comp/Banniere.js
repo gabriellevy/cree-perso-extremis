@@ -24,14 +24,22 @@ function Banniere({perso, majPerso}) {
     return <div className='banniere'>
                 {persoSelectionne ? (
                     <div>
-                        <Portrait className='descriptionPerso' perso={perso}/>
-                        <div className='descriptionPerso'>
-                            {perso.nom}<br/>
-                            {perso.coterie}<br/>
-                            {perso.voie}<br/>
-                            {perso.age}<br/>
-                            {perso.male?"Homme":"Femme"}<br/>
-                        </div>
+                        <table>
+                            <tr>
+                                <td>
+                                    <Portrait className='descriptionPerso' perso={perso}/>
+                                </td>
+                                <td>
+                                    <div className='descriptionPerso'>
+                                        {perso.nom}<br/>
+                                        {perso.coterie}<br/>
+                                        {perso.voie}<br/>
+                                        {perso.age}<br/>
+                                        {perso.male?"Homme":"Femme"}<br/>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
                 ):(
                 <h1>Création de personnage Extremis</h1>

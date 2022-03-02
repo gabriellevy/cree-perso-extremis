@@ -29,14 +29,6 @@ import portrait_conquistador_portrait_50_plus_b from './img/conquistadors/portra
 import portrait_conquistador_portrait_60_plus from './img/conquistadors/portraits/portrait_60+.jpg'
 import portrait_conquistador_pretre_20_50 from './img/conquistadors/portraits/pretre_20-50.jpg'
 
-import portrait_ork_15_plus from './img/orks/portraits/portrait_15+.jpg'
-
-import portrait_templier_20_40 from './img/templiers/portraits/20-40.jpg'
-
-import portrait_transhumaniste_15_30_2 from './img/transhumanistes/portraits/portrait15-30_2.jpg'
-
-import portrait_zaporogue_20_45 from './img/zaporogues/portraits/20-45.jpg'
-
 import portrait_elfe_femme15_40 from './img/elfes/portraits/femme15_40.jpg'
 import portrait_elfe_femme15_40_b from './img/elfes/portraits/femme15_40_b.jpg'
 import portrait_elfe_femme15_40_c from './img/elfes/portraits/femme15_40_c.jpg'
@@ -98,6 +90,14 @@ import portrait_elfe_50_plus_b from './img/elfes/portraits/portrait_50_plus_b.pn
 import portrait_elfe_20_50 from './img/elfes/portraits/portrait20_50.jpg'
 import portrait_elfe_20_50_b from './img/elfes/portraits/portrait20_50_b.jpg'
 import portrait_elfe_sournois20_50 from './img/elfes/portraits/sournois20_50.jpg'
+
+import portrait_ork_15_plus from './img/orks/portraits/portrait_15+.jpg'
+
+import portrait_templier_20_40 from './img/templiers/portraits/20-40.jpg'
+
+import portrait_transhumaniste_15_30_2 from './img/transhumanistes/portraits/portrait15-30_2.jpg'
+
+import portrait_zaporogue_20_45 from './img/zaporogues/portraits/20-45.jpg'
 
 var nomCotConquistadors = "Conquistadors"
 var nomCotElfes = "Elfes"

@@ -13,9 +13,11 @@ function ZoneDeValidation({descriptionCourante, majDescriptionCourante, perso, m
          <div style={{ padding: "0px 15px 0px 15px" }}>
             <div className="texteStandard">
                 {descriptionCourante.texte}
-                <button onClick={() => validerSelection()}>
-                    Sélectionner
-                </button>
+                <div className='aligneDroite'>
+                    <button className='bouton' onClick={() => validerSelection()}>
+                        Sélectionner
+                    </button>
+                </div>
             </div>
         </div>
     </div>

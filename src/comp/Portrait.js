@@ -1,6 +1,4 @@
 import '../styles/Portrait.css'
-import { lstCoteries } from '../donnees/lstCoteries'
-import { useState } from 'react'
 import { lstPortraits } from '../donnees/lstPortraits';
 
 function getRandomInt(max) {
@@ -22,7 +20,7 @@ function Portrait({perso}) {
     if (portraitsRestants.length > 0)
         portrait=portraitsRestants[getRandomInt(portraitsRestants.length)].image;
 
-    return <div>
+    return <div className="zonePortrait">
         {(portraitsRestants.length > 0) ? (
             <img className='portrait_img' src={portrait} alt='portrait' />
         ) : (
