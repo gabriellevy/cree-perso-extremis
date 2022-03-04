@@ -91,12 +91,6 @@ import portrait_elfe_20_50 from './img/elfes/portraits/portrait20_50.jpg'
 import portrait_elfe_20_50_b from './img/elfes/portraits/portrait20_50_b.jpg'
 import portrait_elfe_sournois20_50 from './img/elfes/portraits/sournois20_50.jpg'
 
-import portrait_templier_20_40 from './img/templiers/portraits/20-40.jpg'
-
-import portrait_transhumaniste_15_30_2 from './img/transhumanistes/portraits/portrait15-30_2.jpg'
-
-import portrait_zaporogue_20_45 from './img/zaporogues/portraits/20-45.jpg'
-
 import portrait_ork_15_plus from './img/orks/portraits/portrait_15+.jpg'
 import portrait_ork_30_50 from './img/orks/portraits/portrait30-50.jpg'
 import portrait_ork_20_50_c from './img/orks/portraits/portrait20-50_c.jpg'
@@ -108,11 +102,165 @@ import portrait_ork_25_gobelin_plus from './img/orks/portraits/portrait_gobelin_
 import portrait_ork_40_plus from './img/orks/portraits/portrait_40+.jpg'
 import portrait_ork_30_plus from './img/orks/portraits/portrait_30+.jpg'
 
+import portrait_templier_20_40 from './img/templiers/portraits/20-40.jpg'
+
+import portrait_transhumaniste_15_30_2 from './img/transhumanistes/portraits/portrait15-30_2.jpg'
+
+import portrait_zaporogue_20_45 from './img/zaporogues/portraits/20-45.jpg'
+
+import portrait_8_15 from './img/portraits/8-15.jpg'
+import portrait_femme13_20 from './img/portraits/F13-20.jpg'
+import portrait_femme20_40 from './img/portraits/F20-40.jpg'
+import portrait_femme30_50 from './img/portraits/femme30_50.jpg'
+import portrait_femme14_40 from './img/portraits/Fportrait14-40.png'
+import portrait_15_40 from './img/portraits/portrait_15-40.jpg'
+import portrait_15_40_b from './img/portraits/portrait_15-40_b.jpg'
+import portrait_20_40 from './img/portraits/20-40.jpg'
+import portrait_20_40_a from './img/portraits/portrait20-40.png'
+import portrait_20_40_b from './img/portraits/portrait20-40_2.png'
+import portrait_20_50_b from './img/portraits/portrait20-50_2.png'
+import portrait_20_50_c from './img/portraits/portrait20-50_3.png'
+import portrait_20_50_d from './img/portraits/portrait20-50_4.png'
+import portrait_20_50 from './img/portraits/portrait_20-50.jpg'
+import portrait_20_60 from './img/portraits/portrait_bucheron_20-60.jpg'
+import portrait_15_35 from './img/portraits/portrait15-35.png'
+import portrait_40_60 from './img/portraits/portrait40-60.png'
+import portrait_40_plus from './img/portraits/portrait40+.png'
+import portrait_60_plus from './img/portraits/portrait60+_miserable.png'
+import portrait_forgeron_60_plus from './img/portraits/portrait_forgeron_60+.jpg'
+
 var nomCotConquistadors = 'Conquistadors'
 var nomCotElfes = 'Elfes'
 var nomCotOrks = 'Orks'
+var nomCotZaporogues = 'Zaporogues'
+var nomCotTranshumanistes = 'Transhumanistes'
+var nomCotTempliers = 'Templiers'
 
 export const lstPortraits = [
+  {
+    image: portrait_forgeron_60_plus,
+    ageMin: 60,
+    male: true,
+  },
+  {
+    image: portrait_40_plus,
+    ageMin: 40,
+    male: true,
+  },
+  {
+    image: portrait_40_60,
+    ageMin: 40,
+    ageMax: 60,
+    male: true,
+  },
+  {
+    image: portrait_20_50_d,
+    ageMin: 20,
+    ageMax: 50,
+    male: true,
+  },
+  {
+    image: portrait_20_50_c,
+    ageMin: 20,
+    ageMax: 50,
+    male: true,
+  },
+  {
+    image: portrait_20_50_b,
+    ageMin: 20,
+    ageMax: 50,
+    male: true,
+  },
+  {
+    image: portrait_20_40_b,
+    ageMin: 20,
+    ageMax: 40,
+    male: true,
+  },
+  {
+    image: portrait_20_40_a,
+    ageMin: 20,
+    ageMax: 40,
+    male: true,
+  },
+  {
+    image: portrait_15_35,
+    ageMin: 15,
+    ageMax: 35,
+    male: true,
+  },
+  {
+    image: portrait_60_plus,
+    ageMin: 60,
+    male: true,
+  },
+  {
+    image: portrait_20_60,
+    ageMin: 20,
+    ageMax: 60,
+    male: true,
+  },
+  {
+    image: portrait_20_50,
+    ageMin: 20,
+    ageMax: 50,
+    male: true,
+  },
+  {
+    image: portrait_15_40_b,
+    ageMin: 15,
+    ageMax: 40,
+    male: true,
+  },
+  {
+    image: portrait_15_40,
+    ageMin: 15,
+    ageMax: 40,
+    male: true,
+  },
+  {
+    image: portrait_femme14_40,
+    ageMin: 14,
+    ageMax: 40,
+    male: false,
+  },
+  {
+    image: portrait_femme30_50,
+    ageMin: 30,
+    ageMax: 50,
+    male: false,
+  },
+  {
+    image: portrait_femme20_40,
+    ageMin: 20,
+    ageMax: 40,
+    male: false,
+  },
+  {
+    image: portrait_femme13_20,
+    ageMin: 13,
+    ageMax: 20,
+    male: false,
+  },
+  {
+    image: portrait_20_40,
+    ageMin: 20,
+    ageMax: 40,
+    male: true,
+  },
+  {
+    image: portrait_8_15,
+    ageMin: 8,
+    ageMax: 15,
+    male: true,
+  },
+  {
+    coterie: nomCotZaporogues,
+    image: portrait_zaporogue_20_45,
+    ageMin: 20,
+    ageMax: 45,
+    male: true,
+  },
   {
     coterie: nomCotOrks,
     image: portrait_ork_30_plus,
@@ -798,24 +946,17 @@ export const lstPortraits = [
     male: true,
   },
   {
-    coterie: 'Templiers',
+    coterie: nomCotTempliers,
     image: portrait_templier_20_40,
     ageMin: 20,
     ageMax: 40,
     male: true,
   },
   {
-    coterie: 'Transhumanistes',
+    coterie: nomCotTranshumanistes,
     image: portrait_transhumaniste_15_30_2,
     ageMin: 15,
     ageMax: 30,
-    male: true,
-  },
-  {
-    coterie: 'Zaporogues',
-    image: portrait_zaporogue_20_45,
-    ageMin: 20,
-    ageMax: 45,
     male: true,
   },
 ]
