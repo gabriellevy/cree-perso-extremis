@@ -1,29 +1,49 @@
 import '../styles/Coterie.css'
-import { useState, useEffect } from 'react'
 
-function Coterie({ titre, portrait, bg, description, descriptionCourante, majDescriptionCourante }) {
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max)
+}
 
-	function appliquerSelection() {
-		majDescriptionCourante({
-			texte: description,
-			bg: bg,
-			titre: titre
-			});
-	}
+function Coterie({
+  titre,
+  portrait,
+  fonds,
+  description,
+  descriptionCourante,
+  majDescriptionCourante,
+}) {
+  function appliquerSelection() {
+    var fond = fonds[getRandomInt(fonds.length)]
 
-	var selection = descriptionCourante.titre === titre;
-	
-	return (
-		<li className={selection ? 'lstCoteries_li_selection':'lstCoteries_li'}
-		 id={titre} onClick={() => appliquerSelection()}>
-			<img className='lstCoteries_img' src={portrait} alt={`${titre} portrait`} />
-			<div>
-				<button className={selection ? 'boutonCoterie_selection':'boutonCoterie'}>
-					{titre}
-				</button>
-			</div>
-		</li>
-	)
+    majDescriptionCourante({
+      texte: description,
+      fond: fond,
+      titre: titre,
+    })
+  }
+
+  var selection = descriptionCourante.titre === titre
+
+  return (
+    <li
+      className={selection ? 'lstCoteries_li_selection' : 'lstCoteries_li'}
+      id={titre}
+      onClick={() => appliquerSelection()}
+    >
+      <img
+        className="lstCoteries_img"
+        src={portrait}
+        alt={`${titre} portrait`}
+      />
+      <div>
+        <button
+          className={selection ? 'boutonCoterie_selection' : 'boutonCoterie'}
+        >
+          {titre}
+        </button>
+      </div>
+    </li>
+  )
 }
 
 export default Coterie
