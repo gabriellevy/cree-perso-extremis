@@ -5,14 +5,12 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max)
 }
 
-// génère un portrait selonles données de personnage fournies => mis à jour chaque fois que le personnage change
-function Portrait({ perso }) {
-  // filtrage des portraits dispos selon les caracs de persos
-
+function getPortraits(perso, prendreEnCompteCoterie) {
   const portraitsRestants = lstPortraits
     .filter(
       (portrait) =>
-        portrait.coterie === undefined || perso.coterie === portrait.coterie
+        (!prendreEnCompteCoterie && portrait.coterie === undefined) ||
+        (portrait.coterie !== undefined && perso.coterie === portrait.coterie)
     )
     .filter((portrait) => perso.male === portrait.male)
     .filter(
@@ -23,7 +21,16 @@ function Portrait({ perso }) {
       (portrait) =>
         portrait.ageMax === undefined || perso.age <= portrait.ageMax
     )
-  // A FAIRE : ne prendre les portraits sans coterie que si on n'en a pas de la bonne coterie
+  return portraitsRestants
+}
+
+// génère un portrait selonles données de personnage fournies => mis à jour chaque fois que le personnage change
+function Portrait({ perso }) {
+  // filtrage des portraits dispos selon les caracs de persos
+
+  var portraitsRestants = getPortraits(perso, true)
+  if (portraitsRestants.length == 0)
+    portraitsRestants = getPortraits(perso, false)
 
   var portrait
   if (portraitsRestants.length > 0)
