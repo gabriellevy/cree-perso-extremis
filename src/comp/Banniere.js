@@ -9,37 +9,47 @@ function Banniere({ perso, majPerso }) {
   const persoSelectionne = Object.entries(perso).length !== 0
 
   if (persoSelectionne) {
-    const age = getRandomInt(60) + 15
     const male = getRandomInt(2) === 0
-    perso.nom = 'Marcello Marconi'
-    perso.voie = 'Malandrin'
-    perso.age = age
-    perso.male = male
+    if (perso.nom === undefined) {
+      perso.nom = 'Marcello Marconi'
+    }
+    if (perso.voie === undefined) {
+      perso.voie = 'Malandrin'
+    }
+    if (perso.age === undefined) {
+      const age = getRandomInt(60) + 15
+      perso.age = age
+    }
+    if (perso.male === undefined) {
+      perso.male = male
+    }
   }
   return (
     <div className="banniere">
       {persoSelectionne ? (
         <div>
           <table>
-            <tr>
-              <td>
-                <Portrait className="descriptionPerso" perso={perso} />
-              </td>
-              <td>
-                <div className="descriptionPerso">
-                  {perso.nom}
-                  <br />
-                  {perso.coterie}
-                  <br />
-                  {perso.voie}
-                  <br />
-                  {perso.age}
-                  <br />
-                  {perso.male ? 'Homme' : 'Femme'}
-                  <br />
-                </div>
-              </td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>
+                  <Portrait className="descriptionPerso" perso={perso} />
+                </td>
+                <td>
+                  <div className="descriptionPerso">
+                    {perso.nom}
+                    <br />
+                    {perso.coterie}
+                    <br />
+                    {perso.voie}
+                    <br />
+                    {perso.age}
+                    <br />
+                    {perso.male ? 'Homme' : 'Femme'}
+                    <br />
+                  </div>
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
       ) : (

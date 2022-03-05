@@ -1,21 +1,18 @@
 import Coteries from './choix/Coteries'
 import Finalisation from './choix/Finalisation'
 
-function ZoneDeChoix({
-  descriptionCourante,
-  majDescriptionCourante,
-  phaseChoix,
-  majPhaseChoix,
-}) {
+function ZoneDeChoix({ perso, majPerso, phaseChoix, majPhaseChoix }) {
   return (
     <div>
       {phaseChoix === 1 ? (
         <Coteries
-          descriptionCourante={descriptionCourante}
-          majDescriptionCourante={majDescriptionCourante}
+          perso={perso}
+          majPerso={majPerso}
+          phaseChoix={phaseChoix}
+          majPhaseChoix={majPhaseChoix}
         />
       ) : (
-        <Finalisation majDescriptionCourante={majDescriptionCourante} />
+        <Finalisation perso={perso} majPerso={majPerso} />
       )}
     </div>
   )

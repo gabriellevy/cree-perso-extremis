@@ -1,8 +1,16 @@
 import Coterie from '../Coterie'
 import { lstCoteries } from '../../donnees/lstCoteries'
 import '../../styles/Coteries.css'
+import ZoneDeValidation from './coteries/ZoneDeValidation'
+import { useState, useEffect } from 'react'
 
-function Coteries({ descriptionCourante, majDescriptionCourante }) {
+function Coteries({ perso, majPerso, phaseChoix, majPhaseChoix }) {
+  const [descriptionCourante, majDescriptionCourante] = useState({
+    texte: '',
+    fond: '',
+    titre: '',
+  })
+
   return (
     <div>
       <ul className="lstCoteries_ul">
@@ -15,9 +23,18 @@ function Coteries({ descriptionCourante, majDescriptionCourante }) {
             description={description}
             descriptionCourante={descriptionCourante}
             majDescriptionCourante={majDescriptionCourante}
+            majPerso={majPerso}
           />
         ))}
       </ul>
+      <ZoneDeValidation
+        descriptionCourante={descriptionCourante}
+        majDescriptionCourante={majDescriptionCourante}
+        perso={perso}
+        majPerso={majPerso}
+        phaseChoix={phaseChoix}
+        majPhaseChoix={majPhaseChoix}
+      />
     </div>
   )
 }

@@ -1,16 +1,17 @@
-import '../styles/App.css'
+import '../../../styles/App.css'
 
 function ZoneDeValidation({
   descriptionCourante,
   majDescriptionCourante,
+  perso,
   majPerso,
   phaseChoix,
   majPhaseChoix,
 }) {
   function validerSelection() {
-    const persoL = {
-      coterie: descriptionCourante.titre,
-    }
+    const persoL = perso
+    persoL.coterie = descriptionCourante.titre
+
     majPerso(persoL)
     majPhaseChoix(phaseChoix + 1)
     majDescriptionCourante({

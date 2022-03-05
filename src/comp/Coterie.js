@@ -11,14 +11,17 @@ function Coterie({
   description,
   descriptionCourante,
   majDescriptionCourante,
+  majPerso,
 }) {
   function appliquerSelection() {
     var fond = fonds[getRandomInt(fonds.length)]
 
     majDescriptionCourante({
       texte: description,
-      fond: fond,
       titre: titre,
+    })
+    majPerso({
+      fond: fond,
     })
   }
 

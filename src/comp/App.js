@@ -1,15 +1,9 @@
 import Banniere from './Banniere'
 import '../styles/App.css'
 import ZoneDeChoix from './ZoneDeChoix'
-import ZoneDeValidation from './ZoneDeValidation'
 import { useState, useEffect } from 'react'
 
 function App() {
-  const [descriptionCourante, majDescriptionCourante] = useState({
-    texte: '',
-    fond: '',
-    titre: '',
-  })
   const [perso, majPerso] = useState({})
   const [phaseChoix, majPhaseChoix] = useState(1)
 
@@ -22,7 +16,7 @@ function App() {
       <Banniere perso={perso} majPerso={majPerso} />
       <div
         style={{
-          backgroundImage: `url(${descriptionCourante.fond})`,
+          backgroundImage: `url(${perso.fond})`,
           backgroundColor: 'transparent',
           opacity: 0.9,
           width: 1280,
@@ -30,14 +24,7 @@ function App() {
         }}
       >
         <ZoneDeChoix
-          descriptionCourante={descriptionCourante}
-          majDescriptionCourante={majDescriptionCourante}
-          phaseChoix={phaseChoix}
-          majPhaseChoix={majPhaseChoix}
-        />
-        <ZoneDeValidation
-          descriptionCourante={descriptionCourante}
-          majDescriptionCourante={majDescriptionCourante}
+          perso={perso}
           majPerso={majPerso}
           phaseChoix={phaseChoix}
           majPhaseChoix={majPhaseChoix}
