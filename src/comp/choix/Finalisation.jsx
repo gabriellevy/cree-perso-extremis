@@ -1,14 +1,9 @@
 import { useState } from 'react'
 
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max)
-}
-
 function Finalisation({ perso, majPerso }) {
-  const ageAleatoire = getRandomInt(60) + 15
-  const [age, majAge] = useState(ageAleatoire)
+  const [age, majAge] = useState(perso.age)
 
-  function handleInput(e) {
+  function gererAge(e) {
     majAge(e.target.value)
     majPerso({
       coterie: perso.coterie,
@@ -16,6 +11,16 @@ function Finalisation({ perso, majPerso }) {
       nom: perso.nom,
       voie: perso.voie,
       male: perso.male,
+    })
+  }
+  function gererSexe(e) {
+    const male = e.target.value === 'male'
+    majPerso({
+      coterie: perso.coterie,
+      age: perso.age,
+      nom: perso.nom,
+      voie: perso.voie,
+      male: male,
     })
   }
 
@@ -30,9 +35,29 @@ function Finalisation({ perso, majPerso }) {
           maxLength={3}
           pattern="[+-]?\d+(?:[.,]\d+)?"
           placeholder="Âge du perso"
-          onChange={handleInput}
+          onChange={gererAge}
           value={age}
         />
+        <div onChange={gererSexe}>
+          <label>
+            <input
+              type="radio"
+              checked={perso.male}
+              value="male"
+              name="gender"
+            />
+            Homme
+          </label>
+          <label>
+            <input
+              type="radio"
+              checked={!perso.male}
+              value="femelle"
+              name="gender"
+            />
+            Femme
+          </label>
+        </div>
       </form>
     </div>
   )
