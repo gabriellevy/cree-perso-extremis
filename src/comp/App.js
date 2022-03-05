@@ -11,6 +11,7 @@ function App() {
     titre: '',
   })
   const [perso, majPerso] = useState({})
+  const [phaseChoix, majPhaseChoix] = useState(1)
 
   useEffect(() => {
     document.title = perso.coterie
@@ -35,6 +36,8 @@ function App() {
         <ZoneDeValidation
           descriptionCourante={descriptionCourante}
           majPerso={majPerso}
+          phaseChoix={phaseChoix}
+          majPhaseChoix={majPhaseChoix}
         />
       </div>
     </div>

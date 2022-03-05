@@ -1,7 +1,6 @@
-import Coterie from './Coterie'
-import { lstCoteries } from '../donnees/lstCoteries'
-import '../styles/Coteries.css'
-import { useState } from 'react'
+import Coterie from '../Coterie'
+import { lstCoteries } from '../../donnees/lstCoteries'
+import '../../styles/Coteries.css'
 
 function Coteries({ descriptionCourante, majDescriptionCourante }) {
   return (
