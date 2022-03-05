@@ -32,9 +32,12 @@ function App() {
         <ZoneDeChoix
           descriptionCourante={descriptionCourante}
           majDescriptionCourante={majDescriptionCourante}
+          phaseChoix={phaseChoix}
+          majPhaseChoix={majPhaseChoix}
         />
         <ZoneDeValidation
           descriptionCourante={descriptionCourante}
+          majDescriptionCourante={majDescriptionCourante}
           majPerso={majPerso}
           phaseChoix={phaseChoix}
           majPhaseChoix={majPhaseChoix}

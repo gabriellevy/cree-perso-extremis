@@ -2,6 +2,7 @@ import '../styles/App.css'
 
 function ZoneDeValidation({
   descriptionCourante,
+  majDescriptionCourante,
   majPerso,
   phaseChoix,
   majPhaseChoix,
@@ -12,20 +13,29 @@ function ZoneDeValidation({
     }
     majPerso(persoL)
     majPhaseChoix(phaseChoix + 1)
+    majDescriptionCourante({
+      texte: '',
+    })
   }
+
+  const affiche = descriptionCourante.texte !== ''
 
   return (
     <div>
-      <div style={{ padding: '0px 15px 0px 15px' }}>
-        <div className="texteStandard">
-          {descriptionCourante.texte}
-          <div className="aligneDroite">
-            <button className="bouton" onClick={() => validerSelection()}>
-              Sélectionner
-            </button>
+      {affiche ? (
+        <div style={{ padding: '0px 15px 0px 15px' }}>
+          <div className="texteStandard">
+            {descriptionCourante.texte}
+            <div className="aligneDroite">
+              <button className="bouton" onClick={() => validerSelection()}>
+                Sélectionner
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <div> </div>
+      )}
     </div>
   )
 }
