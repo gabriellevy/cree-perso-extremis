@@ -11,6 +11,7 @@ function Finalisation({ perso, majPerso }) {
       nom: perso.nom,
       voie: perso.voie,
       male: perso.male,
+      fond: perso.fond,
     })
   }
   function gererSexe(e) {
@@ -21,6 +22,7 @@ function Finalisation({ perso, majPerso }) {
       nom: perso.nom,
       voie: perso.voie,
       male: male,
+      fond: perso.fond,
     })
   }
 
