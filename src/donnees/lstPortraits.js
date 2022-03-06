@@ -129,7 +129,7 @@ import portrait_40_plus from './img/portraits/portrait40+.png'
 import portrait_60_plus from './img/portraits/portrait60+_miserable.png'
 import portrait_forgeron_60_plus from './img/portraits/portrait_forgeron_60+.jpg'
 
-var nomCotConquistadors = 'Conquistadors'
+export const nomCotConquistadors = 'Conquistadors'
 var nomCotElfes = 'Elfes'
 var nomCotOrks = 'Orks'
 var nomCotZaporogues = 'Zaporogues'
