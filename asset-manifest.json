@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cree-perso-extremis/static/css/main.15420271.css",
-    "main.js": "/cree-perso-extremis/static/js/main.b9c457f6.js",
+    "main.css": "/cree-perso-extremis/static/css/main.830d8a7f.css",
+    "main.js": "/cree-perso-extremis/static/js/main.e3c44e37.js",
     "static/js/787.f47d12c8.chunk.js": "/cree-perso-extremis/static/js/787.f47d12c8.chunk.js",
     "static/media/bg_lettre_zapo.jpg": "/cree-perso-extremis/static/media/bg_lettre_zapo.d63e86ecf62d58aac7f0.jpg",
     "static/media/bg_interieur_basilique.jpg": "/cree-perso-extremis/static/media/bg_interieur_basilique.1175f822d5b671b64756.jpg",
@@ -127,12 +127,12 @@
     "static/media/portrait_15-40_d.jpg": "/cree-perso-extremis/static/media/portrait_15-40_d.6552bcde20f9d22b0094.jpg",
     "static/media/portrait_forgeron_60+.jpg": "/cree-perso-extremis/static/media/portrait_forgeron_60+.ad13f173184695218994.jpg",
     "index.html": "/cree-perso-extremis/index.html",
-    "main.15420271.css.map": "/cree-perso-extremis/static/css/main.15420271.css.map",
-    "main.b9c457f6.js.map": "/cree-perso-extremis/static/js/main.b9c457f6.js.map",
+    "main.830d8a7f.css.map": "/cree-perso-extremis/static/css/main.830d8a7f.css.map",
+    "main.e3c44e37.js.map": "/cree-perso-extremis/static/js/main.e3c44e37.js.map",
     "787.f47d12c8.chunk.js.map": "/cree-perso-extremis/static/js/787.f47d12c8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.15420271.css",
-    "static/js/main.b9c457f6.js"
+    "static/css/main.830d8a7f.css",
+    "static/js/main.e3c44e37.js"
   ]
 }
