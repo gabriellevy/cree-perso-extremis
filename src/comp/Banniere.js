@@ -5,7 +5,7 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max)
 }
 
-function Banniere({ perso, majPerso }) {
+function Banniere({ perso }) {
   const persoSelectionne = Object.entries(perso).length !== 0
 
   if (persoSelectionne) {

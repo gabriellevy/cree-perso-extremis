@@ -2,7 +2,7 @@ import Coterie from '../Coterie'
 import { lstCoteries } from '../../donnees/lstCoteries'
 import '../../styles/Coteries.css'
 import ZoneDeValidation from './coteries/ZoneDeValidation'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 function Coteries({ perso, majPerso, phaseChoix, majPhaseChoix }) {
   const [descriptionCourante, majDescriptionCourante] = useState({

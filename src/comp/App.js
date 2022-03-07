@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <Banniere perso={perso} majPerso={majPerso} />
+      <Banniere perso={perso} />
       <div
         style={{
           backgroundImage: `url(${perso.fond})`,

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { nomCotConquistadors } from '../../donnees/lstPortraits'
+import { nomCotElfes } from '../../donnees/lstPortraits'
 import { genNomConquistador } from '../../donnees/coteries/conquistadors/nomsConquistadors'
+import { genNomElfe } from '../../donnees/coteries/elfes/nomsElfes'
 
 function Finalisation({ perso, majPerso }) {
   const [age, majAge] = useState(perso.age)
@@ -23,6 +25,7 @@ function Finalisation({ perso, majPerso }) {
     var nom = 'youpi'
     if (perso.coterie === nomCotConquistadors)
       nom = genNomConquistador(perso.male)
+    else if (perso.coterie === nomCotElfes) nom = genNomElfe(perso.male)
     // A FAIRE : génération de noms pour chaque coterie
 
     majNomLocal(nom)
