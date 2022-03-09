@@ -1,6 +1,4 @@
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max)
-}
+import { getRandomInt } from '../../../utils/rand'
 
 export function genNomElfe(male) {
   if (male)

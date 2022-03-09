@@ -1,6 +1,4 @@
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max)
-}
+import { getRandomInt } from '../../../utils/rand'
 
 export function genNomConquistador(male) {
   var nom = PRENOMS_F[getRandomInt(PRENOMS_F.length)]

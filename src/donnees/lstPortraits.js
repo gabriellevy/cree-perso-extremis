@@ -131,10 +131,10 @@ import portrait_forgeron_60_plus from './img/portraits/portrait_forgeron_60+.jpg
 
 export const nomCotConquistadors = 'Conquistadors'
 export const nomCotElfes = 'Elfes'
-var nomCotOrks = 'Orks'
-var nomCotZaporogues = 'Zaporogues'
-var nomCotTranshumanistes = 'Transhumanistes'
-var nomCotTempliers = 'Templiers'
+export const nomCotOrks = 'Orks'
+export const nomCotZaporogues = 'Zaporogues'
+export const nomCotTranshumanistes = 'Transhumanistes'
+export const nomCotTempliers = 'Templiers'
 
 export const lstPortraits = [
   {

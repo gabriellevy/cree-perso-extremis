@@ -1,8 +1,14 @@
 import { useState, useEffect } from 'react'
 import { nomCotConquistadors } from '../../donnees/lstPortraits'
 import { nomCotElfes } from '../../donnees/lstPortraits'
+import { nomCotOrks } from '../../donnees/lstPortraits'
+import { nomCotTempliers } from '../../donnees/lstPortraits'
+import { nomCotZaporogues } from '../../donnees/lstPortraits'
 import { genNomConquistador } from '../../donnees/coteries/conquistadors/nomsConquistadors'
 import { genNomElfe } from '../../donnees/coteries/elfes/nomsElfes'
+import { genNomOrk } from '../../donnees/coteries/orks/nomsOrks'
+import { genNomTemplier } from '../../donnees/coteries/templiers/nomsTempliers'
+import { genNomZaporogue } from '../../donnees/coteries/zaporogues/nomsZaporogues'
 
 function Finalisation({ perso, majPerso }) {
   const [age, majAge] = useState(perso.age)
@@ -22,11 +28,14 @@ function Finalisation({ perso, majPerso }) {
 
   useEffect(() => {
     // générer un nom selon la coterie choisie :
-    var nom = 'youpi'
+    var nom = 'youpi pas de noms pour cette coterie'
     if (perso.coterie === nomCotConquistadors)
       nom = genNomConquistador(perso.male)
     else if (perso.coterie === nomCotElfes) nom = genNomElfe(perso.male)
-    // A FAIRE : génération de noms pour chaque coterie
+    else if (perso.coterie === nomCotOrks) nom = genNomOrk(perso.male)
+    else if (perso.coterie === nomCotTempliers) nom = genNomTemplier(perso.male)
+    else if (perso.coterie === nomCotZaporogues)
+      nom = genNomZaporogue(perso.male)
 
     majNomLocal(nom)
   }, [perso.male])
