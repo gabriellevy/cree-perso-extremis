@@ -17,6 +17,7 @@ import bg_templier_c from './img/quartiers/bg_saint_denis.jpg'
 import bg_transhumaniste from './img/transhumanistes/bg_univ_transhumanistes.jpg'
 import bg_transhumaniste_b from './img/quartiers/bg_la_defense.jpg'
 import bg_zaporogue from './img/zaporogues/bg_lettre_zapo.jpg'
+import bg_zaporogue_b from './img/zaporogues/bg_univ_zaporogues.jpg'
 
 export const lstCoteries = [
   {
@@ -57,7 +58,7 @@ export const lstCoteries = [
   {
     titre: 'Zaporogues',
     portrait: portrait_zaporogue,
-    fonds: [bg_zaporogue],
+    fonds: [bg_zaporogue, bg_zaporogue_b],
     description:
       "Les zaporogues aiment avant tout la liberté, les sentiments exacerbés, et les grands espaces. Les structure rigides et polluées des grandes villes les révulsent, de même que tout ce qui est organisé en profondeur et tout ce qui est basé sur la planification longue durée et la réflexion pure. Ils préfèrent agir impulsivement, obéir à leurs sentiments violents, c'est pour eux ce qui fait la différence entre vrais humains et robots du Consul.",
   },
