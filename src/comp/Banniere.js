@@ -1,11 +1,11 @@
 import '../styles/Banniere.css'
 import Portrait from './Portrait'
+import { useContext } from 'react'
+import { PersoContexte } from '../utils/contexte/perso'
+import { getRandomInt } from '../utils/rand'
 
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max)
-}
-
-function Banniere({ perso }) {
+function Banniere() {
+  const { perso } = useContext(PersoContexte)
   const persoSelectionne = Object.entries(perso).length !== 0
 
   if (persoSelectionne) {

@@ -1,8 +1,5 @@
 import '../styles/Coterie.css'
-
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max)
-}
+import { getRandomInt } from '../utils/rand'
 
 function Coterie({
   titre,

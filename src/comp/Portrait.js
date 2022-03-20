@@ -1,9 +1,6 @@
 import '../styles/Portrait.css'
 import { lstPortraits } from '../donnees/lstPortraits'
-
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max)
-}
+import { getRandomInt } from '../utils/rand'
 
 function getPortraits(perso, prendreEnCompteCoterie) {
   const portraitsRestants = lstPortraits
