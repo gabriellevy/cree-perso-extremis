@@ -9,14 +9,17 @@ import { genNomElfe } from '../../donnees/coteries/elfes/nomsElfes'
 import { genNomOrk } from '../../donnees/coteries/orks/nomsOrks'
 import { genNomTemplier } from '../../donnees/coteries/templiers/nomsTempliers'
 import { genNomZaporogue } from '../../donnees/coteries/zaporogues/nomsZaporogues'
+import { useContext } from 'react'
+import { PersoContexte } from '../../utils/contexte/perso'
 
-function Finalisation({ perso, majPerso }) {
+function Finalisation() {
+  const { perso, setPerso } = useContext(PersoContexte)
   const [age, majAge] = useState(perso.age)
   const [nom, majNom] = useState(perso.nom)
 
   function majNomLocal(nom) {
     majNom(nom)
-    majPerso({
+    setPerso({
       coterie: perso.coterie,
       age: age,
       nom: nom,
@@ -45,7 +48,7 @@ function Finalisation({ perso, majPerso }) {
   }
   function gererAge(e) {
     majAge(e.target.value)
-    majPerso({
+    setPerso({
       coterie: perso.coterie,
       age: e.target.value,
       nom: nom,
@@ -56,7 +59,7 @@ function Finalisation({ perso, majPerso }) {
   }
   function gererSexe(e) {
     const male = e.target.value === 'male'
-    majPerso({
+    setPerso({
       coterie: perso.coterie,
       age: perso.age,
       nom: perso.nom,

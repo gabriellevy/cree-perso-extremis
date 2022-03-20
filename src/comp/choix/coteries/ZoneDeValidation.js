@@ -1,18 +1,20 @@
 import '../../../styles/App.css'
+import { useContext } from 'react'
+import { PersoContexte } from '../../../utils/contexte/perso'
 
 function ZoneDeValidation({
   descriptionCourante,
   majDescriptionCourante,
-  perso,
-  majPerso,
   phaseChoix,
   majPhaseChoix,
 }) {
+  const { perso, setPerso } = useContext(PersoContexte)
+
   function validerSelection() {
     const persoL = perso
     persoL.coterie = descriptionCourante.titre
 
-    majPerso(persoL)
+    setPerso(persoL)
     majPhaseChoix(phaseChoix + 1)
     majDescriptionCourante({
       texte: '',

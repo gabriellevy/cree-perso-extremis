@@ -1,5 +1,7 @@
 import '../styles/Coterie.css'
 import { getRandomInt } from '../utils/rand'
+import { useContext } from 'react'
+import { PersoContexte } from '../utils/contexte/perso'
 
 function Coterie({
   titre,
@@ -8,8 +10,9 @@ function Coterie({
   description,
   descriptionCourante,
   majDescriptionCourante,
-  majPerso,
 }) {
+  const { setPerso } = useContext(PersoContexte)
+
   function appliquerSelection() {
     var fond = fonds[getRandomInt(fonds.length)]
 
@@ -17,7 +20,7 @@ function Coterie({
       texte: description,
       titre: titre,
     })
-    majPerso({
+    setPerso({
       fond: fond,
     })
   }

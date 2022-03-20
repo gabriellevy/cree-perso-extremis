@@ -1,6 +1,8 @@
 import '../styles/Portrait.css'
 import { lstPortraits } from '../donnees/lstPortraits'
 import { getRandomInt } from '../utils/rand'
+import { useContext } from 'react'
+import { PersoContexte } from '../utils/contexte/perso'
 
 function getPortraits(perso, prendreEnCompteCoterie) {
   const portraitsRestants = lstPortraits
@@ -22,11 +24,13 @@ function getPortraits(perso, prendreEnCompteCoterie) {
 }
 
 // génère un portrait selonles données de personnage fournies => mis à jour chaque fois que le personnage change
-function Portrait({ perso }) {
+function Portrait() {
+  const { perso } = useContext(PersoContexte)
+
   // filtrage des portraits dispos selon les caracs de persos
 
   var portraitsRestants = getPortraits(perso, true)
-  if (portraitsRestants.length == 0)
+  if (portraitsRestants.length === 0)
     portraitsRestants = getPortraits(perso, false)
 
   var portrait

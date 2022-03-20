@@ -4,7 +4,7 @@ import '../../styles/Coteries.css'
 import ZoneDeValidation from './coteries/ZoneDeValidation'
 import { useState } from 'react'
 
-function Coteries({ perso, majPerso, phaseChoix, majPhaseChoix }) {
+function Coteries({ phaseChoix, majPhaseChoix }) {
   const [descriptionCourante, majDescriptionCourante] = useState({
     texte: '',
     fond: '',
@@ -23,15 +23,12 @@ function Coteries({ perso, majPerso, phaseChoix, majPhaseChoix }) {
             description={description}
             descriptionCourante={descriptionCourante}
             majDescriptionCourante={majDescriptionCourante}
-            majPerso={majPerso}
           />
         ))}
       </ul>
       <ZoneDeValidation
         descriptionCourante={descriptionCourante}
         majDescriptionCourante={majDescriptionCourante}
-        perso={perso}
-        majPerso={majPerso}
         phaseChoix={phaseChoix}
         majPhaseChoix={majPhaseChoix}
       />

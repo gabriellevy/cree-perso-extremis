@@ -2,9 +2,11 @@ import Banniere from './Banniere'
 import '../styles/App.css'
 import ZoneDeChoix from './ZoneDeChoix'
 import { useState, useEffect } from 'react'
+import { useContext } from 'react'
+import { PersoContexte } from '../utils/contexte/perso'
 
 function App() {
-  const [perso, majPerso] = useState({})
+  const { perso } = useContext(PersoContexte)
   const [phaseChoix, majPhaseChoix] = useState(1)
 
   useEffect(() => {
@@ -23,12 +25,7 @@ function App() {
           height: 720,
         }}
       >
-        <ZoneDeChoix
-          perso={perso}
-          majPerso={majPerso}
-          phaseChoix={phaseChoix}
-          majPhaseChoix={majPhaseChoix}
-        />
+        <ZoneDeChoix phaseChoix={phaseChoix} majPhaseChoix={majPhaseChoix} />
       </div>
     </div>
   )
