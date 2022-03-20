@@ -123,10 +123,6 @@ import portrait_40_plus from './img/portraits/portrait40+.png'
 import portrait_60_plus from './img/portraits/portrait60+_miserable.png'
 import portrait_forgeron_60_plus from './img/portraits/portrait_forgeron_60+.jpg'
 
-import portrait_templier_20_40 from './img/templiers/portraits/20-40.jpg'
-
-import portrait_transhumaniste_15_30_2 from './img/transhumanistes/portraits/portrait15-30_2.jpg'
-
 import portrait_zaporogue_15_35_chasseur from './img/zaporogues/portraits/15-35_chasseur.jpg'
 import portrait_zaporogue_20_45 from './img/zaporogues/portraits/20-45.jpg'
 import portrait_zaporogue_20_45_b from './img/zaporogues/portraits/20-45_2.jpg'
@@ -149,6 +145,10 @@ import portrait_zaporogue_femme20_40_paysane from './img/zaporogues/portraits/F2
 import portrait_zaporogue_femme30_60 from './img/zaporogues/portraits/F30-60.jpg'
 import portrait_zaporogue_femme50_plus from './img/zaporogues/portraits/F50+.jpg'
 
+import portrait_templier_20_40 from './img/templiers/portraits/20-40.jpg'
+
+import portrait_transhumaniste_15_30_2 from './img/transhumanistes/portraits/portrait15-30_2.jpg'
+
 export const nomCotConquistadors = 'Conquistadors'
 export const nomCotElfes = 'Elfes'
 export const nomCotOrks = 'Orks'
@@ -157,6 +157,13 @@ export const nomCotTranshumanistes = 'Transhumanistes'
 export const nomCotTempliers = 'Templiers'
 
 export const lstPortraits = [
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_15_30_2,
+    ageMin: 15,
+    ageMax: 30,
+    male: true,
+  },
   {
     coterie: nomCotZaporogues,
     image: portrait_zaporogue_femme50_plus,
@@ -1106,13 +1113,6 @@ export const lstPortraits = [
     image: portrait_templier_20_40,
     ageMin: 20,
     ageMax: 40,
-    male: true,
-  },
-  {
-    coterie: nomCotTranshumanistes,
-    image: portrait_transhumaniste_15_30_2,
-    ageMin: 15,
-    ageMax: 30,
     male: true,
   },
 ]
