@@ -10,8 +10,8 @@ function App() {
   const [phaseChoix, majPhaseChoix] = useState(1)
 
   useEffect(() => {
-    document.title = perso.coterie
-  }, [perso])
+    document.title = 'Créateur de personnage Extremis'
+  }, [])
 
   return (
     <div className="App">

@@ -19,14 +19,12 @@ function Finalisation() {
 
   function majNomLocal(nom) {
     majNom(nom)
-    setPerso({
-      coterie: perso.coterie,
+    var changementsAuPerso = {
       age: age,
       nom: nom,
-      voie: perso.voie,
-      male: perso.male,
-      fond: perso.fond,
-    })
+    }
+    var persoFinal = { ...perso, ...changementsAuPerso }
+    setPerso(persoFinal)
   }
 
   useEffect(() => {
