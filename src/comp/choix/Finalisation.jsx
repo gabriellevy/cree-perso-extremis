@@ -46,25 +46,21 @@ function Finalisation() {
   }
   function gererAge(e) {
     majAge(e.target.value)
-    setPerso({
-      coterie: perso.coterie,
+
+    var changementsAuPerso = {
       age: e.target.value,
-      nom: nom,
-      voie: perso.voie,
-      male: perso.male,
-      fond: perso.fond,
-    })
+    }
+    var persoFinal = { ...perso, ...changementsAuPerso }
+    setPerso(persoFinal)
   }
   function gererSexe(e) {
     const male = e.target.value === 'male'
-    setPerso({
-      coterie: perso.coterie,
-      age: perso.age,
-      nom: perso.nom,
-      voie: perso.voie,
+
+    var changementsAuPerso = {
       male: male,
-      fond: perso.fond,
-    })
+    }
+    var persoFinal = { ...perso, ...changementsAuPerso }
+    setPerso(persoFinal)
   }
 
   return (
