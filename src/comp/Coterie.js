@@ -11,7 +11,7 @@ function Coterie({
   descriptionCourante,
   majDescriptionCourante,
 }) {
-  const { setPerso } = useContext(PersoContexte)
+  const { perso, setPerso } = useContext(PersoContexte)
 
   function appliquerSelection() {
     var fond = fonds[getRandomInt(fonds.length)]
@@ -20,9 +20,12 @@ function Coterie({
       texte: description,
       titre: titre,
     })
-    setPerso({
+
+    var changementsAuPerso = {
       fond: fond,
-    })
+    }
+    var persoFinal = { ...perso, ...changementsAuPerso }
+    setPerso(persoFinal)
   }
 
   var selection = descriptionCourante.titre === titre

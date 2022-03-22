@@ -11,10 +11,11 @@ function ZoneDeValidation({
   const { perso, setPerso } = useContext(PersoContexte)
 
   function validerSelection() {
-    const persoL = perso
-    persoL.coterie = descriptionCourante.titre
-
-    setPerso(persoL)
+    var changementsAuPerso = {
+      coterie: descriptionCourante.titre,
+    }
+    var persoFinal = { ...perso, ...changementsAuPerso }
+    setPerso(persoFinal)
     majPhaseChoix(phaseChoix + 1)
     majDescriptionCourante({
       texte: '',

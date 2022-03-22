@@ -36,6 +36,22 @@ function Banniere() {
                 </td>
                 <td>
                   <div className="descriptionPerso">
+                    DEX : {perso.dexterite}
+                    <br />
+                    CON : {perso.constitution}
+                    <br />
+                    CHA : {perso.charisme}
+                    <br />
+                    INT : {perso.intelligence}
+                    <br />
+                    SENS : {perso.sensibilite}
+                    <br />
+                    MAG : {perso.magie}
+                    <br />
+                  </div>
+                </td>
+                <td>
+                  <div className="descriptionPerso">
                     {perso.nom}
                     <br />
                     {perso.coterie}
