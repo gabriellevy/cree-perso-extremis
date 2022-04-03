@@ -1,45 +1,109 @@
 import '../../styles/Coteries.css'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { getRandomInt } from '../../utils/rand'
 import { useContext } from 'react'
 import { PersoContexte } from '../../utils/contexte/perso'
+import { lstCaracsExt } from '../../donnees/lstCaracs'
 
 function Caracs({ phaseChoix, majPhaseChoix }) {
   const { perso, setPerso } = useContext(PersoContexte)
+  const [lstCaracs, setLstCaracs] = useState(lstCaracsExt)
+  const [indexCaracASelectionner, setIndexCaracASelectionner] = useState(0)
+  const [valeursARepartir, setValeursARepartir] = useState([
+    {
+      valeur: -1,
+      index: 0,
+      choisi: false,
+    },
+    {
+      valeur: -1,
+      index: 1,
+      choisi: false,
+    },
+    {
+      valeur: -1,
+      index: 2,
+      choisi: false,
+    },
+    {
+      valeur: -1,
+      index: 3,
+      choisi: false,
+    },
+    {
+      valeur: -1,
+      index: 4,
+      choisi: false,
+    },
+    {
+      valeur: -1,
+      index: 5,
+      choisi: false,
+    },
+  ])
 
-  var dexterite = -1
-  var constitution = -1
-  var charisme = -1
-  var intelligence = -1
-  var sensibilite = -1
-  var magie = -1
+  function majCaracLocal(index, valeur) {
+    let caracs = [...lstCaracs]
+    let carac = caracs[indexCaracASelectionner]
+    carac.valeur = valeur
+    carac.choisi = true
 
-  var valTiree1 = -1
-  var valTiree2 = -1
-  var valTiree3 = -1
-  function TirerDes() {
-    valTiree1 = getRandomInt(6) + getRandomInt(6) + 2
-    valTiree2 = getRandomInt(6) + getRandomInt(6) + 2
-    valTiree3 = getRandomInt(6) + getRandomInt(6) + 2
+    let resDes = [...valeursARepartir]
+    let resDe = resDes[index]
+    resDe.choisi = true
 
-    dexterite = valTiree1 + 6
-    constitution = 19 - valTiree1
-    charisme = valTiree2 + 6
-    intelligence = 19 - valTiree2
-    sensibilite = valTiree3 + 6
-    magie = 19 - valTiree3
+    setValeursARepartir(resDes)
+    setIndexCaracASelectionner(indexCaracASelectionner + 1)
+    setLstCaracs(caracs)
   }
 
-  TirerDes()
+  const valeurVide = 'à sélectionner'
+
+  useEffect(() => {
+    function TirerDes() {
+      var valTiree1 = getRandomInt(6) + getRandomInt(6) + 2
+      var valTiree2 = getRandomInt(6) + getRandomInt(6) + 2
+      var valTiree3 = getRandomInt(6) + getRandomInt(6) + 2
+
+      setValeursARepartir([
+        {
+          valeur: valTiree1 + 6,
+          index: 0,
+        },
+        {
+          valeur: 19 - valTiree1,
+          index: 1,
+        },
+        {
+          valeur: valTiree2 + 6,
+          index: 2,
+        },
+        {
+          valeur: 19 - valTiree2,
+          index: 3,
+        },
+        {
+          valeur: valTiree3 + 6,
+          index: 4,
+        },
+        {
+          valeur: 19 - valTiree3,
+          index: 5,
+        },
+      ])
+    }
+
+    TirerDes()
+  }, [])
 
   function validerCaracs() {
     var changementsAuPerso = {
-      dexterite: dexterite,
-      constitution: constitution,
-      charisme: charisme,
-      intelligence: intelligence,
-      sensibilite: sensibilite,
-      magie: magie,
+      dexterite: lstCaracs[0].valeur,
+      constitution: lstCaracs[1].valeur,
+      charisme: lstCaracs[2].valeur,
+      intelligence: lstCaracs[3].valeur,
+      sensibilite: lstCaracs[4].valeur,
+      magie: lstCaracs[5].valeur,
     }
     var persoFinal = { ...perso, ...changementsAuPerso }
     setPerso(persoFinal)
@@ -50,19 +114,42 @@ function Caracs({ phaseChoix, majPhaseChoix }) {
   return (
     <div>
       <ul>
-        <li>Dextérité : {dexterite}</li>
-        <li>Constitution (inclut la force) : {constitution}</li>
-        <li>Charisme : {charisme}</li>
-        <li>Intelligence : {intelligence}</li>
-        <li>
-          Sensibilité (perception au niveau sens, magie, sociabilité) :{' '}
-          {sensibilite}
-        </li>
-        <li>Magie : {magie}</li>
+        {lstCaracs.map(({ titre, valeur, description }) => (
+          <li key={titre}>
+            <b>{titre}</b> ({description}) :{' '}
+            {valeur !== -1 ? valeur : valeurVide}
+          </li>
+        ))}
       </ul>
-      <button className="bouton" onClick={() => validerCaracs()}>
-        Sélectionner
-      </button>
+      {indexCaracASelectionner === 6 ? (
+        <button className="bouton" onClick={() => validerCaracs()}>
+          Valider
+        </button>
+      ) : (
+        <div>
+          Sélection de la carac : {lstCaracs[indexCaracASelectionner].titre}
+          <br />
+          Cliquez sur la valeur que vous voulez lui affecter :
+          <ul>
+            {valeursARepartir.map(({ index, valeur, choisi }) => (
+              <li key={index}>
+                {choisi ? (
+                  ''
+                ) : (
+                  <button
+                    className="bouton"
+                    onClick={() => {
+                      majCaracLocal(index, valeur)
+                    }}
+                  >
+                    {valeur}
+                  </button>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   )
 }
