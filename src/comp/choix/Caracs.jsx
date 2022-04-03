@@ -4,6 +4,7 @@ import { getRandomInt } from '../../utils/rand'
 import { useContext } from 'react'
 import { PersoContexte } from '../../utils/contexte/perso'
 import { lstCaracsExt } from '../../donnees/lstCaracs'
+import '../../styles/Caracs.css'
 
 function Caracs({ phaseChoix, majPhaseChoix }) {
   const { perso, setPerso } = useContext(PersoContexte)
@@ -57,7 +58,7 @@ function Caracs({ phaseChoix, majPhaseChoix }) {
     setLstCaracs(caracs)
   }
 
-  const valeurVide = 'à sélectionner'
+  const valeurVide = 'Pas encore sélectionnée'
 
   useEffect(() => {
     function TirerDes() {
@@ -116,8 +117,7 @@ function Caracs({ phaseChoix, majPhaseChoix }) {
       <ul>
         {lstCaracs.map(({ titre, valeur, description }) => (
           <li key={titre}>
-            <b>{titre}</b> ({description}) :{' '}
-            {valeur !== -1 ? valeur : valeurVide}
+            <b>{titre}</b> : {valeur !== -1 ? valeur : valeurVide}
           </li>
         ))}
       </ul>
@@ -127,17 +127,21 @@ function Caracs({ phaseChoix, majPhaseChoix }) {
         </button>
       ) : (
         <div>
-          Sélection de la carac : {lstCaracs[indexCaracASelectionner].titre}
-          <br />
-          Cliquez sur la valeur que vous voulez lui affecter :
-          <ul>
+          <h1>
+            Sélection de la carac{' '}
+            <b>{lstCaracs[indexCaracASelectionner].titre}</b>
+          </h1>
+          Ci après vos différentes valeurs à affecter à vos caractéristiques.
+          Cliquez sur celle que vous voulez affecter à{' '}
+          {lstCaracs[indexCaracASelectionner].titre}:
+          <ul className="caracs_ul">
             {valeursARepartir.map(({ index, valeur, choisi }) => (
-              <li key={index}>
+              <li key={index} className="caracs_li">
                 {choisi ? (
                   ''
                 ) : (
                   <button
-                    className="bouton"
+                    className="caracs_bouton"
                     onClick={() => {
                       majCaracLocal(index, valeur)
                     }}

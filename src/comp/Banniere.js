@@ -58,7 +58,7 @@ function Banniere() {
                     <br />
                     {perso.voie}
                     <br />
-                    {perso.age}
+                    {perso.age} ans
                     <br />
                     {perso.male ? 'Homme' : 'Femme'}
                     <br />
