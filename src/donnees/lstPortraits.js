@@ -147,7 +147,28 @@ import portrait_zaporogue_femme50_plus from './img/zaporogues/portraits/F50+.jpg
 
 import portrait_templier_20_40 from './img/templiers/portraits/20-40.jpg'
 
+import portrait_transhumaniste_journaliste25_50 from './img/transhumanistes/portraits/journaliste25-50.jpg'
+import portrait_transhumaniste_10_20 from './img/transhumanistes/portraits/portrait10-20.jpg'
+import portrait_transhumaniste_15_30 from './img/transhumanistes/portraits/portrait15-30.jpg'
 import portrait_transhumaniste_15_30_2 from './img/transhumanistes/portraits/portrait15-30_2.jpg'
+import portrait_transhumaniste_15_30_3 from './img/transhumanistes/portraits/portrait15-30_3.jpg'
+import portrait_transhumaniste_20_40 from './img/transhumanistes/portraits/portrait20-40.jpg'
+import portrait_transhumaniste_20_50 from './img/transhumanistes/portraits/portrait20-50.jpg'
+import portrait_transhumaniste_20_50_b from './img/transhumanistes/portraits/portrait20-50.png'
+import portrait_transhumaniste_20_50_c from './img/transhumanistes/portraits/portrait20-50_2.jpg'
+import portrait_transhumaniste_20_50_d from './img/transhumanistes/portraits/portrait20-50_3.jpg'
+import portrait_transhumaniste_30_50 from './img/transhumanistes/portraits/portrait30-50.jpg'
+import portrait_transhumaniste_30_50_b from './img/transhumanistes/portraits/portrait30-50_2.jpg'
+import portrait_transhumaniste_30_50_c from './img/transhumanistes/portraits/portrait30-50_2.png'
+import portrait_transhumaniste_30_50_d from './img/transhumanistes/portraits/portrait30-50_3.jpg'
+import portrait_transhumaniste_35_plus from './img/transhumanistes/portraits/portrait35+.jpg'
+import portrait_transhumaniste_35_plus_b from './img/transhumanistes/portraits/portrait35+_2.jpg'
+import portrait_transhumaniste_35_plus_c from './img/transhumanistes/portraits/portrait35+_3.jpg'
+import portrait_transhumaniste_40_plus from './img/transhumanistes/portraits/portrait40+.jpg'
+import portrait_transhumaniste_50_plus from './img/transhumanistes/portraits/portrait50+.jpg'
+import portrait_transhumaniste_60_plus from './img/transhumanistes/portraits/portrait60+.jpg'
+import portrait_transhumaniste_60_plus_b from './img/transhumanistes/portraits/portrait60+_2.jpg'
+import portrait_transhumaniste_70_plus from './img/transhumanistes/portraits/portrait70+.jpg'
 
 export const nomCotConquistadors = 'Conquistadors'
 export const nomCotElfes = 'Elfes'
@@ -157,6 +178,145 @@ export const nomCotTranshumanistes = 'Transhumanistes'
 export const nomCotTempliers = 'Templiers'
 
 export const lstPortraits = [
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_70_plus,
+    ageMin: 70,
+    male: true,
+  },
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_60_plus_b,
+    ageMin: 60,
+    male: true,
+  },
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_60_plus,
+    ageMin: 60,
+    male: true,
+  },
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_50_plus,
+    ageMin: 50,
+    male: true,
+  },
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_40_plus,
+    ageMin: 40,
+    male: true,
+  },
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_35_plus_c,
+    ageMin: 35,
+    male: true,
+  },
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_35_plus_b,
+    ageMin: 35,
+    male: true,
+  },
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_35_plus,
+    ageMin: 35,
+    male: true,
+  },
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_30_50_d,
+    ageMin: 30,
+    ageMax: 50,
+    male: true,
+  },
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_30_50_c,
+    ageMin: 30,
+    ageMax: 50,
+    male: true,
+  },
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_30_50_b,
+    ageMin: 30,
+    ageMax: 50,
+    male: true,
+  },
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_30_50,
+    ageMin: 30,
+    ageMax: 50,
+    male: true,
+  },
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_20_50_d,
+    ageMin: 20,
+    ageMax: 50,
+    male: true,
+  },
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_20_50_c,
+    ageMin: 20,
+    ageMax: 50,
+    male: true,
+  },
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_20_50_b,
+    ageMin: 20,
+    ageMax: 50,
+    male: true,
+  },
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_20_50,
+    ageMin: 20,
+    ageMax: 50,
+    male: true,
+  },
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_20_40,
+    ageMin: 20,
+    ageMax: 40,
+    male: true,
+  },
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_10_20,
+    ageMin: 10,
+    ageMax: 20,
+    male: true,
+  },
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_journaliste25_50,
+    ageMin: 25,
+    ageMax: 50,
+    male: true,
+  },
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_15_30,
+    ageMin: 15,
+    ageMax: 30,
+    male: true,
+  },
+  {
+    coterie: nomCotTranshumanistes,
+    image: portrait_transhumaniste_15_30_3,
+    ageMin: 15,
+    ageMax: 30,
+    male: true,
+  },
   {
     coterie: nomCotTranshumanistes,
     image: portrait_transhumaniste_15_30_2,
