@@ -145,8 +145,6 @@ import portrait_zaporogue_femme20_40_paysane from './img/zaporogues/portraits/F2
 import portrait_zaporogue_femme30_60 from './img/zaporogues/portraits/F30-60.jpg'
 import portrait_zaporogue_femme50_plus from './img/zaporogues/portraits/F50+.jpg'
 
-import portrait_templier_20_40 from './img/templiers/portraits/20-40.jpg'
-
 import portrait_transhumaniste_journaliste25_50 from './img/transhumanistes/portraits/journaliste25-50.jpg'
 import portrait_transhumaniste_10_20 from './img/transhumanistes/portraits/portrait10-20.jpg'
 import portrait_transhumaniste_15_30 from './img/transhumanistes/portraits/portrait15-30.jpg'
@@ -170,6 +168,15 @@ import portrait_transhumaniste_60_plus from './img/transhumanistes/portraits/por
 import portrait_transhumaniste_60_plus_b from './img/transhumanistes/portraits/portrait60+_2.jpg'
 import portrait_transhumaniste_70_plus from './img/transhumanistes/portraits/portrait70+.jpg'
 
+import portrait_templier_20_40 from './img/templiers/portraits/20-40.jpg'
+import portrait_templier_femme15_30 from './img/templiers/portraits/femme15_30.jpg'
+import portrait_templier_femme20_40 from './img/templiers/portraits/femme20_40.jpg'
+import portrait_templier_femme70_plus from './img/templiers/portraits/femme70+.jpg'
+import portrait_templier_30_plus from './img/templiers/portraits/30+.jpg'
+import portrait_templier_50_plus from './img/templiers/portraits/50+.jpg'
+import portrait_templier_50_plus_b from './img/templiers/portraits/50+_b.jpg'
+import portrait_templier_60_plus from './img/templiers/portraits/60+.jpg'
+
 export const nomCotConquistadors = 'Conquistadors'
 export const nomCotElfes = 'Elfes'
 export const nomCotOrks = 'Orks'
@@ -178,6 +185,57 @@ export const nomCotTranshumanistes = 'Transhumanistes'
 export const nomCotTempliers = 'Templiers'
 
 export const lstPortraits = [
+  {
+    coterie: nomCotTempliers,
+    image: portrait_templier_femme15_30,
+    ageMin: 15,
+    ageMax: 30,
+    male: false,
+  },
+  {
+    coterie: nomCotTempliers,
+    image: portrait_templier_femme20_40,
+    ageMin: 20,
+    ageMax: 40,
+    male: false,
+  },
+  {
+    coterie: nomCotTempliers,
+    image: portrait_templier_femme70_plus,
+    ageMin: 70,
+    male: false,
+  },
+  {
+    coterie: nomCotTempliers,
+    image: portrait_templier_20_40,
+    ageMin: 20,
+    ageMax: 40,
+    male: true,
+  },
+  {
+    coterie: nomCotTempliers,
+    image: portrait_templier_30_plus,
+    ageMin: 30,
+    male: true,
+  },
+  {
+    coterie: nomCotTempliers,
+    image: portrait_templier_60_plus,
+    ageMin: 60,
+    male: true,
+  },
+  {
+    coterie: nomCotTempliers,
+    image: portrait_templier_50_plus,
+    ageMin: 50,
+    male: true,
+  },
+  {
+    coterie: nomCotTempliers,
+    image: portrait_templier_50_plus_b,
+    ageMin: 50,
+    male: true,
+  },
   {
     coterie: nomCotTranshumanistes,
     image: portrait_transhumaniste_70_plus,
@@ -1266,13 +1324,6 @@ export const lstPortraits = [
     image: portrait_conquistador_25_60,
     ageMin: 25,
     ageMax: 60,
-    male: true,
-  },
-  {
-    coterie: nomCotTempliers,
-    image: portrait_templier_20_40,
-    ageMin: 20,
-    ageMax: 40,
     male: true,
   },
 ]
