@@ -3,6 +3,20 @@ import Portrait from './Portrait'
 import { useContext } from 'react'
 import { PersoContexte } from '../utils/contexte/perso'
 import { getRandomInt } from '../utils/rand'
+import { lstComps } from '../donnees/lstComps'
+import { render } from '@testing-library/react'
+
+function listageDescription(lignes) {
+  return render(
+    <div>
+      <ol>
+        {lignes.map((ligne) => (
+          <li key={ligne}>{ligne}</li>
+        ))}
+      </ol>
+    </div>
+  )
+}
 
 function Banniere() {
   const { perso } = useContext(PersoContexte)
@@ -62,6 +76,20 @@ function Banniere() {
                     <br />
                     {perso.male ? 'Homme' : 'Femme'}
                     <br />
+                  </div>
+                </td>
+                <td>
+                  <div className="descriptionPerso">
+                    <b>Compétences : </b>
+                    {lstComps.map(({ titre, valeur, description }) =>
+                      valeur > -1 ? (
+                        <div title={description}>
+                          {titre} ({valeur})
+                        </div>
+                      ) : (
+                        ''
+                      )
+                    )}
                   </div>
                 </td>
               </tr>
