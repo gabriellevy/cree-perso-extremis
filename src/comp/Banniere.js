@@ -6,18 +6,6 @@ import { getRandomInt } from '../utils/rand'
 import { lstComps } from '../donnees/lstComps'
 import { render } from '@testing-library/react'
 
-function listageDescription(lignes) {
-  return render(
-    <div>
-      <ol>
-        {lignes.map((ligne) => (
-          <li key={ligne}>{ligne}</li>
-        ))}
-      </ol>
-    </div>
-  )
-}
-
 function Banniere() {
   const { perso } = useContext(PersoContexte)
   const persoSelectionne = Object.entries(perso).length !== 0
@@ -82,10 +70,10 @@ function Banniere() {
                   <div className="descriptionPerso">
                     <b>Compétences : </b>
                     {lstComps.map(({ titre, valeur, description }) =>
-                      valeur > -1 ? (
-                        <div title={description}>
-                          {titre} ({valeur})
-                        </div>
+                      valeur > 0 ? (
+                        <span title={description}>
+                          {titre} ({valeur}),
+                        </span>
                       ) : (
                         ''
                       )
