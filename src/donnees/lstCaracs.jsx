@@ -29,7 +29,8 @@ export const lstCaracsExt = [
   {
     titre: nomSensibilite,
     valeur: -1,
-    description: 'perception au niveau sens, magie, sociabilité',
+    description:
+      'Perception au sens large, inclut :\n     - la finesse des sens\n     - la perception de la magie\n     - la perception psychologique',
   },
   {
     titre: nomMagie,

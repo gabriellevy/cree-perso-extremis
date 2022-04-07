@@ -43,7 +43,7 @@ export const lstComps = [
       'niveau 6 : +1 un animal dressé\n',
       "S'occuper d'un chat (difficulté 4)",
       'Dresser un cheval (difficulté 14)',
-      'Se comporter face à des requins en plon,gée (difficulté 15)',
+      'Se comporter face à des requins en plongée (difficulté 15)',
     ],
   },
   {
@@ -68,6 +68,46 @@ export const lstComps = [
       'Décrire une oeuvre en profondeur (difficulté 12).\n',
       'Peindre un tableau de qualité (difficulté 14).\n',
     ],
+  },
+  {
+    titre: 'Artisanat',
+    valeur: 0,
+    carac: nomConstitution,
+    description: [
+      'Fabriquer un pot (difficulté 8).\n',
+      'Fabriquer un meuble (difficulté 13).\n',
+      'Installer un piège (difficulté 9).\n',
+      'Concevoir et installer un piège (difficulté 14).\n',
+    ],
+  },
+  {
+    titre: 'Commandement',
+    valeur: 0,
+    carac: nomCharisme,
+    description: [
+      'Commander une escouade (difficulté 8).\n',
+      'COmmander un navire (difficulté 13).\n',
+    ],
+  },
+  {
+    titre: 'Convaincre',
+    valeur: 0,
+    carac: nomCharisme,
+    description: [''],
+  },
+  {
+    titre: 'Corps à corps',
+    valeur: 0,
+    carac: nomConstitution,
+    description: [
+      '+1 arme de contact au choix :  Poing américain, lame rétractile, épée, couteau militaire',
+    ],
+  },
+  {
+    titre: 'Détrousser',
+    valeur: 0,
+    carac: nomSensibilite,
+    description: [''],
   },
   {
     titre: 'Effort',
