@@ -110,6 +110,12 @@ export const lstComps = [
     description: [''],
   },
   {
+    titre: 'Discrétion',
+    valeur: 0,
+    carac: nomDexterite,
+    description: [''],
+  },
+  {
     titre: 'Effort',
     valeur: 0,
     carac: nomConstitution,
@@ -117,6 +123,48 @@ export const lstComps = [
       'Efforts physiques soutenus, endurance.\n',
       'Pousser une voiture en plein soleil (difficulté 8).\n',
       "Faire une journée de travail d'éboueur (difficulté 7).\n",
+    ],
+  },
+  {
+    titre: 'Fabrication technique',
+    valeur: 0,
+    carac: nomIntelligence,
+    description: ['Mécanique, électronique, informatique.\n'],
+  },
+  {
+    titre: 'Force',
+    valeur: 0,
+    carac: nomConstitution,
+    description: [
+      'Déménager une armoire (difficulté 8).\n',
+      "Soulever l'arrière d'une voiture (difficulté 16).\n",
+    ],
+  },
+  {
+    titre: 'Informatique',
+    valeur: 0,
+    carac: nomIntelligence,
+    description: [''],
+  },
+  {
+    titre: 'Intimider',
+    valeur: 0,
+    carac: nomConstitution,
+    description: [
+      'Pousser un videur à nous laisser entrerd ans une boîte très branchée (difficulté 9)',
+    ],
+  },
+  {
+    titre: 'Intuition',
+    valeur: 0,
+    carac: nomSensibilite,
+    description: [
+      'Cette capacité doit être utilisée quand le personnage veut une aide du maître de jeu.',
+      "Chaque point dans cette compétence permet d'utiliser la capacité une fois par session.",
+      "Le joueur dit qu'il utilise son intuition sur un sujet, et le maître de jeu effectue un jet de compétence secrètement, puis révèle une réponse au joueur.",
+      ' - résultat 6 ou moins : ratage cmplet : le joueur reçoit une fausse information',
+      ' - résultat 7 à 10  : aucune information',
+      ' - résultat 11 à 1415 ou plus  : une très bonne information',
     ],
   },
 ]
