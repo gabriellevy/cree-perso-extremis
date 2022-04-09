@@ -6,12 +6,46 @@ import { nomSensibilite } from './lstCaracs'
 import { nomMagie } from './lstCaracs'
 
 export const nomAnimaux = 'Animaux'
+export const nomCorpsACorps = 'Corps à corps'
+export const nomMilieuRue = 'Connaissance de la rue'
+export const nomMilieuReseau = "Réseau d'informateur"
 export const nomResistance = 'Résistance'
 export const nomSurvie = 'Survie'
+export const nomIntimider = 'Intimider'
+export const nomForce = 'Force'
+export const nomConvaincre = 'Convaincre'
+export const nomNegoce = 'Négociation, marchandage'
+export const nomInvestigation = 'Investigation'
+export const nomIntuition = 'Intuition'
+export const nomCommandement = 'Commandement'
+export const nomTir = 'Tir'
+export const nomInformatique = 'Informatique'
+export const nomFabricationTechnique = 'Fabrication technique'
+export const nomReparer = 'Réparer'
+export const nomLangues = 'Langues'
+export const nomLoi = 'Loi'
+export const nomArt = 'Art'
+export const nomAlchimie = 'Alchimie'
+export const nomArcanes = 'Arcanes'
+export const nomMilieuMonde = 'Connaissance du monde'
+export const nomPilotage = 'Pilotage'
+export const nomDetrousser = 'Détrousser'
+export const nomDiscretion = 'Discrétion'
+export const nomSIntroduire = "S'introduire"
+export const nomMilieuClerge = 'Connaissance du clergé'
+export const nomMilieuHauteSociete = 'Connaissance de la haute société'
+export const nomMiracles = 'Miracles'
+export const nomAcrobatie = 'Acrobatie'
+export const nomActeur = 'Acteur'
+export const nomMusique = 'Musique'
+export const nomScience = 'Science'
+export const nomMedecine = 'Médecine'
+export const nomArtisanat = 'Artisanat'
+export const nomEffort = 'Effort'
 
 export const lstComps = [
   {
-    titre: 'Acrobatie',
+    titre: nomAcrobatie,
     valeur: 0,
     carac: nomDexterite,
     description: [
@@ -21,7 +55,7 @@ export const lstComps = [
     ],
   },
   {
-    titre: 'Acteur',
+    titre: nomActeur,
     valeur: 0,
     carac: nomCharisme,
     description: [
@@ -31,7 +65,7 @@ export const lstComps = [
     ],
   },
   {
-    titre: 'Alchimie',
+    titre: nomAlchimie,
     valeur: 0,
     carac: nomMagie,
     description: ['cf voie des elixirs p93 CoC pour des idées.\n'],
@@ -51,7 +85,7 @@ export const lstComps = [
     ],
   },
   {
-    titre: 'Arcanes',
+    titre: nomArcanes,
     valeur: 0,
     carac: nomMagie,
     description: [
@@ -63,7 +97,7 @@ export const lstComps = [
     ],
   },
   {
-    titre: 'Art',
+    titre: nomArt,
     valeur: 0,
     carac: nomSensibilite,
     description: [
@@ -74,7 +108,7 @@ export const lstComps = [
     ],
   },
   {
-    titre: 'Artisanat',
+    titre: nomArtisanat,
     valeur: 0,
     carac: nomConstitution,
     description: [
@@ -85,7 +119,7 @@ export const lstComps = [
     ],
   },
   {
-    titre: 'Commandement',
+    titre: nomCommandement,
     valeur: 0,
     carac: nomCharisme,
     description: [
@@ -94,13 +128,13 @@ export const lstComps = [
     ],
   },
   {
-    titre: 'Convaincre',
+    titre: nomConvaincre,
     valeur: 0,
     carac: nomCharisme,
     description: [''],
   },
   {
-    titre: 'Corps à corps',
+    titre: nomCorpsACorps,
     valeur: 0,
     carac: nomConstitution,
     description: [
@@ -108,19 +142,19 @@ export const lstComps = [
     ],
   },
   {
-    titre: 'Détrousser',
+    titre: nomDetrousser,
     valeur: 0,
     carac: nomSensibilite,
     description: [''],
   },
   {
-    titre: 'Discrétion',
+    titre: nomDiscretion,
     valeur: 0,
     carac: nomDexterite,
     description: [''],
   },
   {
-    titre: 'Effort',
+    titre: nomEffort,
     valeur: 0,
     carac: nomConstitution,
     description: [
@@ -130,13 +164,13 @@ export const lstComps = [
     ],
   },
   {
-    titre: 'Fabrication technique',
+    titre: nomFabricationTechnique,
     valeur: 0,
     carac: nomIntelligence,
     description: ['Mécanique, électronique, informatique.\n'],
   },
   {
-    titre: 'Force',
+    titre: nomForce,
     valeur: 0,
     carac: nomConstitution,
     description: [
@@ -145,13 +179,13 @@ export const lstComps = [
     ],
   },
   {
-    titre: 'Informatique',
+    titre: nomInformatique,
     valeur: 0,
     carac: nomIntelligence,
     description: [''],
   },
   {
-    titre: 'Intimider',
+    titre: nomIntimider,
     valeur: 0,
     carac: nomConstitution,
     description: [
@@ -159,7 +193,7 @@ export const lstComps = [
     ],
   },
   {
-    titre: 'Intuition',
+    titre: nomIntuition,
     valeur: 0,
     carac: nomSensibilite,
     description: [
@@ -172,7 +206,7 @@ export const lstComps = [
     ],
   },
   {
-    titre: 'Investigation',
+    titre: nomInvestigation,
     valeur: 0,
     carac: nomSensibilite,
     description: [
@@ -181,7 +215,7 @@ export const lstComps = [
     ],
   },
   {
-    titre: 'Langues',
+    titre: nomLangues,
     valeur: 0,
     carac: nomIntelligence,
     description: [
@@ -195,7 +229,7 @@ export const lstComps = [
     ],
   },
   {
-    titre: 'Loi',
+    titre: nomLoi,
     valeur: 0,
     carac: nomIntelligence,
     description: [
@@ -206,13 +240,33 @@ export const lstComps = [
     ],
   },
   {
-    titre: 'Médecine',
+    titre: nomMedecine,
     valeur: 0,
     carac: nomIntelligence,
     description: [''],
   },
   {
-    titre: 'Milieu',
+    titre: nomMilieuClerge,
+    valeur: 0,
+    carac: nomSensibilite,
+    description: [''],
+  },
+  {
+    titre: nomMilieuMonde,
+    valeur: 0,
+    carac: nomSensibilite,
+    description: [
+      "Habitude de passer d'un pays à l'autre, d'une culture à l'autre. Facilité à s'y intégrer et débrouiller.\n",
+    ],
+  },
+  {
+    titre: nomMilieuHauteSociete,
+    valeur: 0,
+    carac: nomSensibilite,
+    description: [''],
+  },
+  {
+    titre: nomMilieuRue,
     valeur: 0,
     carac: nomSensibilite,
     description: [
@@ -221,7 +275,13 @@ export const lstComps = [
     ],
   },
   {
-    titre: 'Miracles',
+    titre: nomMilieuReseau,
+    valeur: 0,
+    carac: nomSensibilite,
+    description: ["Réseau d'informateur."],
+  },
+  {
+    titre: nomMiracles,
     valeur: 0,
     carac: nomMagie,
     description: [
@@ -230,7 +290,7 @@ export const lstComps = [
     ],
   },
   {
-    titre: 'Musique',
+    titre: nomMusique,
     valeur: 0,
     carac: nomDexterite,
     description: [
@@ -241,7 +301,7 @@ export const lstComps = [
     ],
   },
   {
-    titre: 'Négociation, marchandage',
+    titre: nomNegoce,
     valeur: 0,
     carac: nomCharisme,
     description: [
@@ -250,16 +310,15 @@ export const lstComps = [
     ],
   },
   {
-    titre: 'Pilotage',
+    titre: nomPilotage,
     valeur: 0,
     carac: nomDexterite,
     description: [
-      ' + 1 véhicule.\n',
       "Un pilote de niveau 1 maîtrise un véhicule auquel s'applique son bonus au jet. Au niveau 3 + 1 un véhicule maîtrise. Au niveau 6  encore +1 véhicule maîtrisé\n",
     ],
   },
   {
-    titre: 'Réparer',
+    titre: nomReparer,
     valeur: 0,
     carac: nomIntelligence,
     description: [''],
@@ -271,13 +330,15 @@ export const lstComps = [
     description: ['Résister au poison, à la maladie, aux substances toxiques'],
   },
   {
-    titre: 'Science',
+    titre: nomScience,
     valeur: 0,
     carac: nomIntelligence,
-    description: [''],
+    description: [
+      'Choisir une science principale parmi biologie, mathématiques, astronomie, physique...',
+    ],
   },
   {
-    titre: "S'introduire",
+    titre: nomSIntroduire,
     valeur: 0,
     carac: nomDexterite,
     description: [''],
@@ -289,7 +350,7 @@ export const lstComps = [
     description: ['survie en pleine nature.'],
   },
   {
-    titre: 'Tir',
+    titre: nomTir,
     valeur: 0,
     carac: nomDexterite,
     description: [''],
