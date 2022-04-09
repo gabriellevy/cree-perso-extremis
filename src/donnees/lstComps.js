@@ -5,6 +5,10 @@ import { nomIntelligence } from './lstCaracs'
 import { nomSensibilite } from './lstCaracs'
 import { nomMagie } from './lstCaracs'
 
+export const nomAnimaux = 'Animaux'
+export const nomResistance = 'Résistance'
+export const nomSurvie = 'Survie'
+
 export const lstComps = [
   {
     titre: 'Acrobatie',
@@ -33,7 +37,7 @@ export const lstComps = [
     description: ['cf voie des elixirs p93 CoC pour des idées.\n'],
   },
   {
-    titre: 'Animaux',
+    titre: nomAnimaux,
     valeur: 0,
     carac: nomSensibilite,
     description: [
@@ -261,7 +265,7 @@ export const lstComps = [
     description: [''],
   },
   {
-    titre: 'Résistance',
+    titre: nomResistance,
     valeur: 0,
     carac: nomConstitution,
     description: ['Résister au poison, à la maladie, aux substances toxiques'],
@@ -279,7 +283,7 @@ export const lstComps = [
     description: [''],
   },
   {
-    titre: 'Survie',
+    titre: nomSurvie,
     valeur: 0,
     carac: nomIntelligence,
     description: ['survie en pleine nature.'],
