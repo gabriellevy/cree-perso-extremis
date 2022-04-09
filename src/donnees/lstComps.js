@@ -216,4 +216,78 @@ export const lstComps = [
       "Exemples : réseau d'Information, clergé, haute société, rue, connaissance du monde (voyage)\n",
     ],
   },
+  {
+    titre: 'Miracles',
+    valeur: 0,
+    carac: nomMagie,
+    description: [
+      'Soin léger (difficulté 10).\n',
+      'Ressuciter un mort (difficulté 30)\n',
+    ],
+  },
+  {
+    titre: 'Musique',
+    valeur: 0,
+    carac: nomDexterite,
+    description: [
+      'Niveau 1 : +1 instrument possédé et maîtrisé.\n',
+      'Niveau 3 : +1 instrument possédé et maîtrisé.\n',
+      'Niveau 5 : +1 instrument possédé et maîtrisé.\n',
+      'Niveau 6 : +1 instrument possédé et maîtrisé.\n',
+    ],
+  },
+  {
+    titre: 'Négociation, marchandage',
+    valeur: 0,
+    carac: nomCharisme,
+    description: [
+      "Inclut la capacité à estimer la valeur d'un objet.\n",
+      'Niveau 3 ou plus : une fois apr jour peut tenter un jet de négoce contre celui du marchand. Si le joueur gagne tous les prix du marchands baissent de 10% et ses achats augmentent de 10%\n',
+    ],
+  },
+  {
+    titre: 'Pilotage',
+    valeur: 0,
+    carac: nomDexterite,
+    description: [
+      ' + 1 véhicule.\n',
+      "Un pilote de niveau 1 maîtrise un véhicule auquel s'applique son bonus au jet. Au niveau 3 + 1 un véhicule maîtrise. Au niveau 6  encore +1 véhicule maîtrisé\n",
+    ],
+  },
+  {
+    titre: 'Réparer',
+    valeur: 0,
+    carac: nomIntelligence,
+    description: [''],
+  },
+  {
+    titre: 'Résistance',
+    valeur: 0,
+    carac: nomConstitution,
+    description: ['Résister au poison, à la maladie, aux substances toxiques'],
+  },
+  {
+    titre: 'Science',
+    valeur: 0,
+    carac: nomIntelligence,
+    description: [''],
+  },
+  {
+    titre: "S'introduire",
+    valeur: 0,
+    carac: nomDexterite,
+    description: [''],
+  },
+  {
+    titre: 'Survie',
+    valeur: 0,
+    carac: nomIntelligence,
+    description: ['survie en pleine nature.'],
+  },
+  {
+    titre: 'Tir',
+    valeur: 0,
+    carac: nomDexterite,
+    description: [''],
+  },
 ]
