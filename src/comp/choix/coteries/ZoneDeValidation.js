@@ -30,6 +30,8 @@ function ZoneDeValidation({
         <div style={{ padding: '0px 15px 0px 15px' }}>
           <div className="texteStandard">
             {descriptionCourante.texte}
+            <br />
+            <a href={descriptionCourante.page}>wiki</a>
             <div className="aligneDroite">
               <button className="bouton" onClick={() => validerSelection()}>
                 Sélectionner
