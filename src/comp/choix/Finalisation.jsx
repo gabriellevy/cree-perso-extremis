@@ -10,6 +10,7 @@ import { genNomElfe } from '../../donnees/coteries/elfes/nomsElfes'
 import { genNomOrk } from '../../donnees/coteries/orks/nomsOrks'
 import { genNomTemplier } from '../../donnees/coteries/templiers/nomsTempliers'
 import { genNomZaporogue } from '../../donnees/coteries/zaporogues/nomsZaporogues'
+import { genNomAcheron } from '../../donnees/coteries/acheron/nomsAcheron'
 import { useContext } from 'react'
 import { PersoContexte } from '../../utils/contexte/perso'
 
@@ -36,6 +37,7 @@ function Finalisation() {
     else if (perso.coterie === nomCotElfes) nom = genNomElfe(perso.male)
     else if (perso.coterie === nomCotOrks) nom = genNomOrk(perso.male)
     else if (perso.coterie === nomCotTempliers) nom = genNomTemplier(perso.male)
+    else if (perso.coterie === nomCotAcheron) nom = genNomAcheron(perso.male)
     else if (perso.coterie === nomCotZaporogues)
       nom = genNomZaporogue(perso.male)
 
