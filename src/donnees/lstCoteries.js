@@ -21,6 +21,10 @@ import bg_zaporogue from './img/zaporogues/bg_lettre_zapo.jpg'
 import bg_zaporogue_b from './img/zaporogues/bg_univ_zaporogues.jpg'
 import bg_acheron from './img/acheron/bg_acheron.jpg'
 
+import { voieMagicien } from './lstVoies'
+import { voieIntellectuel } from './lstVoies'
+import { voieHommeDuMonde } from './lstVoies'
+
 export const nomCotConquistadors = 'Conquistadors'
 export const nomCotElfes = 'Elfes'
 export const nomCotOrks = 'Orks'
@@ -32,6 +36,7 @@ export const nomCotAcheron = 'Achéron'
 export const lstCoteries = [
   {
     titre: nomCotAcheron,
+    voies: [voieHommeDuMonde, voieIntellectuel, voieMagicien],
     affiche: true,
     portrait: portrait_acheron,
     fonds: [bg_acheron],
@@ -41,6 +46,7 @@ export const lstCoteries = [
   },
   {
     titre: nomCotConquistadors,
+    voies: [],
     affiche: true,
     portrait: portrait_conquistador,
     fonds: [bg_conquistador, bg_conquistador_b],
@@ -50,6 +56,7 @@ export const lstCoteries = [
   },
   {
     titre: nomCotElfes,
+    voies: [],
     affiche: true,
     portrait: portrait_elfe,
     fonds: [bg_elfe, bg_elfe_b],
@@ -59,6 +66,7 @@ export const lstCoteries = [
   },
   {
     titre: nomCotOrks,
+    voies: [],
     affiche: true,
     portrait: portrait_ork,
     fonds: [bg_ork, bg_ork_b],
@@ -68,6 +76,7 @@ export const lstCoteries = [
   },
   {
     titre: nomCotTempliers,
+    voies: [],
     affiche: true,
     portrait: portrait_templier,
     fonds: [bg_templier, bg_templier_b, bg_templier_c],
@@ -77,6 +86,7 @@ export const lstCoteries = [
   },
   {
     titre: nomCotTranshumanistes,
+    voies: [],
     affiche: true,
     portrait: portrait_transhumaniste,
     fonds: [bg_transhumaniste, bg_transhumaniste_b],
@@ -86,6 +96,7 @@ export const lstCoteries = [
   },
   {
     titre: nomCotZaporogues,
+    voies: [],
     affiche: true,
     portrait: portrait_zaporogue,
     fonds: [bg_zaporogue, bg_zaporogue_b],

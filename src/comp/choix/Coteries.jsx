@@ -15,18 +15,22 @@ function Coteries({ phaseChoix, majPhaseChoix }) {
     <div>
       <ul className="lstCoteries_ul">
         {lstCoteries.map(
-          ({ titre, portrait, fonds, description, page, affiche }) => (
-            <Coterie
-              key={titre}
-              titre={titre}
-              portrait={portrait}
-              fonds={fonds}
-              description={description}
-              descriptionCourante={descriptionCourante}
-              majDescriptionCourante={majDescriptionCourante}
-              page={page}
-            />
-          )
+          ({ titre, portrait, fonds, description, page, affiche, voies }) =>
+            affiche ? (
+              <Coterie
+                key={titre}
+                titre={titre}
+                portrait={portrait}
+                fonds={fonds}
+                description={description}
+                descriptionCourante={descriptionCourante}
+                majDescriptionCourante={majDescriptionCourante}
+                page={page}
+                voies={voies}
+              />
+            ) : (
+              ''
+            )
         )}
       </ul>
       <ZoneDeValidation

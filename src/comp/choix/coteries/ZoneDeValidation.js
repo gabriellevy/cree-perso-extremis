@@ -31,6 +31,18 @@ function ZoneDeValidation({
           <div className="texteStandard">
             {descriptionCourante.texte}
             <br />
+            <br />
+            {descriptionCourante.voies.length !== 0 ? (
+              <div>
+                <b>Voies :</b>
+                {descriptionCourante.voies.map((voieStr) => (
+                  <span> {voieStr},</span>
+                ))}
+              </div>
+            ) : (
+              'voies non définies'
+            )}
+            <br />
             <a href={descriptionCourante.page}>wiki</a>
             <div className="aligneDroite">
               <button className="bouton" onClick={() => validerSelection()}>

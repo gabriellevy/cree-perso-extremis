@@ -11,6 +11,7 @@ function Coterie({
   descriptionCourante,
   majDescriptionCourante,
   page,
+  voies,
 }) {
   const { perso, setPerso } = useContext(PersoContexte)
 
@@ -21,6 +22,7 @@ function Coterie({
       texte: description,
       titre: titre,
       page: page,
+      voies: voies,
     })
 
     var changementsAuPerso = {

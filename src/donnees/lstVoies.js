@@ -36,6 +36,10 @@ import { nomMedecine } from './lstComps'
 import { nomArtisanat } from './lstComps'
 import { nomEffort } from './lstComps'
 
+export const voieMagicien = 'Magicien'
+export const voieIntellectuel = 'Intellectuel'
+export const voieHommeDuMonde = 'Homme du monde'
+
 export const lstVoies = [
   {
     titre: 'Travailleur',
@@ -63,7 +67,7 @@ export const lstVoies = [
     ],
   },
   {
-    titre: 'Homme du monde',
+    titre: voieHommeDuMonde,
     valeur: 0,
     richesse: 3,
     competences: [nomMilieuHauteSociete],
@@ -118,14 +122,14 @@ export const lstVoies = [
     description: ['Inclut les détextives et enquêteurs de toute sorte.\n'],
   },
   {
-    titre: 'Intellectuel',
+    titre: voieIntellectuel,
     valeur: 0,
     richesse: 1,
     competences: [nomLangues, nomLoi, nomArt],
     description: [''],
   },
   {
-    titre: 'Magicien',
+    titre: voieMagicien,
     valeur: 0,
     richesse: 0,
     competences: [nomArcanes, nomAlchimie],
