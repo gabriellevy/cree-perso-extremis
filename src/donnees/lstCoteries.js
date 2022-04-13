@@ -21,9 +21,17 @@ import bg_zaporogue from './img/zaporogues/bg_lettre_zapo.jpg'
 import bg_zaporogue_b from './img/zaporogues/bg_univ_zaporogues.jpg'
 import bg_acheron from './img/acheron/bg_acheron.jpg'
 
+export const nomCotConquistadors = 'Conquistadors'
+export const nomCotElfes = 'Elfes'
+export const nomCotOrks = 'Orks'
+export const nomCotZaporogues = 'Zaporogues'
+export const nomCotTranshumanistes = 'Transhumanistes'
+export const nomCotTempliers = 'Templiers'
+export const nomCotAcheron = 'Achéron'
+
 export const lstCoteries = [
   {
-    titre: 'Achéron',
+    titre: nomCotAcheron,
     affiche: true,
     portrait: portrait_acheron,
     fonds: [bg_acheron],
@@ -32,7 +40,7 @@ export const lstCoteries = [
       "La coterie d'Achéron a un principe d'une terrifiante clarté : la vie est surfaite. Il est temps que l'humanité dépasse ce stade et entre dans la non vie éternelle derrière le bienveillant guide qu'est la magie des ténèbres. Tout le fonctionnement d'Achéron se base sur la magie des ténèbres. Ils sont probablement la coterie qui a le plus rapproché l'utilisation de la magie d'une science fiable. Il faut dire que c'est d'elle que dépend ce qui leur tient le plus à cœur : l'immortalité.",
   },
   {
-    titre: 'Conquistadors',
+    titre: nomCotConquistadors,
     affiche: true,
     portrait: portrait_conquistador,
     fonds: [bg_conquistador, bg_conquistador_b],
@@ -41,7 +49,7 @@ export const lstCoteries = [
       "Les conquistadors sont une coterie particulièrement militarisée et aventureuse. Ils vivent pour les expéditions lointaines, la conquête, la piraterie, et la gloire qui va avec. Ils parcourent le monde dans des navires en petites troupes d'élite très bien équipées et très motivées appelées Cuadrilla. Ils ne reviennent à leur base de Saint Malo que chargés d'or ou après avoir fondé une colonie prometteuse.",
   },
   {
-    titre: 'Elfes',
+    titre: nomCotElfes,
     affiche: true,
     portrait: portrait_elfe,
     fonds: [bg_elfe, bg_elfe_b],
@@ -50,7 +58,7 @@ export const lstCoteries = [
       "Les elfes  ont pour but principal de faire atteindre son potentiel maximum à tout homme qui les rejoindrait. Cette perfection étant pour eux essentielle au niveau de la beauté, de la sensibilité, de l'agrément et de la morale. Ils ont développé toute une philosophie et une magie orientée vers ce but et les ont poussées à un tel niveau qu'aucun elfe ne reste longtemps laid ou désagréable.",
   },
   {
-    titre: 'Orks',
+    titre: nomCotOrks,
     affiche: true,
     portrait: portrait_ork,
     fonds: [bg_ork, bg_ork_b],
@@ -59,7 +67,7 @@ export const lstCoteries = [
       'Les orks sont des mutants costauds et bricoleurs qui embrassent avant tout une vie simple et brutale, sans prise de tête.',
   },
   {
-    titre: 'Templiers',
+    titre: nomCotTempliers,
     affiche: true,
     portrait: portrait_templier,
     fonds: [bg_templier, bg_templier_b, bg_templier_c],
@@ -68,7 +76,7 @@ export const lstCoteries = [
       "Basée sur la foi inébranlable en Dieu et sur l'honneur guerrier de l'aristocratie franque. Les templiers sont avant tout des guerriers saints qui suivent un code de l'honneur très strict.",
   },
   {
-    titre: 'Transhumanistes',
+    titre: nomCotTranshumanistes,
     affiche: true,
     portrait: portrait_transhumaniste,
     fonds: [bg_transhumaniste, bg_transhumaniste_b],
@@ -77,7 +85,7 @@ export const lstCoteries = [
       "Les transhumanistes sont la coterie qui embrasse le plus la technologie moderne surtout dans tout ce qui s'applique à la transformation de l'humain. Ils s'obsèdent en particulier pour la cybernétique et les modifications génétiques et ils sont très loin en avance sur toutes les autres coteries à ce sujet. Comme leur but ultime est d'améliorer l'homme de toutes les manières possibles ils ne sont pas avares de leurs inventions et les proposent à tous ceux qui les souhaitent. Au juste prix bien sûr car ce sont des commerçants féroces. C'est une nécessité car leurs activités ont l'énorme défaut d'être dévoreuses d'énergie, qui est une ressource rare et chère sur Extremis.",
   },
   {
-    titre: 'Zaporogues',
+    titre: nomCotZaporogues,
     affiche: true,
     portrait: portrait_zaporogue,
     fonds: [bg_zaporogue, bg_zaporogue_b],

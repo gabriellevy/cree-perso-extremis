@@ -177,12 +177,13 @@ import portrait_templier_50_plus from './img/templiers/portraits/50+.jpg'
 import portrait_templier_50_plus_b from './img/templiers/portraits/50+_b.jpg'
 import portrait_templier_60_plus from './img/templiers/portraits/60+.jpg'
 
-export const nomCotConquistadors = 'Conquistadors'
-export const nomCotElfes = 'Elfes'
-export const nomCotOrks = 'Orks'
-export const nomCotZaporogues = 'Zaporogues'
-export const nomCotTranshumanistes = 'Transhumanistes'
-export const nomCotTempliers = 'Templiers'
+import { nomCotTempliers } from './lstCoteries'
+import { nomCotConquistadors } from './lstCoteries'
+import { nomCotElfes } from './lstCoteries'
+import { nomCotOrks } from './lstCoteries'
+import { nomCotZaporogues } from './lstCoteries'
+import { nomCotTranshumanistes } from './lstCoteries'
+import { nomCotAcheron } from './lstCoteries'
 
 export const lstPortraits = [
   {
