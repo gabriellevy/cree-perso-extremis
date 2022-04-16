@@ -7,6 +7,7 @@ import portrait_zaporogue from './img/zaporogues/portraits/20-45.jpg'
 import portrait_acheron from './img/acheron/portraits/f20_50.jpg'
 import portrait_saabi from './img/saabi/portraits/f16_35.jpg'
 import portrait_cathare from './img/cathares/portraits/28_48.jpg'
+import portrait_celte from './img/celtes/portraits/20_45.jpg'
 
 import bg_conquistador from './img/conquistadors/bg_conquistadors_priant.jpg'
 import bg_conquistador_b from './img/quartiers/bg_saint_malo.jpg'
@@ -31,6 +32,7 @@ import { voieMalandrin } from './lstVoies'
 import { voieMarchand } from './lstVoies'
 import { voieTravailleur } from './lstVoies'
 import { voiePretre } from './lstVoies'
+import { voieBrute } from './lstVoies'
 
 export const nomCotConquistadors = 'Conquistadors'
 export const nomCotElfes = 'Elfes'
@@ -41,12 +43,22 @@ export const nomCotTempliers = 'Templiers'
 export const nomCotAcheron = 'Achéron'
 export const nomCotSaabi = 'Saabi'
 export const nomCotCathares = 'Cathares'
+export const nomCotCelte = 'Celtes'
 
 export const lstCoteries = [
   {
+    titre: nomCotCelte,
+    voies: [voieTravailleur, voieAventurier, voieBrute],
+    affiche: false,
+    portrait: portrait_celte,
+    fonds: [],
+    page: 'https://www.notion.so/wiki-extremis/Celtes-3e78fbeedea949e899c615a7f7f7cdf0',
+    description: 'Pas fait.',
+  },
+  {
     titre: nomCotCathares,
     voies: [voieTravailleur, voiePretre],
-    affiche: true,
+    affiche: false,
     portrait: portrait_cathare,
     fonds: [],
     page: 'https://www.notion.so/wiki-extremis/Cathares-5f56f04db3a5463cb274bc8c53054ce2',

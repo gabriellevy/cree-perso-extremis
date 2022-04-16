@@ -44,6 +44,7 @@ export const voieMalandrin = 'Malandrin'
 export const voieMarchand = 'Marchand'
 export const voieTravailleur = 'Travailleur'
 export const voiePretre = 'Prêtre'
+export const voieBrute = 'Brute'
 
 export const lstVoies = [
   {
@@ -111,7 +112,7 @@ export const lstVoies = [
     description: [''],
   },
   {
-    titre: 'Brute',
+    titre: voieBrute,
     valeur: 0,
     richesse: 0,
     competences: [nomMilieuRue, nomCorpsACorps, nomIntimider, nomForce],
