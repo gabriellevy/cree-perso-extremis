@@ -5,6 +5,7 @@ import portrait_templier from './img/templiers/portraits/20-40.jpg'
 import portrait_transhumaniste from './img/transhumanistes/portraits/portrait15-30_2.jpg'
 import portrait_zaporogue from './img/zaporogues/portraits/20-45.jpg'
 import portrait_acheron from './img/acheron/portraits/f20_50.jpg'
+import portrait_saabi from './img/saabi/portraits/f16_35.jpg'
 
 import bg_conquistador from './img/conquistadors/bg_conquistadors_priant.jpg'
 import bg_conquistador_b from './img/quartiers/bg_saint_malo.jpg'
@@ -24,6 +25,9 @@ import bg_acheron from './img/acheron/bg_acheron.jpg'
 import { voieMagicien } from './lstVoies'
 import { voieIntellectuel } from './lstVoies'
 import { voieHommeDuMonde } from './lstVoies'
+import { voieAventurier } from './lstVoies'
+import { voieMalandrin } from './lstVoies'
+import { voieMarchand } from './lstVoies'
 
 export const nomCotConquistadors = 'Conquistadors'
 export const nomCotElfes = 'Elfes'
@@ -32,8 +36,18 @@ export const nomCotZaporogues = 'Zaporogues'
 export const nomCotTranshumanistes = 'Transhumanistes'
 export const nomCotTempliers = 'Templiers'
 export const nomCotAcheron = 'Achéron'
+export const nomCotSaabi = 'Saabi'
 
 export const lstCoteries = [
+  {
+    titre: nomCotSaabi,
+    voies: [voieMarchand, voieHommeDuMonde, voieAventurier, voieMalandrin],
+    affiche: false,
+    portrait: portrait_saabi,
+    fonds: [],
+    page: 'https://www.notion.so/wiki-extremis/Saabi-fbbc9c0bf8d94adbb7757963a65b2a92',
+    description: 'Pas fait',
+  },
   {
     titre: nomCotAcheron,
     voies: [voieHommeDuMonde, voieIntellectuel, voieMagicien],

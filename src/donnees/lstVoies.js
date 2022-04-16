@@ -39,8 +39,34 @@ import { nomEffort } from './lstComps'
 export const voieMagicien = 'Magicien'
 export const voieIntellectuel = 'Intellectuel'
 export const voieHommeDuMonde = 'Homme du monde'
+export const voieAventurier = 'Aventurier'
+export const voieMalandrin = 'Malandrin'
+export const voieMarchand = 'Marchand'
 
 export const lstVoies = [
+  {
+    titre: voieMarchand,
+    valeur: 0,
+    richesse: 2,
+    competences: [nomConvaincre, nomNegoce],
+    description: [''],
+  },
+  {
+    titre: voieMalandrin,
+    valeur: 0,
+    richesse: 0,
+    competences: [nomDetrousser, nomDiscretion, nomSIntroduire],
+    description: [''],
+  },
+  {
+    titre: voieAventurier,
+    valeur: 0,
+    richesse: 0,
+    competences: [nomSurvie, nomAnimaux, nomResistance],
+    description: [
+      'Baroudeur coriace, nomade, habitué aux environnements rudes et à la nature sauvage.\n',
+    ],
+  },
   {
     titre: 'Travailleur',
     valeur: 0,
@@ -83,22 +109,6 @@ export const lstVoies = [
     description: [''],
   },
   {
-    titre: 'Malandrin',
-    valeur: 0,
-    richesse: 0,
-    competences: [nomDetrousser, nomDiscretion, nomSIntroduire],
-    description: [''],
-  },
-  {
-    titre: 'Aventurier',
-    valeur: 0,
-    richesse: 0,
-    competences: [nomSurvie, nomAnimaux, nomResistance],
-    description: [
-      'Baroudeur coriace, nomade, habitué aux environnements rudes et à la nature sauvage.\n',
-    ],
-  },
-  {
     titre: 'Brute',
     valeur: 0,
     richesse: 0,
@@ -133,13 +143,6 @@ export const lstVoies = [
     valeur: 0,
     richesse: 0,
     competences: [nomArcanes, nomAlchimie],
-    description: [''],
-  },
-  {
-    titre: 'Marchand',
-    valeur: 0,
-    richesse: 2,
-    competences: [nomConvaincre, nomNegoce],
     description: [''],
   },
   {
