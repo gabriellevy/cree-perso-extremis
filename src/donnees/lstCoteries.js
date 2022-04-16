@@ -6,6 +6,7 @@ import portrait_transhumaniste from './img/transhumanistes/portraits/portrait15-
 import portrait_zaporogue from './img/zaporogues/portraits/20-45.jpg'
 import portrait_acheron from './img/acheron/portraits/f20_50.jpg'
 import portrait_saabi from './img/saabi/portraits/f16_35.jpg'
+import portrait_cathare from './img/cathares/portraits/28_48.jpg'
 
 import bg_conquistador from './img/conquistadors/bg_conquistadors_priant.jpg'
 import bg_conquistador_b from './img/quartiers/bg_saint_malo.jpg'
@@ -28,6 +29,8 @@ import { voieHommeDuMonde } from './lstVoies'
 import { voieAventurier } from './lstVoies'
 import { voieMalandrin } from './lstVoies'
 import { voieMarchand } from './lstVoies'
+import { voieTravailleur } from './lstVoies'
+import { voiePretre } from './lstVoies'
 
 export const nomCotConquistadors = 'Conquistadors'
 export const nomCotElfes = 'Elfes'
@@ -37,8 +40,18 @@ export const nomCotTranshumanistes = 'Transhumanistes'
 export const nomCotTempliers = 'Templiers'
 export const nomCotAcheron = 'Achéron'
 export const nomCotSaabi = 'Saabi'
+export const nomCotCathares = 'Cathares'
 
 export const lstCoteries = [
+  {
+    titre: nomCotCathares,
+    voies: [voieTravailleur, voiePretre],
+    affiche: true,
+    portrait: portrait_cathare,
+    fonds: [],
+    page: 'https://www.notion.so/wiki-extremis/Cathares-5f56f04db3a5463cb274bc8c53054ce2',
+    description: 'Pas fait. Christianisme obligatoire.',
+  },
   {
     titre: nomCotSaabi,
     voies: [voieMarchand, voieHommeDuMonde, voieAventurier, voieMalandrin],

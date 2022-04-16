@@ -7,7 +7,7 @@ import { PersoContexte } from '../utils/contexte/perso'
 
 function App() {
   const { perso } = useContext(PersoContexte)
-  const [phaseChoix, majPhaseChoix] = useState(2)
+  const [phaseChoix, majPhaseChoix] = useState(1)
 
   useEffect(() => {
     document.title = 'Créateur de personnage Extremis'

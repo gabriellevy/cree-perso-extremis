@@ -6,15 +6,14 @@ function ZoneDeChoix({ phaseChoix, majPhaseChoix }) {
   if (phaseChoix === 1) {
     return (
       <div>
-        <Caracs phaseChoix={phaseChoix} majPhaseChoix={majPhaseChoix} />
+        <Coteries phaseChoix={phaseChoix} majPhaseChoix={majPhaseChoix} />
       </div>
     )
   }
-
   if (phaseChoix === 2) {
     return (
       <div>
-        <Coteries phaseChoix={phaseChoix} majPhaseChoix={majPhaseChoix} />
+        <Caracs phaseChoix={phaseChoix} majPhaseChoix={majPhaseChoix} />
       </div>
     )
   }

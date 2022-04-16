@@ -42,6 +42,8 @@ export const voieHommeDuMonde = 'Homme du monde'
 export const voieAventurier = 'Aventurier'
 export const voieMalandrin = 'Malandrin'
 export const voieMarchand = 'Marchand'
+export const voieTravailleur = 'Travailleur'
+export const voiePretre = 'Prêtre'
 
 export const lstVoies = [
   {
@@ -68,7 +70,7 @@ export const lstVoies = [
     ],
   },
   {
-    titre: 'Travailleur',
+    titre: voieTravailleur,
     valeur: 0,
     richesse: 1,
     competences: [nomArtisanat, nomEffort],
@@ -102,7 +104,7 @@ export const lstVoies = [
     ],
   },
   {
-    titre: 'Prêtre',
+    titre: voiePretre,
     valeur: 0,
     richesse: 0,
     competences: [nomMiracles, nomMilieuClerge],
