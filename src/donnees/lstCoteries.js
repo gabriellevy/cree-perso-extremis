@@ -32,6 +32,8 @@ import { nomIntelligence } from './lstCaracs'
 import { nomSensibilite } from './lstCaracs'
 import { nomMagie } from './lstCaracs'
 
+import { nomAnimaux } from './lstComps'
+
 import { voieMagicien } from './lstVoies'
 import { voieIntellectuel } from './lstVoies'
 import { voieHommeDuMonde } from './lstVoies'
@@ -68,6 +70,7 @@ export const lstCoteries = [
       { carac: nomSensibilite, val: 1 },
       { carac: nomCharisme, val: 1 },
     ],
+    modifs_comps: [{ comp: nomAnimaux, val: 1 }],
     fonds: [],
     page: 'https://www.notion.so/wiki-extremis/Coterie-des-chats-d7ba362bee6644399d85bbd2c6e9061e',
     description: 'Pas fait.',

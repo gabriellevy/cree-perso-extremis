@@ -3,13 +3,7 @@ import { useContext } from 'react'
 import { PersoContexte } from '../../../utils/contexte/perso'
 
 import { getCaracObjPropertyName } from '../../../donnees/lstCaracs'
-
-import { nomDexterite } from '../../../donnees/lstCaracs'
-import { nomConstitution } from '../../../donnees/lstCaracs'
-import { nomCharisme } from '../../../donnees/lstCaracs'
-import { nomIntelligence } from '../../../donnees/lstCaracs'
-import { nomSensibilite } from '../../../donnees/lstCaracs'
-import { nomMagie } from '../../../donnees/lstCaracs'
+import { getCompObjPropertyName } from '../../../donnees/lstComps'
 
 function ZoneDeValidation({
   descriptionCourante,
@@ -22,6 +16,13 @@ function ZoneDeValidation({
   function validerSelection() {
     var changementsAuPerso = {
       coterie: descriptionCourante.titre,
+    }
+
+    if (descriptionCourante.modifs_comps !== undefined) {
+      descriptionCourante.modifs_comps.forEach((elt) => {
+        const compPropertyName = getCompObjPropertyName(elt.comp)
+        changementsAuPerso[compPropertyName] = perso[compPropertyName] + elt.val
+      })
     }
 
     if (descriptionCourante.modifs_caracs !== undefined) {
@@ -72,6 +73,21 @@ function ZoneDeValidation({
                     {' '}
                     {modif_carac.val > 0 ? '+' : ''}
                     {modif_carac.val} {modif_carac.carac},
+                  </span>
+                ))}
+              </div>
+            ) : (
+              ''
+            )}
+            <br />
+            {descriptionCourante.modifs_comps !== undefined ? (
+              <div>
+                <b>Effets sur les compétences : </b>
+                {descriptionCourante.modifs_comps.map((modif_comp) => (
+                  <span key={modif_comp.comp}>
+                    {' '}
+                    {modif_comp.val > 0 ? '+' : ''}
+                    {modif_comp.val} {modif_comp.comp},
                   </span>
                 ))}
               </div>

@@ -13,6 +13,7 @@ function Coterie({
   page,
   voies,
   modifs_caracs,
+  modifs_comps,
   capacite_magique,
 }) {
   const { perso, setPerso } = useContext(PersoContexte)
@@ -26,6 +27,7 @@ function Coterie({
       page: page,
       voies: voies,
       modifs_caracs: modifs_caracs,
+      modifs_comps: modifs_comps,
       capacite_magique: capacite_magique,
     })
 

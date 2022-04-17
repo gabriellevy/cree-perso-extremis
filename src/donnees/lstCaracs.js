@@ -16,6 +16,7 @@ export function getCaracObjPropertyName(nomCaracStr) {
   if (nomCaracStr === nomIntelligence) return 'intelligence'
   if (nomCaracStr === nomSensibilite) return 'sensibilite'
   if (nomCaracStr === nomMagie) return 'magie'
+  return 'carac inconnue'
 }
 
 export const lstCaracsExt = [

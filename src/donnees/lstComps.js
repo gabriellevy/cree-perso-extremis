@@ -43,6 +43,52 @@ export const nomMedecine = 'Médecine'
 export const nomArtisanat = 'Artisanat'
 export const nomEffort = 'Effort'
 
+/**
+ * @param {*} nomCompStr : la chaîne de caractère décrivant le champs compétence à l'utilisateur
+ * @returns identifiant à utiliser pour accéder aux champs compétence de l'objet personnage via l'opérateur []
+ */
+export function getCompObjPropertyName(nomCompStr) {
+  if (nomCompStr === nomAnimaux) return 'animaux'
+  if (nomCompStr === nomCorpsACorps) return 'corps_a_corps'
+  if (nomCompStr === nomMilieuRue) return 'connaissance_de_la_rue'
+  if (nomCompStr === nomMilieuReseau) return 'reseau_d_informateur'
+  if (nomCompStr === nomResistance) return 'resistance'
+  if (nomCompStr === nomSurvie) return 'survie'
+  if (nomCompStr === nomIntimider) return 'intimider'
+  if (nomCompStr === nomForce) return 'force'
+  if (nomCompStr === nomConvaincre) return 'convaincre'
+  if (nomCompStr === nomNegoce) return 'negociation_marchandage'
+  if (nomCompStr === nomInvestigation) return 'investigation'
+  if (nomCompStr === nomIntuition) return 'intuition'
+  if (nomCompStr === nomCommandement) return 'commandement'
+  if (nomCompStr === nomTir) return 'tir'
+  if (nomCompStr === nomInformatique) return 'informatique'
+  if (nomCompStr === nomFabricationTechnique) return 'fabrication_technique'
+  if (nomCompStr === nomReparer) return 'reparer'
+  if (nomCompStr === nomLangues) return 'langues'
+  if (nomCompStr === nomLoi) return 'loi'
+  if (nomCompStr === nomArt) return 'art'
+  if (nomCompStr === nomAlchimie) return 'alchimie'
+  if (nomCompStr === nomArcanes) return 'arcanes'
+  if (nomCompStr === nomMilieuMonde) return 'connaissance_du_monde'
+  if (nomCompStr === nomPilotage) return 'pilotage'
+  if (nomCompStr === nomDetrousser) return 'detrousser'
+  if (nomCompStr === nomDiscretion) return 'discrétion'
+  if (nomCompStr === nomSIntroduire) return 's_introduire'
+  if (nomCompStr === nomMilieuClerge) return 'connaissance_du_clerge'
+  if (nomCompStr === nomMilieuHauteSociete)
+    return 'connaissance_de_la_haute_societe'
+  if (nomCompStr === nomMiracles) return 'miracles'
+  if (nomCompStr === nomAcrobatie) return 'acrobatie'
+  if (nomCompStr === nomActeur) return 'acteur'
+  if (nomCompStr === nomMusique) return 'musique'
+  if (nomCompStr === nomScience) return 'science'
+  if (nomCompStr === nomMedecine) return 'medecine'
+  if (nomCompStr === nomArtisanat) return 'artisanat'
+  if (nomCompStr === nomEffort) return 'effort'
+  return 'compétence inconnue'
+}
+
 export const lstComps = [
   {
     titre: nomAcrobatie,

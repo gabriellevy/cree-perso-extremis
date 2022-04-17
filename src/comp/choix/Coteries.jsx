@@ -24,6 +24,7 @@ function Coteries({ phaseChoix, majPhaseChoix }) {
             affiche,
             voies,
             modifs_caracs,
+            modifs_comps,
             capacite_magique,
           }) =>
             affiche ? (
@@ -38,6 +39,7 @@ function Coteries({ phaseChoix, majPhaseChoix }) {
                 page={page}
                 voies={voies}
                 modifs_caracs={modifs_caracs}
+                modifs_comps={modifs_comps}
                 capacite_magique={capacite_magique}
               />
             ) : (

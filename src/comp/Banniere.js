@@ -3,7 +3,7 @@ import Portrait from './Portrait'
 import { useContext } from 'react'
 import { PersoContexte } from '../utils/contexte/perso'
 import { getRandomInt } from '../utils/rand'
-import { lstComps } from '../donnees/lstComps'
+import { getCompObjPropertyName, lstComps } from '../donnees/lstComps'
 import { render } from '@testing-library/react'
 
 function Banniere() {
@@ -69,15 +69,17 @@ function Banniere() {
                 <td>
                   <div className="descriptionPerso">
                     <b>Compétences : </b>
-                    {lstComps.map(({ titre, valeur, description }) =>
-                      valeur > 0 ? (
-                        <span title={description}>
+                    {lstComps.map(({ titre, description }) => {
+                      const idComp = getCompObjPropertyName(titre)
+                      const valeur = perso[idComp]
+                      return valeur > 0 ? (
+                        <span key={titre} title={description}>
                           {titre} ({valeur}),
                         </span>
                       ) : (
                         ''
                       )
-                    )}
+                    })}
                   </div>
                 </td>
               </tr>
