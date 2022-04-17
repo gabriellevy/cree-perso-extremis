@@ -99,12 +99,12 @@ function Caracs({ phaseChoix, majPhaseChoix }) {
 
   function validerCaracs() {
     var changementsAuPerso = {
-      dexterite: lstCaracs[0].valeur,
-      constitution: lstCaracs[1].valeur,
-      charisme: lstCaracs[2].valeur,
-      intelligence: lstCaracs[3].valeur,
-      sensibilite: lstCaracs[4].valeur,
-      magie: lstCaracs[5].valeur,
+      dexterite: perso.dexterite + lstCaracs[0].valeur,
+      constitution: perso.constitution + lstCaracs[1].valeur,
+      charisme: perso.charisme + lstCaracs[2].valeur,
+      intelligence: perso.intelligence + lstCaracs[3].valeur,
+      sensibilite: perso.sensibilite + lstCaracs[4].valeur,
+      magie: perso.magie + lstCaracs[5].valeur,
     }
     var persoFinal = { ...perso, ...changementsAuPerso }
     setPerso(persoFinal)
@@ -113,7 +113,7 @@ function Caracs({ phaseChoix, majPhaseChoix }) {
   }
 
   return (
-    <div>
+    <div className="texteStandard">
       <ul>
         {lstCaracs.map(({ titre, valeur, description }) => (
           <li key={titre}>

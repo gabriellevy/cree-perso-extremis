@@ -8,6 +8,7 @@ import portrait_acheron from './img/acheron/portraits/f20_50.jpg'
 import portrait_saabi from './img/saabi/portraits/f16_35.jpg'
 import portrait_cathare from './img/cathares/portraits/28_48.jpg'
 import portrait_celte from './img/celtes/portraits/20_45.jpg'
+import portrait_chat from './img/chats/portraits/chat.jpg'
 
 import bg_conquistador from './img/conquistadors/bg_conquistadors_priant.jpg'
 import bg_conquistador_b from './img/quartiers/bg_saint_malo.jpg'
@@ -24,6 +25,13 @@ import bg_zaporogue from './img/zaporogues/bg_lettre_zapo.jpg'
 import bg_zaporogue_b from './img/zaporogues/bg_univ_zaporogues.jpg'
 import bg_acheron from './img/acheron/bg_acheron.jpg'
 
+import { nomDexterite } from './lstCaracs'
+import { nomConstitution } from './lstCaracs'
+import { nomCharisme } from './lstCaracs'
+import { nomIntelligence } from './lstCaracs'
+import { nomSensibilite } from './lstCaracs'
+import { nomMagie } from './lstCaracs'
+
 import { voieMagicien } from './lstVoies'
 import { voieIntellectuel } from './lstVoies'
 import { voieHommeDuMonde } from './lstVoies'
@@ -33,6 +41,8 @@ import { voieMarchand } from './lstVoies'
 import { voieTravailleur } from './lstVoies'
 import { voiePretre } from './lstVoies'
 import { voieBrute } from './lstVoies'
+import { voieSaltimbanque } from './lstVoies'
+import { voieEspion } from './lstVoies'
 
 export const nomCotConquistadors = 'Conquistadors'
 export const nomCotElfes = 'Elfes'
@@ -44,8 +54,26 @@ export const nomCotAcheron = 'Achéron'
 export const nomCotSaabi = 'Saabi'
 export const nomCotCathares = 'Cathares'
 export const nomCotCelte = 'Celtes'
+export const nomCotChats = 'Chats'
 
 export const lstCoteries = [
+  {
+    titre: nomCotChats,
+    voies: [voieMalandrin, voieSaltimbanque, voieEspion],
+    affiche: true,
+    portrait: portrait_chat,
+    modifs_caracs: [
+      { carac: nomConstitution, val: -3 },
+      { carac: nomDexterite, val: 1 },
+      { carac: nomSensibilite, val: 1 },
+      { carac: nomCharisme, val: 1 },
+    ],
+    fonds: [],
+    page: 'https://www.notion.so/wiki-extremis/Coterie-des-chats-d7ba362bee6644399d85bbd2c6e9061e',
+    description: 'Pas fait.',
+    capacite_magique:
+      "peut dépenser un point de magie pour détecter tous les dangers dans un rayon de 10 mètres et jusqu'à 10 minutes dans le futur.",
+  },
   {
     titre: nomCotCelte,
     voies: [voieTravailleur, voieAventurier, voieBrute],

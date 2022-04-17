@@ -45,6 +45,8 @@ export const voieMarchand = 'Marchand'
 export const voieTravailleur = 'Travailleur'
 export const voiePretre = 'Prêtre'
 export const voieBrute = 'Brute'
+export const voieEspion = 'Espion'
+export const voieSaltimbanque = 'Saltimbanque'
 
 export const lstVoies = [
   {
@@ -87,7 +89,7 @@ export const lstVoies = [
     ],
   },
   {
-    titre: 'Saltimbanque',
+    titre: voieSaltimbanque,
     valeur: 0,
     richesse: 0,
     competences: [nomAcrobatie, nomActeur, nomMusique],
@@ -121,7 +123,7 @@ export const lstVoies = [
     ],
   },
   {
-    titre: 'Espion',
+    titre: voieEspion,
     valeur: 0,
     richesse: 0,
     competences: [nomIntuition, nomInvestigation, nomMilieuReseau],
