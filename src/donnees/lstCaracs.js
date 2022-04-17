@@ -5,6 +5,19 @@ export const nomIntelligence = 'Intelligence'
 export const nomSensibilite = 'Sensibilité'
 export const nomMagie = 'Magie'
 
+/**
+ * @param {*} nomCaracStr : la chaîne de caractère décrivant le champs carac à l'utilisateur
+ * @returns identifiant à utiliser pour accéder aux champs carac de l'objet personnage via l'opérateur []
+ */
+export function getCaracObjPropertyName(nomCaracStr) {
+  if (nomCaracStr === nomDexterite) return 'dexterite'
+  if (nomCaracStr === nomConstitution) return 'constitution'
+  if (nomCaracStr === nomCharisme) return 'charisme'
+  if (nomCaracStr === nomIntelligence) return 'intelligence'
+  if (nomCaracStr === nomSensibilite) return 'sensibilite'
+  if (nomCaracStr === nomMagie) return 'magie'
+}
+
 export const lstCaracsExt = [
   {
     titre: nomDexterite,

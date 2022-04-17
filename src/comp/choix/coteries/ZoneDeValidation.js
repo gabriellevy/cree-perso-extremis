@@ -2,6 +2,8 @@ import '../../../styles/App.css'
 import { useContext } from 'react'
 import { PersoContexte } from '../../../utils/contexte/perso'
 
+import { getCaracObjPropertyName } from '../../../donnees/lstCaracs'
+
 import { nomDexterite } from '../../../donnees/lstCaracs'
 import { nomConstitution } from '../../../donnees/lstCaracs'
 import { nomCharisme } from '../../../donnees/lstCaracs'
@@ -23,19 +25,11 @@ function ZoneDeValidation({
     }
 
     if (descriptionCourante.modifs_caracs !== undefined) {
-      descriptionCourante.modifs_caracs.forEach((element) => {
-        if (element.carac === nomDexterite)
-          changementsAuPerso.dexterite = perso.dexterite + element.val
-        if (element.carac === nomConstitution)
-          changementsAuPerso.constitution = perso.constitution + element.val
-        if (element.carac === nomCharisme)
-          changementsAuPerso.charisme = perso.charisme + element.val
-        if (element.carac === nomIntelligence)
-          changementsAuPerso.intelligence = perso.intelligence + element.val
-        if (element.carac === nomSensibilite)
-          changementsAuPerso.sensibilite = perso.sensibilite + element.val
-        if (element.carac === nomMagie)
-          changementsAuPerso.magie = perso.magie + element.val
+      descriptionCourante.modifs_caracs.forEach((elt) => {
+        const caracPropertyName = getCaracObjPropertyName(elt.carac)
+
+        changementsAuPerso[caracPropertyName] =
+          perso[caracPropertyName] + elt.val
       })
     }
 
