@@ -13,6 +13,7 @@ export const PersoProvider = ({ children }) => {
     intelligence: 0,
     sensibilite: 0,
     magie: 0,
+    niveau_richesse: 0,
   })
 
   useEffect(() => {

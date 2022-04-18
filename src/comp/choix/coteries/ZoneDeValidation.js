@@ -38,6 +38,11 @@ function ZoneDeValidation({
       coterie: descriptionCourante.titre,
     }
 
+    if (descriptionCourante.niveau_richesse !== undefined) {
+      changementsAuPerso['niveau_richesse'] =
+        perso['niveau_richesse'] + descriptionCourante.niveau_richesse
+    }
+
     if (descriptionCourante.modifs_comps !== undefined) {
       descriptionCourante.modifs_comps.forEach((elt) => {
         const compPropertyName = getCompObjPropertyName(elt.comp)
@@ -117,6 +122,16 @@ function ZoneDeValidation({
               ''
             )}
             {renderCapaciteMagique(descriptionCourante)}
+            {descriptionCourante.niveau_richesse !== undefined &&
+            descriptionCourante.niveau_richesse !== '' ? (
+              <div>
+                <br />
+                <b>Bonus de richesse : </b>
+                {descriptionCourante.niveau_richesse}
+              </div>
+            ) : (
+              ''
+            )}
             <div className="aligneDroite">
               <button className="bouton" onClick={() => validerSelection()}>
                 Sélectionner

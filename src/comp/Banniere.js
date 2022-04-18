@@ -62,6 +62,8 @@ function Banniere() {
                     <br />
                     {perso.age} ans
                     <br />
+                    Niveau de richesse : {perso.niveau_richesse}
+                    <br />
                     {perso.male ? 'Homme' : 'Femme'}
                     <br />
                   </div>

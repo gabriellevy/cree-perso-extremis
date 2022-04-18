@@ -10,6 +10,7 @@ import portrait_cathare from './img/cathares/portraits/28_48.jpg'
 import portrait_celte from './img/celtes/portraits/20_45.jpg'
 import portrait_chat from './img/chats/portraits/chat.jpg'
 import portrait_skavens from './img/skavens/portraits/30_65.jpg'
+import portrait_schweizer from './img/schweizer/portraits/30_60.jpg'
 
 import bg_conquistador from './img/conquistadors/bg_conquistadors_priant.jpg'
 import bg_conquistador_b from './img/quartiers/bg_saint_malo.jpg'
@@ -26,6 +27,7 @@ import bg_zaporogue from './img/zaporogues/bg_lettre_zapo.jpg'
 import bg_zaporogue_b from './img/zaporogues/bg_univ_zaporogues.jpg'
 import bg_acheron from './img/acheron/bg_acheron.jpg'
 import bg_skavens from './img/skavens/bg_skavens.jpg'
+import bg_schweizer from './img/schweizer/bg.png'
 
 import {
   nomDexterite,
@@ -50,17 +52,17 @@ import {
   voieScientifique,
   voieSoldat,
   voieVoyageur,
+  voieIntellectuel,
+  voieHommeDuMonde,
+  voieAventurier,
+  voieMalandrin,
+  voieMarchand,
+  voieTravailleur,
+  voiePretre,
+  voieBrute,
+  voieSaltimbanque,
+  voieEspion,
 } from './lstVoies'
-import { voieIntellectuel } from './lstVoies'
-import { voieHommeDuMonde } from './lstVoies'
-import { voieAventurier } from './lstVoies'
-import { voieMalandrin } from './lstVoies'
-import { voieMarchand } from './lstVoies'
-import { voieTravailleur } from './lstVoies'
-import { voiePretre } from './lstVoies'
-import { voieBrute } from './lstVoies'
-import { voieSaltimbanque } from './lstVoies'
-import { voieEspion } from './lstVoies'
 
 export const nomCotConquistadors = 'Conquistadors'
 export const nomCotElfes = 'Elfes'
@@ -74,8 +76,27 @@ export const nomCotCathares = 'Cathares'
 export const nomCotCelte = 'Celtes'
 export const nomCotChats = 'Chats'
 export const nomCotSkavens = 'Skavens'
+export const nomCotSchweiser = 'Schweiser'
 
 export const lstCoteries = [
+  {
+    titre: nomCotSchweiser,
+    voies: [
+      voieTravailleur,
+      voieScientifique,
+      voieIngenieur,
+      voiePretre,
+      voieMarchand,
+    ],
+    modifs_caracs: [{ carac: nomMagie, val: -1 }],
+    affiche: true,
+    niveau_richesse: 2,
+    portrait: portrait_schweizer,
+    fonds: [bg_schweizer],
+    page: 'https://www.notion.so/wiki-extremis/Schweizer-94c988b4e0ea47c7b520d99ff7426f6c',
+    description:
+      'L’idéal Schweizer est la prospérité dans la responsabilité. Chaque Schweizer a un nombre incalculable de devoirs politiques, économiques, civils et militaires. Si il cesse de les remplir il cesse d’être Schweizer. Si il les remplit il a droit à la paix, la tranquillité et la sécurité que tous ses coreligionnaires lui assurent.',
+  },
   {
     titre: nomCotChats,
     voies: [voieMalandrin, voieSaltimbanque, voieEspion],

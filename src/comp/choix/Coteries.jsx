@@ -21,6 +21,7 @@ function Coteries({ phaseChoix, majPhaseChoix }) {
             fonds,
             description,
             page,
+            niveau_richesse,
             affiche,
             voies,
             modifs_caracs,
@@ -32,6 +33,7 @@ function Coteries({ phaseChoix, majPhaseChoix }) {
                 key={titre}
                 titre={titre}
                 portrait={portrait}
+                niveau_richesse={niveau_richesse}
                 fonds={fonds}
                 description={description}
                 descriptionCourante={descriptionCourante}

@@ -6,6 +6,7 @@ import { PersoContexte } from '../utils/contexte/perso'
 function Coterie({
   titre,
   portrait,
+  niveau_richesse,
   fonds,
   description,
   descriptionCourante,
@@ -25,6 +26,7 @@ function Coterie({
       texte: description,
       titre: titre,
       page: page,
+      niveau_richesse: niveau_richesse,
       voies: voies,
       modifs_caracs: modifs_caracs,
       modifs_comps: modifs_comps,
