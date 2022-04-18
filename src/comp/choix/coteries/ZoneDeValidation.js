@@ -84,7 +84,8 @@ function ZoneDeValidation({
             ) : (
               'voies non définies'
             )}
-            {descriptionCourante.modifs_caracs !== undefined ? (
+            {descriptionCourante.modifs_caracs !== undefined &&
+            descriptionCourante.modifs_caracs.length !== 0 ? (
               <div>
                 <br />
                 <b>Effets sur les caractéristiques : </b>
@@ -100,7 +101,8 @@ function ZoneDeValidation({
               ''
             )}
             <br />
-            {descriptionCourante.modifs_comps !== undefined ? (
+            {descriptionCourante.modifs_comps !== undefined &&
+            descriptionCourante.modifs_comps.length !== 0 ? (
               <div>
                 <b>Effets sur les compétences : </b>
                 {descriptionCourante.modifs_comps.map((modif_comp) => (

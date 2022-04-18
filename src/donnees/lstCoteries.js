@@ -9,6 +9,7 @@ import portrait_saabi from './img/saabi/portraits/f16_35.jpg'
 import portrait_cathare from './img/cathares/portraits/28_48.jpg'
 import portrait_celte from './img/celtes/portraits/20_45.jpg'
 import portrait_chat from './img/chats/portraits/chat.jpg'
+import portrait_skavens from './img/skavens/portraits/30_65.jpg'
 
 import bg_conquistador from './img/conquistadors/bg_conquistadors_priant.jpg'
 import bg_conquistador_b from './img/quartiers/bg_saint_malo.jpg'
@@ -24,19 +25,29 @@ import bg_transhumaniste_b from './img/quartiers/bg_la_defense.jpg'
 import bg_zaporogue from './img/zaporogues/bg_lettre_zapo.jpg'
 import bg_zaporogue_b from './img/zaporogues/bg_univ_zaporogues.jpg'
 import bg_acheron from './img/acheron/bg_acheron.jpg'
+import bg_skavens from './img/skavens/bg_skavens.jpg'
 
-import { nomDexterite } from './lstCaracs'
-import { nomConstitution } from './lstCaracs'
-import { nomCharisme } from './lstCaracs'
-import { nomIntelligence } from './lstCaracs'
-import { nomSensibilite } from './lstCaracs'
-import { nomMagie } from './lstCaracs'
+import {
+  nomDexterite,
+  nomConstitution,
+  nomCharisme,
+  nomIntelligence,
+  nomSensibilite,
+  nomMagie,
+} from './lstCaracs'
 
-import { nomAlchimie, nomAnimaux, nomArcanes, nomIntimider } from './lstComps'
+import {
+  nomAlchimie,
+  nomAnimaux,
+  nomArcanes,
+  nomDetrousser,
+  nomIntimider,
+} from './lstComps'
 
 import {
   voieIngenieur,
   voieMagicien,
+  voieScientifique,
   voieSoldat,
   voieVoyageur,
 } from './lstVoies'
@@ -62,12 +73,13 @@ export const nomCotSaabi = 'Saabi'
 export const nomCotCathares = 'Cathares'
 export const nomCotCelte = 'Celtes'
 export const nomCotChats = 'Chats'
+export const nomCotSkavens = 'Skavens'
 
 export const lstCoteries = [
   {
     titre: nomCotChats,
     voies: [voieMalandrin, voieSaltimbanque, voieEspion],
-    affiche: true,
+    affiche: false,
     portrait: portrait_chat,
     modifs_caracs: [
       { carac: nomConstitution, val: -3 },
@@ -151,6 +163,18 @@ export const lstCoteries = [
     page: 'https://www.notion.so/wiki-extremis/Elfes-233a158ae654424eaf3f2466f476e13c',
     description:
       "Les elfes  ont pour but principal de faire atteindre son potentiel maximum à tout homme qui les rejoindrait. Cette perfection étant pour eux essentielle au niveau de la beauté, de la sensibilité, de l'agrément et de la morale. Ils ont développé toute une philosophie et une magie orientée vers ce but et les ont poussées à un tel niveau qu'aucun elfe ne reste longtemps laid ou désagréable.",
+  },
+  {
+    titre: nomCotSkavens,
+    voies: [voieScientifique, voieIngenieur, voieMalandrin, voieEspion],
+    modifs_caracs: [],
+    modifs_comps: [{ comp: nomDetrousser, val: 1 }],
+    affiche: true,
+    portrait: portrait_skavens,
+    fonds: [bg_skavens],
+    page: 'https://www.notion.so/wiki-extremis/Skavens-51d5db3bea614d1abca305011d3d5d95',
+    description:
+      'Les skavens ont pour principe de base une énergie et une ambition démesurée. Toujours plus et en un minimum de temps est leur devise, peu importe les risques à prendre.',
   },
   {
     titre: nomCotOrks,
