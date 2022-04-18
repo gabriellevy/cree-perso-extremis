@@ -11,6 +11,7 @@ import portrait_celte from './img/celtes/portraits/20_45.jpg'
 import portrait_chat from './img/chats/portraits/chat.jpg'
 import portrait_skavens from './img/skavens/portraits/30_65.jpg'
 import portrait_schweizer from './img/schweizer/portraits/30_60.jpg'
+import portrait_tyranide from './img/tyranides/portraits/30_60.jpg'
 
 import bg_conquistador from './img/conquistadors/bg_conquistadors_priant.jpg'
 import bg_conquistador_b from './img/quartiers/bg_saint_malo.jpg'
@@ -28,6 +29,7 @@ import bg_zaporogue_b from './img/zaporogues/bg_univ_zaporogues.jpg'
 import bg_acheron from './img/acheron/bg_acheron.jpg'
 import bg_skavens from './img/skavens/bg_skavens.jpg'
 import bg_schweizer from './img/schweizer/bg.png'
+import bg_tyranide from './img/tyranides/bg.jpg'
 
 import {
   nomDexterite,
@@ -78,8 +80,18 @@ export const nomCotCelte = 'Celtes'
 export const nomCotChats = 'Chats'
 export const nomCotSkavens = 'Skavens'
 export const nomCotSchweiser = 'Schweiser'
+export const nomCotTyranides = 'Tyranides'
 
 export const lstCoteries = [
+  {
+    titre: nomCotTyranides,
+    voies: [voieTravailleur, voieEspion, voieBrute],
+    affiche: true,
+    portrait: portrait_tyranide,
+    fonds: [bg_tyranide],
+    page: 'https://www.notion.so/wiki-extremis/Tyranides-c4980eadc51e47f7b1c42126f5aa0588',
+    description: 'Pas fait',
+  },
   {
     titre: nomCotTempliers,
     voies: [
@@ -235,8 +247,9 @@ export const lstCoteries = [
   },
   {
     titre: nomCotTranshumanistes,
-    voies: [],
+    voies: [voieScientifique, voieIngenieur, voieMarchand, voieVoyageur],
     affiche: true,
+    niveau_richesse: 1,
     portrait: portrait_transhumaniste,
     fonds: [bg_transhumaniste, bg_transhumaniste_b],
     page: 'https://www.notion.so/wiki-extremis/Transhumanistes-08e0709a67bd486cb594815e5bccdd0d',
