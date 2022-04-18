@@ -4,7 +4,20 @@ import { useContext } from 'react'
 import { PersoContexte } from '../utils/contexte/perso'
 import { getRandomInt } from '../utils/rand'
 import { getCompObjPropertyName, lstComps } from '../donnees/lstComps'
-import { render } from '@testing-library/react'
+
+function afficheObjets(perso) {
+  if (perso.objets === undefined || perso.objets.length === 0) return ''
+
+  return perso.objets.map((objet) => {
+    return (
+      <div>
+        <br />
+        <span key={objet}>{objet},</span>
+        <br />
+      </div>
+    )
+  })
+}
 
 function Banniere() {
   const { perso } = useContext(PersoContexte)
@@ -65,7 +78,7 @@ function Banniere() {
                     Niveau de richesse : {perso.niveau_richesse}
                     <br />
                     {perso.male ? 'Homme' : 'Femme'}
-                    <br />
+                    {afficheObjets(perso)}
                   </div>
                 </td>
                 <td>

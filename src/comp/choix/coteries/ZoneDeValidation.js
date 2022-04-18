@@ -43,6 +43,16 @@ function ZoneDeValidation({
         perso['niveau_richesse'] + descriptionCourante.niveau_richesse
     }
 
+    if (descriptionCourante.objets !== undefined) {
+      var objets = []
+      if (perso.objets !== undefined) {
+        objets = perso.objets
+      }
+      changementsAuPerso['objets'] = objets
+      changementsAuPerso['objets'].push(descriptionCourante.objets)
+      console.log(changementsAuPerso['objets'])
+    }
+
     if (descriptionCourante.modifs_comps !== undefined) {
       descriptionCourante.modifs_comps.forEach((elt) => {
         const compPropertyName = getCompObjPropertyName(elt.comp)
@@ -116,6 +126,17 @@ function ZoneDeValidation({
                     {modif_comp.val > 0 ? '+' : ''}
                     {modif_comp.val} {modif_comp.comp},
                   </span>
+                ))}
+              </div>
+            ) : (
+              ''
+            )}
+            {descriptionCourante.objets !== undefined &&
+            descriptionCourante.objets.length !== 0 ? (
+              <div>
+                <b>Objets : </b>
+                {descriptionCourante.objets.map((objet) => (
+                  <span key={objet}>{objet}</span>
                 ))}
               </div>
             ) : (

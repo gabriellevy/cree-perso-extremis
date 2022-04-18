@@ -42,6 +42,7 @@ import {
   nomAlchimie,
   nomAnimaux,
   nomArcanes,
+  nomCorpsACorps,
   nomDetrousser,
   nomIntimider,
 } from './lstComps'
@@ -80,6 +81,24 @@ export const nomCotSchweiser = 'Schweiser'
 
 export const lstCoteries = [
   {
+    titre: nomCotTempliers,
+    voies: [
+      voieAventurier,
+      voieSoldat,
+      voieTravailleur,
+      voiePretre,
+      voieVoyageur,
+    ],
+    objets: ['Épée rituelle'],
+    modifs_caracs: [{ carac: nomCorpsACorps, val: 2 }],
+    affiche: true,
+    portrait: portrait_templier,
+    fonds: [bg_templier, bg_templier_b, bg_templier_c],
+    page: 'https://www.notion.so/wiki-extremis/Templiers-c00f7ed56be2424f9a0baf1797328dfb',
+    description:
+      "Basée sur la foi inébranlable en Dieu et sur l'honneur guerrier de l'aristocratie franque. Les templiers sont avant tout des guerriers saints qui suivent un code de l'honneur très strict. Forcément chrétien, Richesse limitée à 1 maximum.",
+  },
+  {
     titre: nomCotSchweiser,
     voies: [
       voieTravailleur,
@@ -88,7 +107,6 @@ export const lstCoteries = [
       voiePretre,
       voieMarchand,
     ],
-    modifs_caracs: [{ carac: nomMagie, val: -1 }],
     affiche: true,
     niveau_richesse: 2,
     portrait: portrait_schweizer,
@@ -214,16 +232,6 @@ export const lstCoteries = [
       'Les orks sont des mutants costauds et bricoleurs qui embrassent avant tout une vie simple et brutale, sans prise de tête.',
     capacite_magique:
       'Peut dépenser un point de magie pour :\n- si mis hors de combat, faire un test de CON dif 12. Si il est réussi le personnage se relève sans séquelle avec un dé de vie.\n- force herculéenne : +1D6 CON pour une heure',
-  },
-  {
-    titre: nomCotTempliers,
-    voies: [],
-    affiche: true,
-    portrait: portrait_templier,
-    fonds: [bg_templier, bg_templier_b, bg_templier_c],
-    page: 'https://www.notion.so/wiki-extremis/Templiers-c00f7ed56be2424f9a0baf1797328dfb',
-    description:
-      "Basée sur la foi inébranlable en Dieu et sur l'honneur guerrier de l'aristocratie franque. Les templiers sont avant tout des guerriers saints qui suivent un code de l'honneur très strict.",
   },
   {
     titre: nomCotTranshumanistes,
