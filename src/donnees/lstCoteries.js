@@ -12,6 +12,7 @@ import portrait_chat from './img/chats/portraits/chat.jpg'
 import portrait_skavens from './img/skavens/portraits/30_65.jpg'
 import portrait_schweizer from './img/schweizer/portraits/30_60.jpg'
 import portrait_tyranide from './img/tyranides/portraits/30_60.jpg'
+import portrait_lumieres from './img/lumieres/portraits/20_45.jpg'
 
 import bg_conquistador from './img/conquistadors/bg_conquistadors_priant.jpg'
 import bg_conquistador_b from './img/quartiers/bg_saint_malo.jpg'
@@ -30,6 +31,7 @@ import bg_acheron from './img/acheron/bg_acheron.jpg'
 import bg_skavens from './img/skavens/bg_skavens.jpg'
 import bg_schweizer from './img/schweizer/bg.png'
 import bg_tyranide from './img/tyranides/bg.jpg'
+import bg_lumieres from './img/lumieres/bg.jpg'
 
 import {
   nomDexterite,
@@ -81,8 +83,24 @@ export const nomCotChats = 'Chats'
 export const nomCotSkavens = 'Skavens'
 export const nomCotSchweiser = 'Schweiser'
 export const nomCotTyranides = 'Tyranides'
+export const nomCotLumieres = 'Lumières'
 
 export const lstCoteries = [
+  {
+    titre: nomCotLumieres,
+    voies: [
+      voieScientifique,
+      voieHommeDuMonde,
+      voieEspion,
+      voieIntellectuel,
+      voieMarchand,
+    ],
+    affiche: true,
+    portrait: portrait_lumieres,
+    fonds: [bg_lumieres],
+    page: 'https://www.notion.so/wiki-extremis/Lumi-res-228ae184d41a42209307684589fbd81c',
+    description: 'Pas fait',
+  },
   {
     titre: nomCotTyranides,
     voies: [voieTravailleur, voieEspion, voieBrute],
@@ -130,7 +148,7 @@ export const lstCoteries = [
   {
     titre: nomCotChats,
     voies: [voieMalandrin, voieSaltimbanque, voieEspion],
-    affiche: false,
+    affiche: true,
     portrait: portrait_chat,
     modifs_caracs: [
       { carac: nomConstitution, val: -3 },
@@ -148,7 +166,7 @@ export const lstCoteries = [
   {
     titre: nomCotCelte,
     voies: [voieTravailleur, voieAventurier, voieBrute],
-    affiche: false,
+    affiche: true,
     portrait: portrait_celte,
     fonds: [],
     page: 'https://www.notion.so/wiki-extremis/Celtes-3e78fbeedea949e899c615a7f7f7cdf0',
@@ -157,7 +175,7 @@ export const lstCoteries = [
   {
     titre: nomCotCathares,
     voies: [voieTravailleur, voiePretre],
-    affiche: false,
+    affiche: true,
     portrait: portrait_cathare,
     fonds: [],
     page: 'https://www.notion.so/wiki-extremis/Cathares-5f56f04db3a5463cb274bc8c53054ce2',
@@ -166,7 +184,7 @@ export const lstCoteries = [
   {
     titre: nomCotSaabi,
     voies: [voieMarchand, voieHommeDuMonde, voieAventurier, voieMalandrin],
-    affiche: false,
+    affiche: true,
     portrait: portrait_saabi,
     fonds: [],
     page: 'https://www.notion.so/wiki-extremis/Saabi-fbbc9c0bf8d94adbb7757963a65b2a92',
@@ -258,7 +276,14 @@ export const lstCoteries = [
   },
   {
     titre: nomCotZaporogues,
-    voies: [],
+    voies: [
+      voieAventurier,
+      voieSaltimbanque,
+      voieBrute,
+      voieVoyageur,
+      voiePretre,
+      voieTravailleur,
+    ],
     affiche: true,
     portrait: portrait_zaporogue,
     fonds: [bg_zaporogue, bg_zaporogue_b],
