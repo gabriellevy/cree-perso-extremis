@@ -32,9 +32,14 @@ import { nomIntelligence } from './lstCaracs'
 import { nomSensibilite } from './lstCaracs'
 import { nomMagie } from './lstCaracs'
 
-import { nomAnimaux } from './lstComps'
+import { nomAlchimie, nomAnimaux, nomArcanes, nomIntimider } from './lstComps'
 
-import { voieMagicien } from './lstVoies'
+import {
+  voieIngenieur,
+  voieMagicien,
+  voieSoldat,
+  voieVoyageur,
+} from './lstVoies'
 import { voieIntellectuel } from './lstVoies'
 import { voieHommeDuMonde } from './lstVoies'
 import { voieAventurier } from './lstVoies'
@@ -116,17 +121,30 @@ export const lstCoteries = [
   },
   {
     titre: nomCotConquistadors,
-    voies: [],
+    voies: [
+      voieAventurier,
+      voieSoldat,
+      voieSaltimbanque,
+      voieVoyageur,
+      voieIngenieur,
+    ],
+    modifs_comps: [{ comp: nomArcanes, val: 1 }],
     affiche: true,
     portrait: portrait_conquistador,
     fonds: [bg_conquistador, bg_conquistador_b],
     page: 'https://www.notion.so/wiki-extremis/Conquistadors-433a3daa82574550a20fe555a3ad2eb4',
     description:
-      "Les conquistadors sont une coterie particulièrement militarisée et aventureuse. Ils vivent pour les expéditions lointaines, la conquête, la piraterie, et la gloire qui va avec. Ils parcourent le monde dans des navires en petites troupes d'élite très bien équipées et très motivées appelées Cuadrilla. Ils ne reviennent à leur base de Saint Malo que chargés d'or ou après avoir fondé une colonie prometteuse.",
+      "Les conquistadors sont une coterie particulièrement militarisée et aventureuse. Ils vivent pour les expéditions lointaines, la conquête, la piraterie, et la gloire qui va avec. Ils parcourent le monde dans des navires en petites troupes d'élite très bien équipées et très motivées appelées Cuadrilla. Ils ne reviennent à leur base de Saint Malo que chargés d'or ou après avoir fondé une colonie prometteuse.\nChoisit entre arcanes de feu ou de barde.",
   },
   {
     titre: nomCotElfes,
-    voies: [],
+    voies: [voieSaltimbanque, voieMagicien, voieHommeDuMonde, voieIntellectuel],
+    modifs_caracs: [
+      { carac: nomConstitution, val: -1 },
+      { carac: nomMagie, val: 1 },
+      { carac: nomCharisme, val: 1 },
+    ],
+    modifs_comps: [{ comp: nomAlchimie, val: 1 }],
     affiche: true,
     portrait: portrait_elfe,
     fonds: [bg_elfe, bg_elfe_b],
@@ -136,13 +154,21 @@ export const lstCoteries = [
   },
   {
     titre: nomCotOrks,
-    voies: [],
+    voies: [voieSoldat, voieIngenieur, voieBrute, voieVoyageur],
+    modifs_caracs: [
+      { carac: nomConstitution, val: 2 },
+      { carac: nomIntelligence, val: -1 },
+      { carac: nomCharisme, val: -1 },
+    ],
+    modifs_comps: [{ comp: nomIntimider, val: 1 }],
     affiche: true,
     portrait: portrait_ork,
     fonds: [bg_ork, bg_ork_b],
     page: 'https://www.notion.so/wiki-extremis/Orks-c92555dd3ea94318a030d7bb6cfe24ca',
     description:
       'Les orks sont des mutants costauds et bricoleurs qui embrassent avant tout une vie simple et brutale, sans prise de tête.',
+    capacite_magique:
+      'Peut dépenser un point de magie pour :\n- si mis hors de combat, faire un test de CON dif 12. Si il est réussi le personnage se relève sans séquelle avec un dé de vie.\n- force herculéenne : +1D6 CON pour une heure',
   },
   {
     titre: nomCotTempliers,

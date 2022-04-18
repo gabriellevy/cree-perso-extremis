@@ -5,6 +5,26 @@ import { PersoContexte } from '../../../utils/contexte/perso'
 import { getCaracObjPropertyName } from '../../../donnees/lstCaracs'
 import { getCompObjPropertyName } from '../../../donnees/lstComps'
 
+function interpreterNouvLigne(texte) {
+  const newText = texte
+    .split('\n')
+    .map((str) => <p className="paragrapheRapproche">{str}</p>)
+  return newText
+}
+
+function renderCapaciteMagique(descriptionCourante) {
+  return descriptionCourante.capacite_magique !== undefined &&
+    descriptionCourante.capacite_magique !== '' ? (
+    <div>
+      <br />
+      <b>Capacité magique : </b>
+      {interpreterNouvLigne(descriptionCourante.capacite_magique)}
+    </div>
+  ) : (
+    ''
+  )
+}
+
 function ZoneDeValidation({
   descriptionCourante,
   majDescriptionCourante,
@@ -64,9 +84,9 @@ function ZoneDeValidation({
             ) : (
               'voies non définies'
             )}
-            <br />
             {descriptionCourante.modifs_caracs !== undefined ? (
               <div>
+                <br />
                 <b>Effets sur les caractéristiques : </b>
                 {descriptionCourante.modifs_caracs.map((modif_carac) => (
                   <span key={modif_carac.carac}>
@@ -94,15 +114,7 @@ function ZoneDeValidation({
             ) : (
               ''
             )}
-            {descriptionCourante.capacite_magique !== '' ? (
-              <div>
-                <br />
-                <b>Capacité magique : </b>
-                {descriptionCourante.capacite_magique}
-              </div>
-            ) : (
-              ''
-            )}
+            {renderCapaciteMagique(descriptionCourante)}
             <div className="aligneDroite">
               <button className="bouton" onClick={() => validerSelection()}>
                 Sélectionner

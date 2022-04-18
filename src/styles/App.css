@@ -3,11 +3,16 @@
   max-width: 1280px;
 }
 
+.paragrapheRapproche {
+  padding: 1px;
+  margin: 0px;
+}
+
 .texteStandard {
   padding: 8px;
   background-color: white;
   color: black;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 @media (prefers-reduced-motion: no-preference) {

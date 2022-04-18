@@ -47,6 +47,10 @@ export const voiePretre = 'Prêtre'
 export const voieBrute = 'Brute'
 export const voieEspion = 'Espion'
 export const voieSaltimbanque = 'Saltimbanque'
+export const voieIngenieur = 'Ingénieur'
+export const voieSoldat = 'Soldat'
+export const voieVoyageur = 'Voyageur'
+export const voieScientifique = 'Scientifique'
 
 export const lstVoies = [
   {
@@ -80,7 +84,7 @@ export const lstVoies = [
     description: ['Ouvrier...'],
   },
   {
-    titre: 'Scientifique',
+    titre: voieScientifique,
     valeur: 0,
     richesse: 1,
     competences: [nomScience, nomMedecine],
@@ -130,7 +134,7 @@ export const lstVoies = [
     description: ['Inclut les détectives et enquêteurs de toute sorte.\n'],
   },
   {
-    titre: 'Ingénieur',
+    titre: voieIngenieur,
     valeur: 0,
     richesse: 1,
     competences: [nomInformatique, nomFabricationTechnique, nomReparer],
@@ -151,7 +155,7 @@ export const lstVoies = [
     description: [''],
   },
   {
-    titre: 'Soldat',
+    titre: voieSoldat,
     valeur: 0,
     richesse: 0,
     competences: [nomCommandement, nomTir],
@@ -160,7 +164,7 @@ export const lstVoies = [
     ],
   },
   {
-    titre: 'Voyageur',
+    titre: voieVoyageur,
     valeur: 0,
     richesse: 1,
     competences: [nomPilotage, nomMilieuMonde],
