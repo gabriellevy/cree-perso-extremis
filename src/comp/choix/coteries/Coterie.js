@@ -1,7 +1,7 @@
-import '../styles/Coterie.css'
-import { getRandomInt } from '../utils/rand'
+import '../../../styles/Coterie.css'
+import { getRandomInt } from '../../../utils/rand'
 import { useContext } from 'react'
-import { PersoContexte } from '../utils/contexte/perso'
+import { PersoContexte } from '../../../utils/contexte/perso'
 
 function Coterie({
   titre,
