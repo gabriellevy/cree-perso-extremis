@@ -19,7 +19,7 @@ export function getCaracObjPropertyName(nomCaracStr) {
   return 'carac inconnue'
 }
 
-export const lstCaracsExt = [
+export const lstCaracsInitial = [
   {
     titre: nomDexterite,
     valeur: -1,
