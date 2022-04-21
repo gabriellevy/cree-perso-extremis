@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.css": "/cree-perso-extremis/static/css/main.1893a34d.css",
-    "main.js": "/cree-perso-extremis/static/js/main.4d4f0f05.js",
+    "main.css": "/cree-perso-extremis/static/css/main.4b06481c.css",
+    "main.js": "/cree-perso-extremis/static/js/main.cf907b96.js",
+    "static/media/bg.png": "/cree-perso-extremis/static/media/bg.5b05470e4595692cc14e.png",
     "static/media/bg_lettre_zapo.jpg": "/cree-perso-extremis/static/media/bg_lettre_zapo.d63e86ecf62d58aac7f0.jpg",
+    "static/media/bg.jpg": "/cree-perso-extremis/static/media/bg.aa2671f848f7ed2664c1.jpg",
     "static/media/bg_univ_zaporogues.jpg": "/cree-perso-extremis/static/media/bg_univ_zaporogues.c6d193c1dd5fc983d6c7.jpg",
     "static/media/bg_interieur_basilique.jpg": "/cree-perso-extremis/static/media/bg_interieur_basilique.1175f822d5b671b64756.jpg",
     "static/media/bg_la_defense.jpg": "/cree-perso-extremis/static/media/bg_la_defense.c326a73073c2e4a3a0f1.jpg",
@@ -28,7 +30,9 @@
     "static/media/portrait60+_miserable.png": "/cree-perso-extremis/static/media/portrait60+_miserable.4ce392585eddac119c6f.png",
     "static/media/portrait20-40.png": "/cree-perso-extremis/static/media/portrait20-40.a5dec23437c5fbaf6f1a.png",
     "static/media/portrait20-50_3.png": "/cree-perso-extremis/static/media/portrait20-50_3.04f11668c2805806d370.png",
+    "static/media/bg_skavens.jpg": "/cree-perso-extremis/static/media/bg_skavens.2ebd7d3ec4562146cc89.jpg",
     "static/media/Fportrait14-40.png": "/cree-perso-extremis/static/media/Fportrait14-40.de318ad64722ad29727b.png",
+    "static/media/bg_acheron.jpg": "/cree-perso-extremis/static/media/bg_acheron.ef7953456a690886ff86.jpg",
     "static/media/portrait30-50_2.png": "/cree-perso-extremis/static/media/portrait30-50_2.eabbf6e267c20fd9c4ae.png",
     "static/media/portrait20-40_2.png": "/cree-perso-extremis/static/media/portrait20-40_2.c460dd00a6294474d67c.png",
     "static/media/portrait20-50_4.png": "/cree-perso-extremis/static/media/portrait20-50_4.12e69c632af3d5048389.png",
@@ -148,7 +152,9 @@
     "static/media/30-60.jpg": "/cree-perso-extremis/static/media/30-60.73b872af102049cbf9c8.jpg",
     "static/media/F20-40_paysane.jpg": "/cree-perso-extremis/static/media/F20-40_paysane.8051fdcbbe941f1c157e.jpg",
     "static/media/20-45.jpg": "/cree-perso-extremis/static/media/20-45.4b399d783927ab74087d.jpg",
+    "static/media/70_plus.jpg": "/cree-perso-extremis/static/media/70_plus.b77e2fd6ee8020be566b.jpg",
     "static/media/50+_2.jpg": "/cree-perso-extremis/static/media/50+_2.266977d33cf1903c6efc.jpg",
+    "static/media/f20_60.jpg": "/cree-perso-extremis/static/media/f20_60.85d2ae86dcfb8890f45f.jpg",
     "static/media/portrait_50_plus_a.jpg": "/cree-perso-extremis/static/media/portrait_50_plus_a.713ecba50fb2c6f01146.jpg",
     "static/media/20-45_2.jpg": "/cree-perso-extremis/static/media/20-45_2.e5baf1a5687bbcfcefeb.jpg",
     "static/media/portrait_15-40_c.jpg": "/cree-perso-extremis/static/media/portrait_15-40_c.95c22adaa36c7cddb668.jpg",
@@ -157,21 +163,29 @@
     "static/media/F15-35.jpg": "/cree-perso-extremis/static/media/F15-35.85a0ae343c201cfd2e78.jpg",
     "static/media/30-60_musicien.jpg": "/cree-perso-extremis/static/media/30-60_musicien.809c4ef236d4f8e09699.jpg",
     "static/media/60+.jpg": "/cree-perso-extremis/static/media/60+.99279bde48be3524aaa8.jpg",
+    "static/media/70_plus_b.jpg": "/cree-perso-extremis/static/media/70_plus_b.d59ba9184f3fc5546684.jpg",
     "static/media/F20-40_bergere.jpg": "/cree-perso-extremis/static/media/F20-40_bergere.989104520fecaca3dc86.jpg",
+    "static/media/f12_25.jpg": "/cree-perso-extremis/static/media/f12_25.320f00df351a4b7a2628.jpg",
     "static/media/portrait_15-40_d.jpg": "/cree-perso-extremis/static/media/portrait_15-40_d.6552bcde20f9d22b0094.jpg",
+    "static/media/f60_plus.jpg": "/cree-perso-extremis/static/media/f60_plus.f20202096bbcaf2a6609.jpg",
     "static/media/40-60.jpg": "/cree-perso-extremis/static/media/40-60.4f760545e36f4c3345aa.jpg",
     "static/media/25-50_2.jpg": "/cree-perso-extremis/static/media/25-50_2.396843b5fa8762853537.jpg",
+    "static/media/chat.jpg": "/cree-perso-extremis/static/media/chat.13923e9aaf89e84d1032.jpg",
     "static/media/65+.jpg": "/cree-perso-extremis/static/media/65+.5d0bb84670f840a124be.jpg",
     "static/media/25-50.jpg": "/cree-perso-extremis/static/media/25-50.a35d5462ffe654b20b7f.jpg",
+    "static/media/20_45.jpg": "/cree-perso-extremis/static/media/20_45.c96067b23456813650e8.jpg",
+    "static/media/50_plus.jpg": "/cree-perso-extremis/static/media/50_plus.838f69a5a57e6b90a757.jpg",
+    "static/media/28_48.jpg": "/cree-perso-extremis/static/media/28_48.b58d0c1ba79ccfdc0225.jpg",
+    "static/media/f15_30.jpg": "/cree-perso-extremis/static/media/f15_30.0b5ea635d1fc30cff2d2.jpg",
     "static/media/50+_b.jpg": "/cree-perso-extremis/static/media/50+_b.71432e75a30ce3eef72a.jpg",
     "static/media/F50+.jpg": "/cree-perso-extremis/static/media/F50+.6ac7205212a9ca1b6220.jpg",
     "static/media/portrait_forgeron_60+.jpg": "/cree-perso-extremis/static/media/portrait_forgeron_60+.ad13f173184695218994.jpg",
     "index.html": "/cree-perso-extremis/index.html",
-    "main.1893a34d.css.map": "/cree-perso-extremis/static/css/main.1893a34d.css.map",
-    "main.4d4f0f05.js.map": "/cree-perso-extremis/static/js/main.4d4f0f05.js.map"
+    "main.4b06481c.css.map": "/cree-perso-extremis/static/css/main.4b06481c.css.map",
+    "main.cf907b96.js.map": "/cree-perso-extremis/static/js/main.cf907b96.js.map"
   },
   "entrypoints": [
-    "static/css/main.1893a34d.css",
-    "static/js/main.4d4f0f05.js"
+    "static/css/main.4b06481c.css",
+    "static/js/main.cf907b96.js"
   ]
 }
