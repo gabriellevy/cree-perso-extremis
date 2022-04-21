@@ -1,42 +1,65 @@
-import '../../styles/Coteries.css'
-import { useState, useContext } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import { getRandomInt } from '../../utils/rand'
 import { PersoContexte } from '../../utils/contexte/perso'
-import '../../styles/Caracs.css'
 import Colonne from './caracs/Colonne'
 //import '@atlaskit/css-reset'
 import { DragDropContext } from 'react-beautiful-dnd'
 import donneesInitiales from './caracs/DnDDonnees'
+import styled from 'styled-components'
 
-function TirerDes() {
-  var valTiree1 = getRandomInt(6) + getRandomInt(6) + 2
-  var valTiree2 = getRandomInt(6) + getRandomInt(6) + 2
-  var valTiree3 = getRandomInt(6) + getRandomInt(6) + 2
-
-  var data = donneesInitiales
-
-  data.valeurs['tirage-1'].valeur = valTiree1 + 6
-  data.valeurs['tirage-2'].valeur = 19 - valTiree1
-  data.valeurs['tirage-3'].valeur = valTiree2 + 6
-  data.valeurs['tirage-4'].valeur = 19 - valTiree2
-  data.valeurs['tirage-5'].valeur = valTiree3 + 6
-  data.valeurs['tirage-6'].valeur = 19 - valTiree3
-
-  return data
-}
+const Container = styled.div`
+  display: flex;
+`
 
 function Caracs({ phaseChoix, majPhaseChoix }) {
-  const [dndDonnees, setDnDDonnees] = useState(TirerDes())
+  const [dndDonnees, setDnDDonnees] = useState(donneesInitiales)
   const { perso, setPerso } = useContext(PersoContexte)
+  const [rerender, setRerender] = useState(false)
+
+  useEffect(() => {
+    var valTiree1 = getRandomInt(6) + getRandomInt(6) + 2
+    var valTiree2 = getRandomInt(6) + getRandomInt(6) + 2
+    var valTiree3 = getRandomInt(6) + getRandomInt(6) + 2
+
+    var data = donneesInitiales
+
+    data.valeurs['tirage-1'].valeur = valTiree1 + 6
+    data.valeurs['tirage-2'].valeur = 19 - valTiree1
+    data.valeurs['tirage-3'].valeur = valTiree2 + 6
+    data.valeurs['tirage-4'].valeur = 19 - valTiree2
+    data.valeurs['tirage-5'].valeur = valTiree3 + 6
+    data.valeurs['tirage-6'].valeur = 19 - valTiree3
+
+    // setRerender est complèteemnt bidon mais pour une raison qui m'échappe setDnDDonnees ne provoque aps le rafraichissement par lui-même...
+    setDnDDonnees(data)
+    setRerender(!rerender)
+  }, [])
 
   function validerCaracs() {
     var changementsAuPerso = {
-      dexterite: perso.dexterite + dndDonnees['carac-1'].valeursIds[0],
-      constitution: perso.constitution + dndDonnees['carac-2'].valeursIds[1],
-      charisme: perso.charisme + dndDonnees['carac-3'].valeursIds[2],
-      intelligence: perso.intelligence + dndDonnees['carac-4'].valeursIds[3],
-      sensibilite: perso.sensibilite + dndDonnees['carac-5'].valeursIds[4],
-      magie: perso.magie + dndDonnees['carac-6'].valeursIds[5],
+      dexterite:
+        perso.dexterite +
+        dndDonnees.valeurs[dndDonnees.colonnes['dexterite'].valeursIds[0]]
+          .valeur,
+      constitution:
+        perso.constitution +
+        dndDonnees.valeurs[dndDonnees.colonnes['constitution'].valeursIds[0]]
+          .valeur,
+      charisme:
+        perso.charisme +
+        dndDonnees.valeurs[dndDonnees.colonnes['charisme'].valeursIds[0]]
+          .valeur,
+      intelligence:
+        perso.intelligence +
+        dndDonnees.valeurs[dndDonnees.colonnes['intelligence'].valeursIds[0]]
+          .valeur,
+      sensibilite:
+        perso.sensibilite +
+        dndDonnees.valeurs[dndDonnees.colonnes['sensibilite'].valeursIds[0]]
+          .valeur,
+      magie:
+        perso.magie +
+        dndDonnees.valeurs[dndDonnees.colonnes['magie'].valeursIds[0]].valeur,
     }
     var persoFinal = { ...perso, ...changementsAuPerso }
     setPerso(persoFinal)
@@ -44,33 +67,112 @@ function Caracs({ phaseChoix, majPhaseChoix }) {
     majPhaseChoix(phaseChoix + 1)
   }
 
-  function finGlisserDeposer(result) {}
+  function finGlisserDeposer(result) {
+    document.body.style.color = 'inherit'
+    document.body.style.transition = 'inherit'
+    const { destination, source, draggableId } = result
 
-  const choixValides = false // TODO : ajouter un test sur est-ce que les 6 caracs ont une valeur assocée
+    if (!destination) return
+
+    if (
+      destination.droppableId === source.droppableId &&
+      destination.index === source.index
+    )
+      return
+
+    const colonneSource = dndDonnees.colonnes[source.droppableId]
+    const colonneDest = dndDonnees.colonnes[destination.droppableId]
+
+    if (colonneSource === colonneDest) {
+      const nouvValeursIdsSource = Array.from(colonneSource.valeursIds)
+      nouvValeursIdsSource.splice(source.index, 1)
+      nouvValeursIdsSource.splice(destination.index, 0, draggableId)
+
+      const nouvCol = {
+        ...colonneSource,
+        valeursIds: nouvValeursIdsSource,
+      }
+
+      const nouvDnDDonnees = {
+        ...dndDonnees,
+        colonnes: {
+          ...dndDonnees.colonnes,
+          [nouvCol.id]: nouvCol,
+        },
+      }
+
+      setDnDDonnees(nouvDnDDonnees)
+      return
+    }
+
+    const nouvValeursIdsSource = Array.from(colonneSource.valeursIds)
+    nouvValeursIdsSource.splice(source.index, 1)
+    const newColSrc = {
+      ...colonneSource,
+      valeursIds: nouvValeursIdsSource,
+    }
+
+    const nouvValeursIdsDest = Array.from(colonneDest.valeursIds)
+    nouvValeursIdsDest.splice(destination.index, 0, draggableId)
+    const newColDest = {
+      ...colonneDest,
+      valeursIds: nouvValeursIdsDest,
+    }
+    const nouvDnDDonnees = {
+      ...dndDonnees,
+      colonnes: {
+        ...dndDonnees.colonnes,
+        [newColSrc.id]: newColSrc,
+        [newColDest.id]: newColDest,
+      },
+    }
+
+    setDnDDonnees(nouvDnDDonnees)
+  }
+
+  var choixValides = true // TODO : ajouter un test sur est-ce que les 6 caracs ont une valeur assocée
+
+  Object.values(dndDonnees.colonnes).forEach((colonne) => {
+    if (colonne.id === 'tirages')
+      choixValides = choixValides && colonne.valeursIds.length === 0
+    else choixValides = choixValides && colonne.valeursIds.length === 1
+  })
 
   return (
     <DragDropContext onDragEnd={finGlisserDeposer}>
-      <div className="texteStandard">
-        {choixValides ? (
-          <button className="bouton" onClick={() => validerCaracs()}>
-            Valider
-          </button>
-        ) : (
+      <Container>
+        <div>
           <div>
-            <h1>Sélection des valeurs de carac</h1>
-            {dndDonnees.ordreColonnes.map((idColonne) => {
-              const colonne = dndDonnees.colonnes[idColonne]
-              const valeurs = colonne.valeursIds.map(
-                (valeurId) => dndDonnees.valeurs[valeurId]
-              )
+            <h2>
+              Faites glisser les tirages obtenus vers la caractéristique à
+              laquelle vous souhaitez les affecter
+            </h2>
+            <ul className="lstCoteries_ul">
+              {dndDonnees.ordreColonnes.map((idColonne) => {
+                const colonne = dndDonnees.colonnes[idColonne]
+                const valeurs = colonne.valeursIds.map(
+                  (valeurId) => dndDonnees.valeurs[valeurId]
+                )
 
-              return (
-                <Colonne key={colonne.id} colonne={colonne} valeurs={valeurs} />
-              )
-            })}
+                return (
+                  <Colonne
+                    key={colonne.id}
+                    colonne={colonne}
+                    valeurs={valeurs}
+                  />
+                )
+              })}
+            </ul>
           </div>
-        )}
-      </div>
+          {choixValides ? (
+            <button className="bouton" onClick={() => validerCaracs()}>
+              Valider
+            </button>
+          ) : (
+            ''
+          )}
+        </div>
+      </Container>
     </DragDropContext>
   )
 }

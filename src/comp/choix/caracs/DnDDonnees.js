@@ -35,40 +35,47 @@ const donneesInitiales = {
     },
   },
   colonnes: {
-    'carac-1': {
-      id: nomDexterite,
+    dexterite: {
+      id: 'dexterite',
+      titre: nomDexterite,
       description: 'description Dextérité',
       valeursIds: [],
     },
-    'carac-2': {
-      id: nomConstitution,
+    constitution: {
+      id: 'constitution',
+      titre: nomConstitution,
       description:
         'Puissance physique au sens large : résistance, endurance, force...',
       valeursIds: [],
     },
-    'carac-3': {
-      id: nomCharisme,
+    charisme: {
+      id: 'charisme',
+      titre: nomCharisme,
       description: 'description Charisme',
       valeursIds: [],
     },
-    'carac-4': {
-      id: nomIntelligence,
+    intelligence: {
+      id: 'intelligence',
+      titre: nomIntelligence,
       description: 'description Intelligence',
       valeursIds: [],
     },
-    'carac-5': {
-      id: nomSensibilite,
+    sensibilite: {
+      id: 'sensibilite',
+      titre: nomSensibilite,
       description:
         'Perception au sens large, inclut :\n     - la finesse des sens\n     - la perception de la magie\n     - la perception psychologique',
       valeursIds: [],
     },
-    'carac-6': {
-      id: nomMagie,
+    magie: {
+      id: 'magie',
+      titre: nomMagie,
       description: 'description Magie',
       valeursIds: [],
     },
     tirages: {
       id: 'tirages',
+      titre: 'Tirages',
       description: 'Valeurs à répartir dans les caracs',
       valeursIds: [
         'tirage-1',
@@ -81,12 +88,12 @@ const donneesInitiales = {
     },
   },
   ordreColonnes: [
-    'carac-1',
-    'carac-2',
-    'carac-3',
-    'carac-4',
-    'carac-5',
-    'carac-6',
+    'dexterite',
+    'constitution',
+    'charisme',
+    'intelligence',
+    'sensibilite',
+    'magie',
     'tirages',
   ],
 }

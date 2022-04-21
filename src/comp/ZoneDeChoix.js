@@ -4,7 +4,7 @@ import Voies from './choix/Voies'
 import Finalisation from './choix/Finalisation'
 
 function ZoneDeChoix({ phaseChoix, majPhaseChoix }) {
-  if (phaseChoix === 1) {
+  if (phaseChoix === 2) {
     return (
       <div>
         <Coteries phaseChoix={phaseChoix} majPhaseChoix={majPhaseChoix} />
@@ -18,7 +18,7 @@ function ZoneDeChoix({ phaseChoix, majPhaseChoix }) {
       </div>
     )
   }
-  if (phaseChoix === 2) {
+  if (phaseChoix === 1) {
     return (
       <div>
         <Caracs phaseChoix={phaseChoix} majPhaseChoix={majPhaseChoix} />
