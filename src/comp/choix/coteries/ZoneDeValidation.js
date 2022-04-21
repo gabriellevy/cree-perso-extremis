@@ -6,9 +6,11 @@ import { getCaracObjPropertyName } from '../../../donnees/lstCaracs'
 import { getCompObjPropertyName } from '../../../donnees/lstComps'
 
 function interpreterNouvLigne(texte) {
-  const newText = texte
-    .split('\n')
-    .map((str) => <p className="paragrapheRapproche">{str}</p>)
+  const newText = texte.split('\n').map((str, index) => (
+    <p className="paragrapheRapproche" key={index}>
+      {str}
+    </p>
+  ))
   return newText
 }
 

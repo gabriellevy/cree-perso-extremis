@@ -1,11 +1,11 @@
 import '../../styles/Coteries.css'
-import { useEffect, useState, useContext } from 'react'
+import { useState, useContext } from 'react'
 import { getRandomInt } from '../../utils/rand'
 import { PersoContexte } from '../../utils/contexte/perso'
 import '../../styles/Caracs.css'
 import Colonne from './caracs/Colonne'
 //import '@atlaskit/css-reset'
-import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd'
+import { DragDropContext } from 'react-beautiful-dnd'
 import donneesInitiales from './caracs/DnDDonnees'
 
 function TirerDes() {
@@ -44,30 +44,34 @@ function Caracs({ phaseChoix, majPhaseChoix }) {
     majPhaseChoix(phaseChoix + 1)
   }
 
+  function finGlisserDeposer(result) {}
+
   const choixValides = false // TODO : ajouter un test sur est-ce que les 6 caracs ont une valeur assocée
 
   return (
-    <div className="texteStandard">
-      {choixValides ? (
-        <button className="bouton" onClick={() => validerCaracs()}>
-          Valider
-        </button>
-      ) : (
-        <div>
-          <h1>Sélection des valeurs de carac</h1>
-          {dndDonnees.ordreColonnes.map((idColonne) => {
-            const colonne = dndDonnees.colonnes[idColonne]
-            const valeurs = colonne.valeursIds.map(
-              (valeurId) => dndDonnees.valeurs[valeurId]
-            )
+    <DragDropContext onDragEnd={finGlisserDeposer}>
+      <div className="texteStandard">
+        {choixValides ? (
+          <button className="bouton" onClick={() => validerCaracs()}>
+            Valider
+          </button>
+        ) : (
+          <div>
+            <h1>Sélection des valeurs de carac</h1>
+            {dndDonnees.ordreColonnes.map((idColonne) => {
+              const colonne = dndDonnees.colonnes[idColonne]
+              const valeurs = colonne.valeursIds.map(
+                (valeurId) => dndDonnees.valeurs[valeurId]
+              )
 
-            return (
-              <Colonne key={colonne.id} colonne={colonne} valeurs={valeurs} />
-            )
-          })}
-        </div>
-      )}
-    </div>
+              return (
+                <Colonne key={colonne.id} colonne={colonne} valeurs={valeurs} />
+              )
+            })}
+          </div>
+        )}
+      </div>
+    </DragDropContext>
   )
 }
 
