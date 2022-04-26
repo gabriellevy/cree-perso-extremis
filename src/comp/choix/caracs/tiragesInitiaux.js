@@ -7,7 +7,7 @@ import {
   nomSensibilite,
 } from '../../../donnees/lstCaracs'
 
-const donneesInitiales = {
+const tiragesInitiaux = {
   valeurs: {
     'tirage-1': {
       id: 'tirage-1',
@@ -98,4 +98,4 @@ const donneesInitiales = {
   ],
 }
 
-export default donneesInitiales
+export default tiragesInitiaux

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Valeur from './Valeur'
+import DraggableTirage from './DraggableTirage'
 import { Droppable } from 'react-beautiful-dnd'
 
 const Container = styled.div`
@@ -20,7 +20,7 @@ const ValeurListe = styled.div`
   min-height: 40px;
 `
 
-function Colonne({ colonne, valeurs }) {
+function DroppableCarac({ colonne, valeurs }) {
   var valide = valeurs.length === 1
   if (colonne.id === 'tirages') valide = valeurs.length === 0
 
@@ -35,7 +35,7 @@ function Colonne({ colonne, valeurs }) {
             isDragginOver={snapshot.isDraggingOver}
           >
             {valeurs.map((tirage, index) => (
-              <Valeur
+              <DraggableTirage
                 key={tirage.id}
                 valeur={tirage.valeur}
                 id={tirage.id}
@@ -50,4 +50,4 @@ function Colonne({ colonne, valeurs }) {
   )
 }
 
-export default Colonne
+export default DroppableCarac

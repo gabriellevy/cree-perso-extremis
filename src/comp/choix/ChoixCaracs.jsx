@@ -1,10 +1,10 @@
 import { useState, useContext, useEffect } from 'react'
 import { getRandomInt } from '../../utils/rand'
 import { PersoContexte } from '../../utils/contexte/perso'
-import Colonne from './caracs/Colonne'
+import DroppableCarac from './caracs/DroppableCarac'
 //import '@atlaskit/css-reset'
 import { DragDropContext } from 'react-beautiful-dnd'
-import donneesInitiales from './caracs/DnDDonnees'
+import tiragesInitiaux from './caracs/tiragesInitiaux'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -12,7 +12,7 @@ const Container = styled.div`
 `
 
 function Caracs({ phaseChoix, majPhaseChoix }) {
-  const [dndDonnees, setDnDDonnees] = useState(donneesInitiales)
+  const [dndDonnees, setDnDDonnees] = useState(tiragesInitiaux)
   const { perso, setPerso } = useContext(PersoContexte)
   const [rerender, setRerender] = useState(false)
 
@@ -21,7 +21,7 @@ function Caracs({ phaseChoix, majPhaseChoix }) {
     var valTiree2 = getRandomInt(6) + getRandomInt(6) + 2
     var valTiree3 = getRandomInt(6) + getRandomInt(6) + 2
 
-    var data = donneesInitiales
+    var data = tiragesInitiaux
 
     data.valeurs['tirage-1'].valeur = valTiree1 + 6
     data.valeurs['tirage-2'].valeur = 19 - valTiree1
@@ -155,7 +155,7 @@ function Caracs({ phaseChoix, majPhaseChoix }) {
                 )
 
                 return (
-                  <Colonne
+                  <DroppableCarac
                     key={colonne.id}
                     colonne={colonne}
                     valeurs={valeurs}

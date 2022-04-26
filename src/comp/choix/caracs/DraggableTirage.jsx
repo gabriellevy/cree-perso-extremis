@@ -10,7 +10,7 @@ transition: background-color 0.2s ease;
 background-color: ${(props) => (props.isDragging ? 'lightgreen' : 'white')};
 `
 
-function Valeur({ valeur, id, index }) {
+function DraggableTirage({ valeur, id, index }) {
   return (
     <Draggable draggableId={id} index={index}>
       {(provided, snapshot) => (
@@ -27,4 +27,4 @@ function Valeur({ valeur, id, index }) {
   )
 }
 
-export default Valeur
+export default DraggableTirage

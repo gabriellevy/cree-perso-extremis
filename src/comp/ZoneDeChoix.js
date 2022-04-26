@@ -4,32 +4,39 @@ import Voies from './choix/Voies'
 import Finalisation from './choix/Finalisation'
 
 function ZoneDeChoix({ phaseChoix, majPhaseChoix }) {
-  if (phaseChoix === 2) {
+  const iDCoteries = 'Coteries'
+  const iDVoies = 'Voies'
+  const iDCaracs = 'Caracs'
+  const iDFinalisation = 'Finalisation'
+  const ordre = [iDCoteries, iDVoies, iDCaracs, iDFinalisation]
+  if (ordre[phaseChoix - 1] === iDCoteries) {
     return (
       <div>
         <Coteries phaseChoix={phaseChoix} majPhaseChoix={majPhaseChoix} />
       </div>
     )
   }
-  if (phaseChoix === 3) {
+  if (ordre[phaseChoix - 1] === iDVoies) {
     return (
       <div>
         <Voies phaseChoix={phaseChoix} majPhaseChoix={majPhaseChoix} />
       </div>
     )
   }
-  if (phaseChoix === 1) {
+  if (ordre[phaseChoix - 1] === iDCaracs) {
     return (
       <div>
         <Caracs phaseChoix={phaseChoix} majPhaseChoix={majPhaseChoix} />
       </div>
     )
   }
-  return (
-    <div>
-      <Finalisation />
-    </div>
-  )
+  if (ordre[phaseChoix - 1] === iDFinalisation) {
+    return (
+      <div>
+        <Finalisation />
+      </div>
+    )
+  }
 }
 
 export default ZoneDeChoix
