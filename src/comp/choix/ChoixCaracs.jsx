@@ -130,7 +130,7 @@ function Caracs({ phaseChoix, majPhaseChoix }) {
     setDnDDonnees(nouvDnDDonnees)
   }
 
-  var choixValides = true // TODO : ajouter un test sur est-ce que les 6 caracs ont une valeur assocée
+  var choixValides = true
 
   Object.values(dndDonnees.colonnes).forEach((colonne) => {
     if (colonne.id === 'tirages')
