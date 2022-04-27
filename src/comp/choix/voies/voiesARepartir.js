@@ -6,11 +6,11 @@ export const idVoie5 = 'voie-5'
 export const idVoie6 = 'voie-6'
 
 export const idMetier = 'metier'
-export const titreMetier = 'Métier'
+export const titreMetier = 'Spécialité'
 export const idPassion = 'passion'
 export const titrePassion = 'Passion'
 export const idOccupation = 'occupation'
-export const titreOccupation = 'Occupation'
+export const titreOccupation = 'Occupation secondaire'
 export const idARepartir = 'arepartir'
 export const titreARepartir = 'Voies disponibles à répartir'
 
@@ -51,13 +51,14 @@ const voiesARepartir = {
     [idPassion]: {
       id: idPassion,
       titre: titrePassion,
-      description: '',
+      description:
+        'Activité qui passionne le personnage, éventuellement un second métier',
       valeursIds: [],
     },
     [idOccupation]: {
       id: idOccupation,
       titre: titreOccupation,
-      description: '',
+      description: 'Activité de loisir ou carrière abandonnée',
       valeursIds: [],
     },
     [idARepartir]: {

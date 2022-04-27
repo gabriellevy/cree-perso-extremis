@@ -7,14 +7,14 @@ const Container = styled.div`
   margin: 4px;
   border: 2px solid lightgrey;
   border-radius: 15px;
-  width: 140px;
   background-color: ${(props) => (props.valide ? 'green' : 'red')};
 `
 const Title = styled.h3`
-  padding: 8px;
+  padding: 4px;
+  margin: 3px;
 `
-const ValeurListe = styled.div`
-  padding: 8px;
+const VoieListe = styled.div`
+  padding: 3px;
   transition: background-color 0.2s ease;
   background-color: ${(props) => (props.isDragginOver ? 'skyblue' : 'none')};
   flex-grow: 1;
@@ -30,17 +30,17 @@ function DroppableVoie({ colonne, valeurs }) {
       <Title>{colonne.titre}</Title>
       <Droppable droppableId={colonne.id}>
         {(provided, snapshot) => (
-          <ValeurListe
+          <VoieListe
             ref={provided.innerRef}
             {...provided.droppableProps}
             isDragginOver={snapshot.isDraggingOver}
           >
-            {valeurs.map((tirage, index) =>
-              tirage.valeur !== '' ? (
+            {valeurs.map((voie, index) =>
+              voie.valeur !== '' ? (
                 <DraggableVoie
-                  key={tirage.id}
-                  valeur={tirage.valeur}
-                  id={tirage.id}
+                  key={voie.id}
+                  valeur={voie.valeur}
+                  id={voie.id}
                   index={index}
                 />
               ) : (
@@ -48,7 +48,7 @@ function DroppableVoie({ colonne, valeurs }) {
               )
             )}
             {provided.placeholder}
-          </ValeurListe>
+          </VoieListe>
         )}
       </Droppable>
     </Container>

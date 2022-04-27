@@ -150,12 +150,12 @@ export default function Voies({ phaseChoix, majPhaseChoix }) {
   return (
     <DragDropContext onDragEnd={finGlisserDeposer}>
       <Container>
-        <div>
+        <div className="texteStandard">
           <div>
             <h2>
-              Faites glisser les voies obtenus slon votre ordre de préférence
+              Faites glisser les voies obtenus selon votre ordre de préférence
             </h2>
-            <ul className="lstCoteries_ul">
+            <ul>
               {dndDonnees.ordreColonnes.map((idColonne) => {
                 const colonne = dndDonnees.colonnes[idColonne]
                 const valeurs = colonne.valeursIds.map(
