@@ -15,7 +15,7 @@ import voiesARepartir, {
   idVoie6,
 } from './voies/voiesARepartir'
 import styled from 'styled-components'
-import { lstCoteries } from '../../donnees/lstCoteries'
+import { lstCoteries, nomCotTempliers } from '../../donnees/lstCoteries'
 import DroppableVoie from './voies/DroppableVoie'
 import { getVoie } from '../../donnees/lstVoies'
 import { getCompObjPropertyName } from '../../donnees/lstComps'
@@ -117,6 +117,12 @@ export default function Voies({ phaseChoix, majPhaseChoix }) {
 
     changementsAuPerso['niveau_richesse'] =
       perso['niveau_richesse'] + niveauRichesseBonus
+    // les templiers n'ont jamais plus de 1 en richesse
+    if (
+      perso.coterie === nomCotTempliers &&
+      changementsAuPerso['niveau_richesse'] > 0
+    )
+      changementsAuPerso['niveau_richesse'] = 1
     var persoFinal = { ...perso, ...changementsAuPerso }
     setPerso(persoFinal)
 
