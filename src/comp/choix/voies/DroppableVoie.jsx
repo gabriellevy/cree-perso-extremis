@@ -21,7 +21,7 @@ const VoieListe = styled.div`
   min-height: 40px;
 `
 
-function DroppableVoie({ colonne, valeurs }) {
+function DroppableVoie({ colonne, valeurs, indexColonne }) {
   var valide = valeurs.length === 1
   if (colonne.id === idARepartir) valide = true
 
@@ -39,9 +39,11 @@ function DroppableVoie({ colonne, valeurs }) {
               voie.valeur !== '' ? (
                 <DraggableVoie
                   key={voie.id}
-                  valeur={voie.valeur}
-                  id={voie.id}
+                  idVoie={voie.valeur}
+                  idDnD={voie.id}
                   index={index}
+                  valide={valide}
+                  classement={indexColonne + 1}
                 />
               ) : (
                 ''

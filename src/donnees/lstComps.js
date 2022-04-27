@@ -89,6 +89,16 @@ export function getCompObjPropertyName(nomCompStr) {
   return 'compétence inconnue'
 }
 
+export function getCompetence(idComp) {
+  for (let i = 0; i < lstComps.length; i++) {
+    const comp = lstComps[i]
+    if (comp.titre === idComp) {
+      return comp
+    }
+  }
+  return null
+}
+
 export const lstComps = [
   {
     titre: nomAcrobatie,

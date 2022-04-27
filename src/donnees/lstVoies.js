@@ -52,6 +52,16 @@ export const voieSoldat = 'Soldat'
 export const voieVoyageur = 'Voyageur'
 export const voieScientifique = 'Scientifique'
 
+export function getVoie(idVoie) {
+  for (let i = 0; i < lstVoies.length; i++) {
+    const voie = lstVoies[i]
+    if (voie.titre === idVoie) {
+      return voie
+    }
+  }
+  return null
+}
+
 export const lstVoies = [
   {
     titre: voieMarchand,
@@ -88,18 +98,14 @@ export const lstVoies = [
     valeur: 0,
     richesse: 1,
     competences: [nomScience, nomMedecine],
-    description: [
-      'Riche membre de la haute société. Peut-être un prince, un héritier...',
-    ],
+    description: [''],
   },
   {
     titre: voieSaltimbanque,
     valeur: 0,
     richesse: 0,
     competences: [nomAcrobatie, nomActeur, nomMusique],
-    description: [
-      'Riche membre de la haute société. Peut-être un prince, un héritier...',
-    ],
+    description: [''],
   },
   {
     titre: voieHommeDuMonde,
@@ -138,7 +144,7 @@ export const lstVoies = [
     valeur: 0,
     richesse: 1,
     competences: [nomInformatique, nomFabricationTechnique, nomReparer],
-    description: ['Inclut les détextives et enquêteurs de toute sorte.\n'],
+    description: [''],
   },
   {
     titre: voieIntellectuel,

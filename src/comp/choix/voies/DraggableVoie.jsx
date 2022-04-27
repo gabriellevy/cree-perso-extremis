@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 import { Draggable } from 'react-beautiful-dnd'
+import { interpreterNouvLigne } from '../coteries/ZoneDeValidation'
+import { getVoie } from '../../../donnees/lstVoies'
+import { idVoie1 } from './voiesARepartir'
+import { getCompetence } from '../../../donnees/lstComps'
 
 const Container = styled.div`
 border: 1px solid lightgrey;
@@ -9,10 +13,42 @@ margin-bottom: 8px;
 transition: background-color 0.2s ease;
 background-color: ${(props) => (props.isDragging ? 'lightgreen' : 'white')};
 `
+/**
+ *
+ * @param valid : si cette voie a été glissée et est unique dans sa colonne, et donc que ses bonus doivent être affichés
+ * @returns
+ */
+function DraggableVoie({ idVoie, idDnD, index, valide, classement }) {
+  var texte = idVoie
+  if (valide) {
+    const voie = getVoie(idVoie)
+    texte = texte + '\n'
+    if (voie.richesse > 0 && classement !== 3) {
+      texte = texte + '\n - bonus de richesse : +' + voie.richesse
+    }
+    voie.competences.forEach((idComp) => {
+      const compObj = getCompetence(idComp)
+      var valeur = 1
+      if (classement === 1) valeur = 3
+      else if (classement === 2) valeur = 2
+      else if (classement === 4) valeur = '?'
+      texte =
+        texte +
+        '\n - +' +
+        valeur +
+        ' en ' +
+        compObj.titre +
+        ' (' +
+        compObj.carac +
+        ')'
+    })
+    if (voie.description !== '') {
+      texte = texte + '\n' + voie.description
+    }
+  }
 
-function DraggableVoie({ valeur, id, index }) {
   return (
-    <Draggable draggableId={id} index={index}>
+    <Draggable draggableId={idDnD} index={index}>
       {(provided, snapshot) => (
         <Container
           {...provided.draggableProps}
@@ -20,7 +56,7 @@ function DraggableVoie({ valeur, id, index }) {
           ref={provided.innerRef}
           isDragging={snapshot.isDragging}
         >
-          {valeur}
+          {interpreterNouvLigne(texte)}
         </Container>
       )}
     </Draggable>

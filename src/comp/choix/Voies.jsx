@@ -26,7 +26,6 @@ export default function Voies({ phaseChoix, majPhaseChoix }) {
 
   useEffect(() => {
     var idCoteriePerso = perso.coterie
-    console.log(idCoteriePerso)
     var coteriePerso
     lstCoteries.forEach((coterie) => {
       if (coterie.titre === idCoteriePerso) {
@@ -156,7 +155,7 @@ export default function Voies({ phaseChoix, majPhaseChoix }) {
               Faites glisser les voies obtenus selon votre ordre de préférence
             </h2>
             <ul>
-              {dndDonnees.ordreColonnes.map((idColonne) => {
+              {dndDonnees.ordreColonnes.map((idColonne, indexColonne) => {
                 const colonne = dndDonnees.colonnes[idColonne]
                 const valeurs = colonne.valeursIds.map(
                   (valeurId) => dndDonnees.valeurs[valeurId]
@@ -167,6 +166,7 @@ export default function Voies({ phaseChoix, majPhaseChoix }) {
                     key={colonne.id}
                     colonne={colonne}
                     valeurs={valeurs}
+                    indexColonne={indexColonne}
                   />
                 )
               })}
