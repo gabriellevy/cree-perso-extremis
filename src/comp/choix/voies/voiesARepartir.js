@@ -17,7 +17,7 @@ export const titreARepartir = 'Voies disponibles à répartir'
 const voiesARepartir = {
   valeurs: {
     [idVoie1]: {
-      id: 'voie-1',
+      id: idVoie1,
       valeur: '',
     },
     [idVoie2]: {

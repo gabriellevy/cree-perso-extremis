@@ -4,6 +4,9 @@ import { PersoContexte } from '../../utils/contexte/perso'
 import { DragDropContext } from 'react-beautiful-dnd'
 import voiesARepartir, {
   idARepartir,
+  idMetier,
+  idOccupation,
+  idPassion,
   idVoie1,
   idVoie2,
   idVoie3,
@@ -14,6 +17,8 @@ import voiesARepartir, {
 import styled from 'styled-components'
 import { lstCoteries } from '../../donnees/lstCoteries'
 import DroppableVoie from './voies/DroppableVoie'
+import { getVoie } from '../../donnees/lstVoies'
+import { getCompObjPropertyName } from '../../donnees/lstComps'
 
 const Container = styled.div`
   display: flex;
@@ -25,6 +30,7 @@ export default function Voies({ phaseChoix, majPhaseChoix }) {
   const [rerender, setRerender] = useState(false)
 
   useEffect(() => {
+    // mise en place des voies à répartir selon la coterie
     var idCoteriePerso = perso.coterie
     var coteriePerso
     lstCoteries.forEach((coterie) => {
@@ -68,8 +74,49 @@ export default function Voies({ phaseChoix, majPhaseChoix }) {
 
   function validerVoies() {
     var changementsAuPerso = {}
-    // TODO MAJ compétences
-    // TODO MAJ caracs
+    var niveauRichesseBonus = 0
+
+    // ----------------------- métier
+    const idVoieMetier =
+      dndDonnees.valeurs[[dndDonnees.colonnes[[idMetier]].valeursIds[0]]].valeur
+    const voieMetier = getVoie(idVoieMetier)
+    // MAJ compétences
+    voieMetier.competences.forEach((comp) => {
+      const compPropertyName = getCompObjPropertyName(comp)
+      changementsAuPerso[compPropertyName] = perso[compPropertyName] + 3
+    })
+    // MAJ niveau de richesse
+    niveauRichesseBonus = niveauRichesseBonus + voieMetier.richesse
+
+    // MAJ métier
+    changementsAuPerso['metier'] = voieMetier.titre
+
+    // ----------------------- passion
+    const idVoiePassion =
+      dndDonnees.valeurs[[dndDonnees.colonnes[[idPassion]].valeursIds[0]]]
+        .valeur
+    const voiePassion = getVoie(idVoiePassion)
+    // MAJ compétences
+    voiePassion.competences.forEach((comp) => {
+      const compPropertyName = getCompObjPropertyName(comp)
+      changementsAuPerso[compPropertyName] = perso[compPropertyName] + 2
+    })
+    // MAJ niveau de richesse
+    niveauRichesseBonus = niveauRichesseBonus + voiePassion.richesse
+
+    // ----------------------- occupation
+    const idVoieOccupation =
+      dndDonnees.valeurs[[dndDonnees.colonnes[[idOccupation]].valeursIds[0]]]
+        .valeur
+    const voieOccupation = getVoie(idVoieOccupation)
+    // MAJ compétences
+    voieOccupation.competences.forEach((comp) => {
+      const compPropertyName = getCompObjPropertyName(comp)
+      changementsAuPerso[compPropertyName] = perso[compPropertyName] + 1
+    })
+
+    changementsAuPerso['niveau_richesse'] =
+      perso['niveau_richesse'] + niveauRichesseBonus
     var persoFinal = { ...perso, ...changementsAuPerso }
     setPerso(persoFinal)
 

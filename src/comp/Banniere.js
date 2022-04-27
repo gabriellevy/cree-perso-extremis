@@ -26,10 +26,10 @@ function Banniere() {
   if (persoSelectionne) {
     const male = getRandomInt(2) === 0
     if (perso.nom === undefined) {
-      perso.nom = 'Marcello Marconi'
+      perso.nom = ''
     }
-    if (perso.voie === undefined) {
-      perso.voie = 'Malandrin'
+    if (perso.metier === undefined) {
+      perso.metier = ''
     }
     if (perso.age === undefined) {
       const age = getRandomInt(60) + 15
@@ -71,7 +71,7 @@ function Banniere() {
                     <br />
                     {perso.coterie}
                     <br />
-                    {perso.voie}
+                    {perso.metier}
                     <br />
                     {perso.age} ans
                     <br />
