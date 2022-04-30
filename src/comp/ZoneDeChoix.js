@@ -3,8 +3,11 @@ import Caracs from './choix/ChoixCaracs'
 import Voies from './choix/Voies'
 import Finalisation from './choix/Finalisation'
 import AffichageFinal from './choix/AffichageFinal'
+import { useContext } from 'react'
+import { PhaseChoixContexte } from '../utils/contexte/phaseChoix'
 
-function ZoneDeChoix({ phaseChoix, majPhaseChoix }) {
+function ZoneDeChoix() {
+  const { phaseChoix, majPhaseChoix } = useContext(PhaseChoixContexte)
   const iDCoteries = 'Coteries'
   const iDVoies = 'Voies'
   const iDCaracs = 'Caracs'
@@ -20,21 +23,21 @@ function ZoneDeChoix({ phaseChoix, majPhaseChoix }) {
   if (ordre[phaseChoix - 1] === iDCoteries) {
     return (
       <div>
-        <Coteries phaseChoix={phaseChoix} majPhaseChoix={majPhaseChoix} />
+        <Coteries />
       </div>
     )
   }
   if (ordre[phaseChoix - 1] === iDVoies) {
     return (
       <div>
-        <Voies phaseChoix={phaseChoix} majPhaseChoix={majPhaseChoix} />
+        <Voies />
       </div>
     )
   }
   if (ordre[phaseChoix - 1] === iDCaracs) {
     return (
       <div>
-        <Caracs phaseChoix={phaseChoix} majPhaseChoix={majPhaseChoix} />
+        <Caracs />
       </div>
     )
   }

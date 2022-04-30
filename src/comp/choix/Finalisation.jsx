@@ -13,6 +13,7 @@ import { genNomZaporogue } from '../../donnees/coteries/zaporogues/nomsZaporogue
 import { genNomAcheron } from '../../donnees/coteries/acheron/nomsAcheron'
 import { useContext } from 'react'
 import { PersoContexte } from '../../utils/contexte/perso'
+import { PhaseChoixContexte } from '../../utils/contexte/phaseChoix'
 
 /**
  * Ce composant contient le choix de final des caracs personnelles n'ayant pas d'effet sur la jouabilité (sexe, nom...)
@@ -21,6 +22,7 @@ import { PersoContexte } from '../../utils/contexte/perso'
  */
 function Finalisation() {
   const { perso, setPerso } = useContext(PersoContexte)
+  const { phaseChoix, majPhaseChoix } = useContext(PhaseChoixContexte)
   const [age, majAge] = useState(perso.age)
   const [nom, majNom] = useState(perso.nom)
 
@@ -69,6 +71,13 @@ function Finalisation() {
     }
     var persoFinal = { ...perso, ...changementsAuPerso }
     setPerso(persoFinal)
+  }
+  function validerFinalisation() {
+    var changementsAuPerso = {} // A FAIRE : calcul des caracs secondaires déduites
+    var persoFinal = { ...perso, ...changementsAuPerso }
+    setPerso(persoFinal)
+
+    majPhaseChoix(phaseChoix + 1)
   }
 
   return (
@@ -119,6 +128,9 @@ function Finalisation() {
           </div>
         </form>
       </div>
+      <button className="bouton" onClick={() => validerFinalisation()}>
+        Valider
+      </button>
     </div>
   )
 }

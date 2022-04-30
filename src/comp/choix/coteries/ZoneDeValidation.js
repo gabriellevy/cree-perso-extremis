@@ -4,6 +4,7 @@ import { PersoContexte } from '../../../utils/contexte/perso'
 
 import { getCaracObjPropertyName } from '../../../donnees/lstCaracs'
 import { getCompObjPropertyName } from '../../../donnees/lstComps'
+import { PhaseChoixContexte } from '../../../utils/contexte/phaseChoix'
 
 export function interpreterNouvLigne(texte) {
   const newText = texte.split('\n').map((str, index) => (
@@ -27,13 +28,9 @@ function renderCapaciteMagique(descriptionCourante) {
   )
 }
 
-function ZoneDeValidation({
-  descriptionCourante,
-  majDescriptionCourante,
-  phaseChoix,
-  majPhaseChoix,
-}) {
+function ZoneDeValidation({ descriptionCourante, majDescriptionCourante }) {
   const { perso, setPerso } = useContext(PersoContexte)
+  const { phaseChoix, majPhaseChoix } = useContext(PhaseChoixContexte)
 
   function validerSelection() {
     var changementsAuPerso = {

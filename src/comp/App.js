@@ -1,13 +1,13 @@
 import Banniere from './Banniere'
 import '../styles/App.css'
 import ZoneDeChoix from './ZoneDeChoix'
-import { useState, useEffect } from 'react'
-import { useContext } from 'react'
+import { useEffect, useContext } from 'react'
 import { PersoContexte } from '../utils/contexte/perso'
+import { PhaseChoixContexte } from '../utils/contexte/phaseChoix'
 
 function App() {
   const { perso } = useContext(PersoContexte)
-  const [phaseChoix, majPhaseChoix] = useState(1)
+  const { phaseChoix, majPhaseChoix } = useContext(PhaseChoixContexte)
 
   useEffect(() => {
     document.title = 'Créateur de personnage Extremis'
@@ -25,7 +25,7 @@ function App() {
           height: 720,
         }}
       >
-        <ZoneDeChoix phaseChoix={phaseChoix} majPhaseChoix={majPhaseChoix} />
+        <ZoneDeChoix />
       </div>
     </div>
   )

@@ -18,14 +18,16 @@ import { lstCoteries, nomCotTempliers } from '../../donnees/lstCoteries'
 import DroppableVoie from './voies/DroppableVoie'
 import { getVoie } from '../../donnees/lstVoies'
 import { getCompObjPropertyName } from '../../donnees/lstComps'
+import { PhaseChoixContexte } from '../../utils/contexte/phaseChoix'
 
 const Container = styled.div`
   display: flex;
 `
 
-export default function Voies({ phaseChoix, majPhaseChoix }) {
+export default function Voies() {
   const [dndDonnees, setDnDDonnees] = useState(voiesARepartir)
   const { perso, setPerso } = useContext(PersoContexte)
+  const { phaseChoix, majPhaseChoix } = useContext(PhaseChoixContexte)
   const [rerender, setRerender] = useState(false)
 
   useEffect(() => {

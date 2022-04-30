@@ -6,15 +6,17 @@ import DroppableCarac from './caracs/DroppableCarac'
 import { DragDropContext } from 'react-beautiful-dnd'
 import tiragesInitiaux from './caracs/tiragesInitiaux'
 import styled from 'styled-components'
+import { PhaseChoixContexte } from '../../utils/contexte/phaseChoix'
 
 const Container = styled.div`
   display: flex;
 `
 
-function Caracs({ phaseChoix, majPhaseChoix }) {
+function Caracs() {
   const [dndDonnees, setDnDDonnees] = useState(tiragesInitiaux)
   const { perso, setPerso } = useContext(PersoContexte)
   const [rerender, setRerender] = useState(false)
+  const { phaseChoix, majPhaseChoix } = useContext(PhaseChoixContexte)
 
   useEffect(() => {
     var valTiree1 = getRandomInt(6) + getRandomInt(6) + 2
