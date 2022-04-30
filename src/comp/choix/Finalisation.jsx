@@ -14,6 +14,7 @@ import { genNomAcheron } from '../../donnees/coteries/acheron/nomsAcheron'
 import { useContext } from 'react'
 import { PersoContexte } from '../../utils/contexte/perso'
 import { PhaseChoixContexte } from '../../utils/contexte/phaseChoix'
+import { modificateurCarac } from '../../donnees/lstCaracs'
 
 /**
  * Ce composant contient le choix de final des caracs personnelles n'ayant pas d'effet sur la jouabilité (sexe, nom...)
@@ -73,7 +74,15 @@ function Finalisation() {
     setPerso(persoFinal)
   }
   function validerFinalisation() {
-    var changementsAuPerso = {} // A FAIRE : calcul des caracs secondaires déduites
+    // calcul des caracs secondaires déduites
+    const utilCapaMag =
+      perso.utilisationsCapaMagique + modificateurCarac(perso.magie) + 4
+
+    // nb utilisation de capas magiques
+    var changementsAuPerso = {
+      utilisationsCapaMagique: utilCapaMag,
+    }
+
     var persoFinal = { ...perso, ...changementsAuPerso }
     setPerso(persoFinal)
 

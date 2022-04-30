@@ -38,6 +38,8 @@ function Caracs() {
   }, [])
 
   function validerCaracs() {
+    var nouvCaracMagie =
+      dndDonnees.valeurs[dndDonnees.colonnes['magie'].valeursIds[0]].valeur
     var changementsAuPerso = {
       dexterite:
         perso.dexterite +
@@ -59,9 +61,7 @@ function Caracs() {
         perso.sensibilite +
         dndDonnees.valeurs[dndDonnees.colonnes['sensibilite'].valeursIds[0]]
           .valeur,
-      magie:
-        perso.magie +
-        dndDonnees.valeurs[dndDonnees.colonnes['magie'].valeursIds[0]].valeur,
+      magie: perso.magie + nouvCaracMagie,
     }
     var persoFinal = { ...perso, ...changementsAuPerso }
     setPerso(persoFinal)

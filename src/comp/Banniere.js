@@ -77,6 +77,9 @@ function Banniere() {
                     <br />
                     Dé de vie : {typesDes[perso.deDeVie]}
                     <br />
+                    Utilisations de capa magique :{' '}
+                    {perso.utilisationsCapaMagique}
+                    <br />
                     {perso.age} ans
                     <br />
                     Niveau de richesse : {perso.niveau_richesse}

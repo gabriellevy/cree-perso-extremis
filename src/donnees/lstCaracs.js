@@ -19,6 +19,19 @@ export function getCaracObjPropertyName(nomCaracStr) {
   return 'carac inconnue'
 }
 
+export function modificateurCarac(valeurCarac) {
+  if (valeurCarac < 4) return -4
+  if (valeurCarac < 6) return -3
+  if (valeurCarac < 8) return -2
+  if (valeurCarac < 10) return -1
+  if (valeurCarac < 12) return 0
+  if (valeurCarac < 14) return 1
+  if (valeurCarac < 16) return 2
+  if (valeurCarac < 18) return 3
+  if (valeurCarac < 20) return 4
+  return 5
+}
+
 export const lstCaracsInitial = [
   {
     titre: nomDexterite,

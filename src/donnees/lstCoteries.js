@@ -141,6 +141,7 @@ export const lstCoteries = [
       voiePretre,
       voieMarchand,
     ],
+    modifs_caracs: [{ carac: nomMagie, val: -1 }],
     affiche: true,
     niveau_richesse: 2,
     portrait: portrait_schweizer,

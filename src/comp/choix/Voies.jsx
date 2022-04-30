@@ -93,8 +93,6 @@ export default function Voies() {
     changementsAuPerso['metier'] = voieMetier.titre
 
     // MAJ dé de vie (si supérieur à celui que le perso a déjà)
-    console.log(perso['deDeVie'])
-    console.log(voieMetier.deDeVie)
     if (voieMetier.deDeVie > perso['deDeVie'])
       changementsAuPerso['deDeVie'] = voieMetier.deDeVie
 
