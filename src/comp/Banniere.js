@@ -2,7 +2,7 @@ import '../styles/Banniere.css'
 import Portrait from './Portrait'
 import { useContext } from 'react'
 import { PersoContexte } from '../utils/contexte/perso'
-import { getRandomInt } from '../utils/rand'
+import { getRandomInt, typesDes } from '../utils/rand'
 import { getCompObjPropertyName, lstComps } from '../donnees/lstComps'
 
 function afficheObjets(perso) {
@@ -72,6 +72,8 @@ function Banniere() {
                     {perso.coterie}
                     <br />
                     {perso.metier}
+                    <br />
+                    Dé de vie : {typesDes[perso.deDeVie]}
                     <br />
                     {perso.age} ans
                     <br />

@@ -4,6 +4,7 @@ import { interpreterNouvLigne } from '../coteries/ZoneDeValidation'
 import { getVoie } from '../../../donnees/lstVoies'
 import { idVoie1 } from './voiesARepartir'
 import { getCompetence } from '../../../donnees/lstComps'
+import { typesDes } from '../../../utils/rand'
 
 const Container = styled.div`
 border: 1px solid lightgrey;
@@ -42,6 +43,9 @@ function DraggableVoie({ idVoie, idDnD, index, valide, classement }) {
         compObj.carac +
         ')'
     })
+    if (classement === 1)
+      texte = texte + '\nDé de vie minimum : ' + typesDes[voie.deDeVie]
+
     if (voie.description !== '') {
       texte = texte + '\n' + voie.description
     }

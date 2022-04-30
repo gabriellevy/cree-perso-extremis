@@ -14,6 +14,7 @@ export const PersoProvider = ({ children }) => {
     sensibilite: 0,
     magie: 0,
     niveau_richesse: 0,
+    deDeVie: 0, // stocké par index du tableau 'typesDes' => quand une coterie ou autre qu'on choisit a une valeur supérieure, alors on prend cette valeur supérieure
   })
 
   useEffect(() => {

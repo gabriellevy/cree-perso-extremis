@@ -5,6 +5,7 @@ import { PersoContexte } from '../../../utils/contexte/perso'
 import { getCaracObjPropertyName } from '../../../donnees/lstCaracs'
 import { getCompObjPropertyName } from '../../../donnees/lstComps'
 import { PhaseChoixContexte } from '../../../utils/contexte/phaseChoix'
+import { typesDes } from '../../../utils/rand'
 
 export function interpreterNouvLigne(texte) {
   const newText = texte.split('\n').map((str, index) => (
@@ -50,6 +51,11 @@ function ZoneDeValidation({ descriptionCourante, majDescriptionCourante }) {
       changementsAuPerso['objets'] = objets
       changementsAuPerso['objets'].push(descriptionCourante.objets)
       console.log(changementsAuPerso['objets'])
+    }
+
+    if (descriptionCourante.deDeVie !== undefined) {
+      if (descriptionCourante.deDeVie > perso['niveau_richesse'])
+        changementsAuPerso['deDeVie'] = descriptionCourante.deDeVie
     }
 
     if (descriptionCourante.modifs_comps !== undefined) {
@@ -152,6 +158,7 @@ function ZoneDeValidation({ descriptionCourante, majDescriptionCourante }) {
             ) : (
               ''
             )}
+            Dé de vie minimum : {typesDes[descriptionCourante.deDeVie]}
             <div className="aligneDroite">
               <button className="bouton" onClick={() => validerSelection()}>
                 Sélectionner

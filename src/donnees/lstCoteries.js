@@ -88,6 +88,7 @@ export const nomCotLumieres = 'Lumières'
 export const lstCoteries = [
   {
     titre: nomCotLumieres,
+    deDeVie: 1,
     voies: [
       voieScientifique,
       voieHommeDuMonde,
@@ -103,6 +104,7 @@ export const lstCoteries = [
   },
   {
     titre: nomCotTyranides,
+    deDeVie: 2,
     voies: [voieTravailleur, voieEspion, voieBrute],
     affiche: true,
     portrait: portrait_tyranide,
@@ -112,6 +114,7 @@ export const lstCoteries = [
   },
   {
     titre: nomCotTempliers,
+    deDeVie: 1,
     voies: [
       voieAventurier,
       voieSoldat,
@@ -130,6 +133,7 @@ export const lstCoteries = [
   },
   {
     titre: nomCotSchweiser,
+    deDeVie: 1,
     voies: [
       voieTravailleur,
       voieScientifique,
@@ -147,6 +151,7 @@ export const lstCoteries = [
   },
   {
     titre: nomCotChats,
+    deDeVie: 0,
     voies: [voieMalandrin, voieSaltimbanque, voieEspion],
     affiche: true,
     portrait: portrait_chat,
@@ -165,6 +170,7 @@ export const lstCoteries = [
   },
   {
     titre: nomCotCelte,
+    deDeVie: 1,
     voies: [voieTravailleur, voieAventurier, voieBrute],
     affiche: true,
     portrait: portrait_celte,
@@ -174,6 +180,7 @@ export const lstCoteries = [
   },
   {
     titre: nomCotCathares,
+    deDeVie: 1,
     voies: [voieTravailleur, voiePretre],
     affiche: true,
     portrait: portrait_cathare,
@@ -183,6 +190,7 @@ export const lstCoteries = [
   },
   {
     titre: nomCotSaabi,
+    deDeVie: 1,
     voies: [voieMarchand, voieHommeDuMonde, voieAventurier, voieMalandrin],
     affiche: true,
     portrait: portrait_saabi,
@@ -192,6 +200,7 @@ export const lstCoteries = [
   },
   {
     titre: nomCotAcheron,
+    deDeVie: 1,
     voies: [voieHommeDuMonde, voieIntellectuel, voieMagicien],
     affiche: true,
     portrait: portrait_acheron,
@@ -202,6 +211,7 @@ export const lstCoteries = [
   },
   {
     titre: nomCotConquistadors,
+    deDeVie: 1,
     voies: [
       voieAventurier,
       voieSoldat,
@@ -219,6 +229,7 @@ export const lstCoteries = [
   },
   {
     titre: nomCotElfes,
+    deDeVie: 1,
     voies: [voieSaltimbanque, voieMagicien, voieHommeDuMonde, voieIntellectuel],
     modifs_caracs: [
       { carac: nomConstitution, val: -1 },
@@ -235,6 +246,7 @@ export const lstCoteries = [
   },
   {
     titre: nomCotSkavens,
+    deDeVie: 0,
     voies: [voieScientifique, voieIngenieur, voieMalandrin, voieEspion],
     modifs_caracs: [],
     modifs_comps: [{ comp: nomDetrousser, val: 1 }],
@@ -247,6 +259,7 @@ export const lstCoteries = [
   },
   {
     titre: nomCotOrks,
+    deDeVie: 3,
     voies: [voieSoldat, voieIngenieur, voieBrute, voieVoyageur],
     modifs_caracs: [
       { carac: nomConstitution, val: 2 },
@@ -265,6 +278,7 @@ export const lstCoteries = [
   },
   {
     titre: nomCotTranshumanistes,
+    deDeVie: 1,
     voies: [voieScientifique, voieIngenieur, voieMarchand, voieVoyageur],
     affiche: true,
     niveau_richesse: 1,
@@ -276,6 +290,7 @@ export const lstCoteries = [
   },
   {
     titre: nomCotZaporogues,
+    deDeVie: 1,
     voies: [
       voieAventurier,
       voieSaltimbanque,

@@ -31,6 +31,7 @@ function Coteries() {
             modifs_comps,
             objets,
             capacite_magique,
+            deDeVie,
           }) =>
             affiche ? (
               <Coterie
@@ -48,6 +49,7 @@ function Coteries() {
                 modifs_comps={modifs_comps}
                 objets={objets}
                 capacite_magique={capacite_magique}
+                deDeVie={deDeVie}
               />
             ) : (
               ''
@@ -57,8 +59,6 @@ function Coteries() {
       <ZoneDeValidation
         descriptionCourante={descriptionCourante}
         majDescriptionCourante={majDescriptionCourante}
-        phaseChoix={phaseChoix}
-        majPhaseChoix={majPhaseChoix}
       />
     </div>
   )
