@@ -1,5 +1,4 @@
 import { useState, useContext, useEffect } from 'react'
-import { getRandomInt } from '../../utils/rand'
 import { PersoContexte } from '../../utils/contexte/perso'
 import { DragDropContext } from 'react-beautiful-dnd'
 import voiesARepartir, {

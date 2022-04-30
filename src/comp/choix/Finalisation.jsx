@@ -14,6 +14,11 @@ import { genNomAcheron } from '../../donnees/coteries/acheron/nomsAcheron'
 import { useContext } from 'react'
 import { PersoContexte } from '../../utils/contexte/perso'
 
+/**
+ * Ce composant contient le choix de final des caracs personnelles n'ayant pas d'effet sur la jouabilité (sexe, nom...)
+ * + la calcul des caracs déduites des autres et nécessaires pour le jeu (PV, attaque,...)
+ * @returns
+ */
 function Finalisation() {
   const { perso, setPerso } = useContext(PersoContexte)
   const [age, majAge] = useState(perso.age)
@@ -90,11 +95,12 @@ function Finalisation() {
             value={age}
           />
           <br />
-          <div onChange={gererSexe}>
+          <div>
             <label>
               <input
                 type="radio"
                 checked={perso.male}
+                onChange={gererSexe}
                 value="male"
                 name="gender"
               />
@@ -104,6 +110,7 @@ function Finalisation() {
               <input
                 type="radio"
                 checked={!perso.male}
+                onChange={gererSexe}
                 value="femelle"
                 name="gender"
               />
