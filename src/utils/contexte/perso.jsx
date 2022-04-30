@@ -1,9 +1,27 @@
 import React, { useState, createContext, useEffect } from 'react'
 
-import { getCompObjPropertyName, lstComps } from '../../donnees/lstComps'
+import {
+  getCompObjPropertyName,
+  lstComps,
+  nomResistance,
+} from '../../donnees/lstComps'
 import { resMaxDe, typesDes } from '../rand'
 
 export const PersoContexte = createContext()
+
+export function calculerPoids(perso) {
+  var poidsVal = 39
+
+  if (perso.male) poidsVal = poidsVal + 10
+  if (perso.age > 25) poidsVal = poidsVal + 5
+
+  if (perso.constitution > 12) poidsVal = poidsVal + 6
+  if (perso.dexterite > 12) poidsVal = poidsVal - 4
+
+  poidsVal = poidsVal + perso[getCompObjPropertyName(nomResistance)] * 3
+
+  return poidsVal
+}
 
 export const PersoProvider = ({ children }) => {
   const [perso, setPerso] = useState({
@@ -20,7 +38,9 @@ export const PersoProvider = ({ children }) => {
     initiative: 0,
     defense: 0,
     atc: 0,
+    poids: 0,
     atd: 0,
+    description: '',
     deDeVie: 0, // stocké par index du tableau 'typesDes' => quand une coterie ou autre qu'on choisit a une valeur supérieure, alors on prend cette valeur supérieure
   })
 
@@ -39,6 +59,14 @@ export const PersoProvider = ({ children }) => {
     var persoFinal = { ...perso, ...changementsAuPerso }
     setPerso(persoFinal)
   }, [perso.deDeVie])
+
+  useEffect(() => {
+    var changementsAuPerso = {}
+    changementsAuPerso['poids'] = calculerPoids(perso)
+
+    var persoFinal = { ...perso, ...changementsAuPerso }
+    setPerso(persoFinal)
+  }, [perso.male, perso.age])
 
   // c'est ici que je pourrais changer le bg ??
 

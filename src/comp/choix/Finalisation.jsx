@@ -12,7 +12,7 @@ import { genNomTemplier } from '../../donnees/coteries/templiers/nomsTempliers'
 import { genNomZaporogue } from '../../donnees/coteries/zaporogues/nomsZaporogues'
 import { genNomAcheron } from '../../donnees/coteries/acheron/nomsAcheron'
 import { useContext } from 'react'
-import { PersoContexte } from '../../utils/contexte/perso'
+import { calculerPoids, PersoContexte } from '../../utils/contexte/perso'
 import { PhaseChoixContexte } from '../../utils/contexte/phaseChoix'
 import { modificateurCarac } from '../../donnees/lstCaracs'
 import {
@@ -31,6 +31,8 @@ function Finalisation() {
   const { phaseChoix, majPhaseChoix } = useContext(PhaseChoixContexte)
   const [age, majAge] = useState(perso.age)
   const [nom, majNom] = useState(perso.nom)
+  const [poids, majPoids] = useState(calculerPoids(perso))
+  const [description, majDescription] = useState(perso.description)
 
   function majNomLocal(nom) {
     majNom(nom)
@@ -57,6 +59,10 @@ function Finalisation() {
     majNomLocal(nom)
   }, [perso.male])
 
+  useEffect(() => {
+    if (perso.poids !== poids) majPoids(perso.poids)
+  }, [perso.poids, poids, majPoids])
+
   function gererNom(e) {
     majNomLocal(e.target.value)
   }
@@ -69,6 +75,15 @@ function Finalisation() {
     var persoFinal = { ...perso, ...changementsAuPerso }
     setPerso(persoFinal)
   }
+  function gererPoids(e) {
+    majPoids(e.target.value)
+
+    var changementsAuPerso = {
+      poids: e.target.value,
+    }
+    var persoFinal = { ...perso, ...changementsAuPerso }
+    setPerso(persoFinal)
+  }
   function gererSexe(e) {
     const male = e.target.value === 'male'
 
@@ -77,6 +92,14 @@ function Finalisation() {
     }
     var persoFinal = { ...perso, ...changementsAuPerso }
     setPerso(persoFinal)
+  }
+  function gererDescription(e) {
+    var changementsAuPerso = {
+      description: e.target.value,
+    }
+    var persoFinal = { ...perso, ...changementsAuPerso }
+    setPerso(persoFinal)
+    majDescription(e.target.value)
   }
   function validerFinalisation() {
     // calcul des caracs secondaires déduites
@@ -119,6 +142,7 @@ function Finalisation() {
             value={nom}
           />
           <br />
+          <br />
           Âge :
           <input
             type="text"
@@ -129,6 +153,19 @@ function Finalisation() {
             onChange={gererAge}
             value={age}
           />
+          <br />
+          <br />
+          Poids :
+          <input
+            type="text"
+            id="poids"
+            maxLength={3}
+            pattern="[+-]?\d+(?:[.,]\d+)?"
+            placeholder="Poids du perso"
+            onChange={gererPoids}
+            value={poids}
+          />
+          <br />
           <br />
           <div>
             <label>
@@ -152,6 +189,16 @@ function Finalisation() {
               Femme
             </label>
           </div>
+          <br />
+          <textarea
+            type="text"
+            id="description"
+            rows={5}
+            cols={90}
+            placeholder="Entrez une description du personnage si vous le souhaitez"
+            onChange={gererDescription}
+            value={description}
+          />
         </form>
       </div>
       <button className="bouton" onClick={() => validerFinalisation()}>

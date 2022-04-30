@@ -4,6 +4,7 @@ import { useContext } from 'react'
 import { PersoContexte } from '../utils/contexte/perso'
 import { getRandomInt, typesDes } from '../utils/rand'
 import { getCompObjPropertyName, lstComps } from '../donnees/lstComps'
+import { niveauxDeVie } from '../donnees/lstNiveauDeVie'
 
 function afficheObjets(perso) {
   if (perso.objets === undefined || perso.objets.length === 0) return ''
@@ -78,7 +79,9 @@ function Banniere() {
                     <br />
                     {perso.age} ans
                     <br />
-                    Niveau de richesse : {perso.niveau_richesse}
+                    {perso.poids} kg
+                    <br />
+                    Niveau de richesse : {niveauxDeVie[perso.niveau_richesse]}
                     <br />
                     {perso.male ? 'Homme' : 'Femme'}
                     {afficheObjets(perso)}
