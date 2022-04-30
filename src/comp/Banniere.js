@@ -8,11 +8,11 @@ import { getCompObjPropertyName, lstComps } from '../donnees/lstComps'
 function afficheObjets(perso) {
   if (perso.objets === undefined || perso.objets.length === 0) return ''
 
-  return perso.objets.map((objet) => {
+  return perso.objets.map((objet, index) => {
     return (
       <div>
         <br />
-        <span key={objet}>{objet},</span>
+        <span key={index}>{objet},</span>
         <br />
       </div>
     )
@@ -72,6 +72,8 @@ function Banniere() {
                     {perso.coterie}
                     <br />
                     {perso.metier}
+                    <br />
+                    Points de vie : {perso.pointsDeVie}
                     <br />
                     Dé de vie : {typesDes[perso.deDeVie]}
                     <br />

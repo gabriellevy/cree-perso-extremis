@@ -3,11 +3,8 @@ import { lstCoteries } from '../../donnees/lstCoteries'
 import '../../styles/Coteries.css'
 import ZoneDeValidation from './coteries/ZoneDeValidation'
 import { useState } from 'react'
-import { useContext } from 'react'
-import { PhaseChoixContexte } from '../../utils/contexte/phaseChoix'
 
 function Coteries() {
-  const { phaseChoix, majPhaseChoix } = useContext(PhaseChoixContexte)
   const [descriptionCourante, majDescriptionCourante] = useState({
     texte: '',
     fond: '',

@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { Draggable } from 'react-beautiful-dnd'
 import { interpreterNouvLigne } from '../coteries/ZoneDeValidation'
 import { getVoie } from '../../../donnees/lstVoies'
-import { idVoie1 } from './voiesARepartir'
 import { getCompetence } from '../../../donnees/lstComps'
 import { typesDes } from '../../../utils/rand'
 
@@ -16,8 +15,7 @@ background-color: ${(props) => (props.isDragging ? 'lightgreen' : 'white')};
 `
 /**
  *
- * @param valid : si cette voie a été glissée et est unique dans sa colonne, et donc que ses bonus doivent être affichés
- * @returns
+ * @param valide : si cette voie a été glissée et est unique dans sa colonne, et donc que ses bonus doivent être affichés
  */
 function DraggableVoie({ idVoie, idDnD, index, valide, classement }) {
   var texte = idVoie
@@ -43,7 +41,7 @@ function DraggableVoie({ idVoie, idDnD, index, valide, classement }) {
         compObj.carac +
         ')'
     })
-    if (classement === 1)
+    if (classement === 1 || classement === 4)
       texte = texte + '\nDé de vie minimum : ' + typesDes[voie.deDeVie]
 
     if (voie.description !== '') {
