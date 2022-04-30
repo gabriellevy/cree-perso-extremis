@@ -17,6 +17,8 @@ export const PersoProvider = ({ children }) => {
     niveau_richesse: 0,
     pointsDeVie: 0,
     utilisationsCapaMagique: 0,
+    initiative: 0,
+    defense: 0,
     deDeVie: 0, // stocké par index du tableau 'typesDes' => quand une coterie ou autre qu'on choisit a une valeur supérieure, alors on prend cette valeur supérieure
   })
 

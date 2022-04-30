@@ -81,6 +81,8 @@ function Finalisation() {
     // nb utilisation de capas magiques
     var changementsAuPerso = {
       utilisationsCapaMagique: utilCapaMag,
+      initiative: perso.dexterite,
+      defense: 10 + modificateurCarac(perso.dexterite),
     }
 
     var persoFinal = { ...perso, ...changementsAuPerso }

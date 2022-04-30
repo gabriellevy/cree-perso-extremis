@@ -73,10 +73,6 @@ function Banniere() {
                     <br />
                     {perso.metier}
                     <br />
-                    Points de vie : {perso.pointsDeVie}
-                    <br />
-                    Dé de vie : {typesDes[perso.deDeVie]}
-                    <br />
                     Utilisations de capa magique :{' '}
                     {perso.utilisationsCapaMagique}
                     <br />
@@ -86,6 +82,20 @@ function Banniere() {
                     <br />
                     {perso.male ? 'Homme' : 'Femme'}
                     {afficheObjets(perso)}
+                  </div>
+                </td>
+                <td>
+                  <div className="descriptionPerso">
+                    <b>Combat : </b>
+                    <br />
+                    Initiative : {perso.initiative}
+                    <br />
+                    Défense : {perso.defense}
+                    <br />
+                    Points de vie : {perso.pointsDeVie}
+                    <br />
+                    Dé de vie : {typesDes[perso.deDeVie]}
+                    <br />
                   </div>
                 </td>
                 <td>
