@@ -16,8 +16,8 @@ function ZoneDeChoix() {
   const ordre = [
     iDCoteries,
     iDCaracs,
-    iDFinalisation,
     iDVoies,
+    iDFinalisation,
     iDAffichageFinal,
   ]
   if (ordre[phaseChoix - 1] === iDCoteries) {

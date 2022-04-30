@@ -90,12 +90,15 @@ function Banniere() {
                     <br />
                     Initiative : {perso.initiative}
                     <br />
+                    Attaque corps à corps : {perso.atc}
+                    <br />
+                    Attaque à distance : {perso.atd}
+                    <br />
                     Défense : {perso.defense}
                     <br />
                     Points de vie : {perso.pointsDeVie}
                     <br />
                     Dé de vie : {typesDes[perso.deDeVie]}
-                    <br />
                   </div>
                 </td>
                 <td>

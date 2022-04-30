@@ -15,6 +15,11 @@ import { useContext } from 'react'
 import { PersoContexte } from '../../utils/contexte/perso'
 import { PhaseChoixContexte } from '../../utils/contexte/phaseChoix'
 import { modificateurCarac } from '../../donnees/lstCaracs'
+import {
+  getCompObjPropertyName,
+  nomCorpsACorps,
+  nomTir,
+} from '../../donnees/lstComps'
 
 /**
  * Ce composant contient le choix de final des caracs personnelles n'ayant pas d'effet sur la jouabilité (sexe, nom...)
@@ -77,12 +82,22 @@ function Finalisation() {
     // calcul des caracs secondaires déduites
     const utilCapaMag =
       perso.utilisationsCapaMagique + modificateurCarac(perso.magie) + 4
+    const atcVal =
+      perso.atc +
+      perso[getCompObjPropertyName(nomCorpsACorps)] +
+      modificateurCarac(perso.constitution)
+    const atdVal =
+      perso.atd +
+      perso[getCompObjPropertyName(nomTir)] +
+      modificateurCarac(perso.dexterite)
 
     // nb utilisation de capas magiques
     var changementsAuPerso = {
       utilisationsCapaMagique: utilCapaMag,
       initiative: perso.dexterite,
       defense: 10 + modificateurCarac(perso.dexterite),
+      atc: atcVal,
+      atd: atdVal,
     }
 
     var persoFinal = { ...perso, ...changementsAuPerso }
