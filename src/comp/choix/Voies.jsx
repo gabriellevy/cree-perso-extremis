@@ -37,7 +37,6 @@ export default function Voies() {
     lstCoteries.forEach((coterie) => {
       if (coterie.titre === idCoteriePerso) {
         coteriePerso = coterie
-        return
       }
     })
 

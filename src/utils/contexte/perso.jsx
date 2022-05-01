@@ -41,6 +41,7 @@ export const PersoProvider = ({ children }) => {
     poids: 0,
     atd: 0,
     description: '',
+    coterie: '', // titre de coterie
     deDeVie: 0, // stocké par index du tableau 'typesDes' => quand une coterie ou autre qu'on choisit a une valeur supérieure, alors on prend cette valeur supérieure
   })
 

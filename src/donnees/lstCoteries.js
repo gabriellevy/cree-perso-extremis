@@ -46,9 +46,15 @@ import {
   nomAlchimie,
   nomAnimaux,
   nomArcanes,
+  nomCommandement,
   nomCorpsACorps,
   nomDetrousser,
   nomIntimider,
+  nomMiracles,
+  nomReparer,
+  nomResistance,
+  nomSurvie,
+  nomTir,
 } from './lstComps'
 
 import {
@@ -68,6 +74,7 @@ import {
   voieSaltimbanque,
   voieEspion,
 } from './lstVoies'
+import { getRandomInt } from '../utils/rand'
 
 export const nomCotConquistadors = 'Conquistadors'
 export const nomCotElfes = 'Elfes'
@@ -84,6 +91,25 @@ export const nomCotSkavens = 'Skavens'
 export const nomCotSchweiser = 'Schweiser'
 export const nomCotTyranides = 'Tyranides'
 export const nomCotLumieres = 'Lumières'
+
+export function getCoterieObj(idCoterie) {
+  var coterieObj
+  lstCoteries.forEach((coterie) => {
+    if (coterie.titre === idCoterie) {
+      coterieObj = coterie
+    }
+  })
+  return coterieObj
+}
+
+export function getEvtAleatoire(idCoterie, nb) {
+  var coterieObj = getCoterieObj(idCoterie)
+  var evts = []
+  for (let i = 0; i < nb; i++) {
+    evts.push(coterieObj.evts[getRandomInt(coterieObj.evts.length)])
+  }
+  return evts
+}
 
 export const lstCoteries = [
   {
@@ -301,6 +327,40 @@ export const lstCoteries = [
       voieTravailleur,
     ],
     affiche: true,
+    evts: [
+      {
+        description: 'pasteur / éleveur',
+        bonusCompetence: nomAnimaux,
+      },
+      {
+        description: 'Fils de chef de clan',
+        bonusCompetence: nomCommandement,
+      },
+      {
+        description: 'Bagarreur ivrogne',
+        bonusCompetence: nomCorpsACorps,
+      },
+      {
+        description: 'Prêtre multireligion',
+        bonusCompetence: nomMiracles,
+      },
+      {
+        description: 'Réutilisateur de matos de seconde main',
+        bonusCompetence: nomReparer,
+      },
+      {
+        description: 'Vie à la dure à la belle étoile',
+        bonusCompetence: nomResistance,
+      },
+      {
+        description: "Chasseur à l'arc",
+        bonusCompetence: nomTir,
+      },
+      {
+        description: 'Sait tout préparer avec peu',
+        bonusCompetence: nomSurvie,
+      },
+    ],
     portrait: portrait_zaporogue,
     fonds: [bg_zaporogue, bg_zaporogue_b],
     page: 'https://www.notion.so/wiki-extremis/Zaporogues-a371ec776cdd45eeaa72f6b2db2a0edc',
