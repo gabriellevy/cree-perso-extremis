@@ -66,8 +66,10 @@ export function getVoie(idVoie) {
 export function getEvtAleatoireVoie(idVoie, nb) {
   var voieObj = getVoie(idVoie)
   var evts = []
-  for (let i = 0; i < nb; i++) {
-    evts.push(voieObj.evts[getRandomInt(voieObj.evts.length)])
+  if (voieObj.evts.length > 0) {
+    for (let i = 0; i < nb; i++) {
+      evts.push(voieObj.evts[getRandomInt(voieObj.evts.length)])
+    }
   }
   return evts
 }
@@ -95,6 +97,56 @@ export const lstVoies = [
     valeur: 0,
     richesse: 0,
     competences: [nomSurvie, nomAnimaux, nomResistance],
+    evts: [
+      {
+        description: 'Voyageur',
+        bonusCompetence: nomMilieuMonde,
+      },
+      {
+        description: 'A du escalader des arbres gigantesques en amazonie',
+        bonusCompetence: nomAcrobatie,
+      },
+      {
+        description: 'Infiltre les peuples facilement',
+        bonusCompetence: nomActeur,
+      },
+      {
+        description: 'A du construire un pont dans les montagnes',
+        bonusCompetence: nomEffort,
+      },
+      {
+        description: 'Ramasseur de plantes magiques',
+        bonusCompetence: nomAlchimie,
+      },
+      {
+        description: "Chef d'expédition",
+        bonusCompetence: nomCommandement,
+      },
+      {
+        description: "Chasse à l'arme blanche, après perte de fusil",
+        bonusCompetence: nomCorpsACorps,
+      },
+      {
+        description: "Pro de l'embuscade",
+        bonusCompetence: nomDiscretion,
+      },
+      {
+        description: 'Traqueur, repéreur de traces',
+        bonusCompetence: nomInvestigation,
+      },
+      {
+        description: 'Premiers soins anti infection et maladies tropicales',
+        bonusCompetence: nomMedecine,
+      },
+      {
+        description: "Dépannage d'urgence",
+        bonusCompetence: nomReparer,
+      },
+      {
+        description: 'Chasseur',
+        bonusCompetence: nomTir,
+      },
+    ],
     description: [
       'Baroudeur coriace, nomade, habitué aux environnements rudes et à la nature sauvage.\n',
     ],

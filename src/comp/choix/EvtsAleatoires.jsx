@@ -1,4 +1,4 @@
-import { getEvtAleatoire } from '../../donnees/lstCoteries'
+import { getEvtAleatoireCoterie } from '../../donnees/lstCoteries'
 import '../../styles/Coteries.css'
 import { useContext, useEffect, useState } from 'react'
 import { PhaseChoixContexte } from '../../utils/contexte/phaseChoix'
@@ -21,7 +21,7 @@ function EvtsAleatoires() {
 
     // événement aléatoire de coterie (+ un deuxième ? coterie des parents ? du lycée ?)
     texte = texte + 'Événements de coterie : \n'
-    const evtsAleatoireCoterie = getEvtAleatoire(perso.coterie, 1)
+    const evtsAleatoireCoterie = getEvtAleatoireCoterie(perso.coterie, 1)
     evtsAleatoireCoterie.forEach((evt) => {
       texte =
         texte + '\n' + evt.description + ' (+1 ' + evt.bonusCompetence + ')'

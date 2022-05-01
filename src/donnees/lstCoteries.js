@@ -102,11 +102,13 @@ export function getCoterieObj(idCoterie) {
   return coterieObj
 }
 
-export function getEvtAleatoire(idCoterie, nb) {
+export function getEvtAleatoireCoterie(idCoterie, nb) {
   var coterieObj = getCoterieObj(idCoterie)
   var evts = []
-  for (let i = 0; i < nb; i++) {
-    evts.push(coterieObj.evts[getRandomInt(coterieObj.evts.length)])
+  if (coterieObj.evts.length > 0) {
+    for (let i = 0; i < nb; i++) {
+      evts.push(coterieObj.evts[getRandomInt(coterieObj.evts.length)])
+    }
   }
   return evts
 }
