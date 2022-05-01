@@ -343,6 +343,44 @@ export const lstVoies = [
     valeur: 0,
     richesse: 0,
     competences: [nomIntuition, nomInvestigation, nomMilieuReseau],
+    evts: [
+      {
+        description: "Spécialiste de l'espionnage depuis les toits",
+        bonusCompetence: nomAcrobatie,
+      },
+      {
+        description: 'Pro du déguisement',
+        bonusCompetence: nomActeur,
+      },
+      {
+        description: 'Préparation de poison',
+        bonusCompetence: nomAlchimie,
+      },
+      {
+        description: "Formation à l'interrogatoire",
+        bonusCompetence: nomConvaincre,
+      },
+      {
+        description: 'Voleur de documents',
+        bonusCompetence: nomDetrousser,
+      },
+      {
+        description: 'Habitué des planques',
+        bonusCompetence: nomDiscretion,
+      },
+      {
+        description: 'Hacker',
+        bonusCompetence: nomInformatique,
+      },
+      {
+        description: 'Entrainement anti-interrogatoire',
+        bonusCompetence: nomResistance,
+      },
+      {
+        description: 'Effraction dans des lieux top secrets',
+        bonusCompetence: nomSIntroduire,
+      },
+    ],
     description: ['Inclut les détectives et enquêteurs de toute sorte.\n'],
   },
   {
