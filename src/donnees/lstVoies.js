@@ -81,6 +81,52 @@ export const lstVoies = [
     valeur: 0,
     richesse: 2,
     competences: [nomConvaincre, nomNegoce],
+    evts: [
+      {
+        description: 'Import / export',
+        bonusCompetence: nomLoi,
+      },
+      {
+        description: 'Arnaqueur déguisé',
+        bonusCompetence: nomActeur,
+      },
+      {
+        description: "Marchand d'animaux",
+        bonusCompetence: nomAnimaux,
+      },
+      {
+        description: "Marchand d'art",
+        bonusCompetence: nomArt,
+      },
+      {
+        description: 'Retappeur et revendeur de meubles',
+        bonusCompetence: nomArtisanat,
+      },
+      {
+        description: 'Chef de caravanes',
+        bonusCompetence: nomCommandement,
+      },
+      {
+        description: "Marchand d'informatique",
+        bonusCompetence: nomInformatique,
+      },
+      {
+        description: 'Repéreur de bourses et détrousseur',
+        bonusCompetence: nomDetrousser,
+      },
+      {
+        description: "Marchand d'instruments de musique",
+        bonusCompetence: nomMusique,
+      },
+      {
+        description: 'Vendeur itinérant (de pizza? de hot dog ?)',
+        bonusCompetence: nomPilotage,
+      },
+      {
+        description: "Marchand d'armes",
+        bonusCompetence: nomTir,
+      },
+    ],
     description: [''],
   },
   {
@@ -241,6 +287,52 @@ export const lstVoies = [
     valeur: 0,
     richesse: 0,
     competences: [nomMilieuRue, nomCorpsACorps, nomIntimider, nomForce],
+    evts: [
+      {
+        description: 'Repris de justice',
+        bonusCompetence: nomLoi,
+      },
+      {
+        description: 'Cicatrices horribles',
+        bonusCompetence: nomIntimider,
+      },
+      {
+        description: 'Tatouages intimidants',
+        bonusCompetence: nomIntimider,
+      },
+      {
+        description: 'Magicien de rue (du sang ou du feu)',
+        bonusCompetence: nomArcanes,
+      },
+      {
+        description: 'Chef de bande',
+        bonusCompetence: nomCommandement,
+      },
+      {
+        description: 'Dealer de rue',
+        bonusCompetence: nomNegoce,
+      },
+      {
+        description: 'Pick pocket du dimanche',
+        bonusCompetence: nomDetrousser,
+      },
+      {
+        description: 'Agresseur de rue embusqué',
+        bonusCompetence: nomDiscretion,
+      },
+      {
+        description: 'Motard',
+        bonusCompetence: nomPilotage,
+      },
+      {
+        description: 'Endurci par la vie dans la rue',
+        bonusCompetence: nomResistance,
+      },
+      {
+        description: 'Grosse pétoire',
+        bonusCompetence: nomTir,
+      },
+    ],
     description: [
       'Loubard qui hante les rues mal famées et règle ses comptes à coup de barre à mine.\n',
     ],
