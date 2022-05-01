@@ -11,15 +11,15 @@ function ZoneDeChoix() {
   const { phaseChoix, majPhaseChoix } = useContext(PhaseChoixContexte)
   const iDCoteries = 'Coteries'
   const iDVoies = 'Voies'
-  const iDCaracs = 'Caracs'
   const iDFinalisation = 'Finalisation'
   const iDAffichageFinal = 'AffichageFinal'
   const iDEvtsAleatoires = 'EvtsAleatoires'
+  const iDCaracs = 'Caracs'
   const ordre = [
     iDCoteries,
+    iDVoies,
     iDEvtsAleatoires,
     iDCaracs,
-    iDVoies,
     iDFinalisation,
     iDAffichageFinal,
   ]

@@ -1,3 +1,4 @@
+import { getRandomInt } from '../utils/rand'
 import { nomSurvie } from './lstComps'
 import { nomResistance } from './lstComps'
 import { nomAnimaux } from './lstComps'
@@ -62,6 +63,15 @@ export function getVoie(idVoie) {
   return null
 }
 
+export function getEvtAleatoireVoie(idVoie, nb) {
+  var voieObj = getVoie(idVoie)
+  var evts = []
+  for (let i = 0; i < nb; i++) {
+    evts.push(voieObj.evts[getRandomInt(voieObj.evts.length)])
+  }
+  return evts
+}
+
 export const lstVoies = [
   {
     titre: voieMarchand,
@@ -95,6 +105,48 @@ export const lstVoies = [
     valeur: 0,
     richesse: 1,
     competences: [nomArtisanat, nomEffort],
+    evts: [
+      {
+        description: 'Ouvrier de gratte-ciel à la défense',
+        bonusCompetence: nomAcrobatie,
+      },
+      {
+        description: 'Agriculteur',
+        bonusCompetence: nomAnimaux,
+      },
+      {
+        description: 'Syndicaliste',
+        bonusCompetence: nomNegoce,
+      },
+      {
+        description: 'Ouvrier qualifié en électronique et mécanique',
+        bonusCompetence: nomFabricationTechnique,
+      },
+      {
+        description: 'Déménageur',
+        bonusCompetence: nomForce,
+      },
+      {
+        description: 'Chauffeur poids lourd',
+        bonusCompetence: nomPilotage,
+      },
+      {
+        description: 'Mécanicien',
+        bonusCompetence: nomReparer,
+      },
+      {
+        description: 'Plombier',
+        bonusCompetence: nomReparer,
+      },
+      {
+        description: 'Électricien',
+        bonusCompetence: nomReparer,
+      },
+      {
+        description: 'A travaillé sur des matières toxiques',
+        bonusCompetence: nomResistance,
+      },
+    ],
     description: ['Ouvrier...'],
   },
   {

@@ -5,6 +5,7 @@ import { PhaseChoixContexte } from '../../utils/contexte/phaseChoix'
 import { PersoContexte } from '../../utils/contexte/perso'
 import { interpreterNouvLigne } from './coteries/ZoneDeValidation'
 import { getCompObjPropertyName } from '../../donnees/lstComps'
+import { getEvtAleatoireVoie } from '../../donnees/lstVoies'
 
 function EvtsAleatoires() {
   const { perso, setPerso } = useContext(PersoContexte)
@@ -16,11 +17,21 @@ function EvtsAleatoires() {
   useEffect(() => {
     // détermination de tous les événements aléatoires
     var texte = ''
-    const evtsAleatoireCoterie = getEvtAleatoire(perso.coterie, 1)
     var changementsAuPersoLocal = {}
 
-    // événement aléatoire de coterie (+ un deuxième ?)
+    // événement aléatoire de coterie (+ un deuxième ? coterie des parents ? du lycée ?)
+    texte = texte + 'Événements de coterie : \n'
+    const evtsAleatoireCoterie = getEvtAleatoire(perso.coterie, 1)
     evtsAleatoireCoterie.forEach((evt) => {
+      texte =
+        texte + '\n' + evt.description + ' (+1 ' + evt.bonusCompetence + ')'
+      const idComp = getCompObjPropertyName(evt.bonusCompetence)
+      changementsAuPersoLocal[idComp] = perso[idComp] + 1
+    })
+
+    texte = texte + 'Événements de voie : \n'
+    const evtsAleatoiresVoie = getEvtAleatoireVoie(perso.metier, 1)
+    evtsAleatoiresVoie.forEach((evt) => {
       texte =
         texte + '\n' + evt.description + ' (+1 ' + evt.bonusCompetence + ')'
       const idComp = getCompObjPropertyName(evt.bonusCompetence)
