@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cree-perso-extremis/static/css/main.96ee96c5.css",
-    "main.js": "/cree-perso-extremis/static/js/main.8b223b9f.js",
+    "main.js": "/cree-perso-extremis/static/js/main.a2aca9d5.js",
     "static/media/bg.png": "/cree-perso-extremis/static/media/bg.5b05470e4595692cc14e.png",
     "static/media/bg_lettre_zapo.jpg": "/cree-perso-extremis/static/media/bg_lettre_zapo.d63e86ecf62d58aac7f0.jpg",
     "static/media/bg.jpg": "/cree-perso-extremis/static/media/bg.aa2671f848f7ed2664c1.jpg",
@@ -182,10 +182,10 @@
     "static/media/portrait_forgeron_60+.jpg": "/cree-perso-extremis/static/media/portrait_forgeron_60+.ad13f173184695218994.jpg",
     "index.html": "/cree-perso-extremis/index.html",
     "main.96ee96c5.css.map": "/cree-perso-extremis/static/css/main.96ee96c5.css.map",
-    "main.8b223b9f.js.map": "/cree-perso-extremis/static/js/main.8b223b9f.js.map"
+    "main.a2aca9d5.js.map": "/cree-perso-extremis/static/js/main.a2aca9d5.js.map"
   },
   "entrypoints": [
     "static/css/main.96ee96c5.css",
-    "static/js/main.8b223b9f.js"
+    "static/js/main.a2aca9d5.js"
   ]
 }
