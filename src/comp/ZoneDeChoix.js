@@ -5,6 +5,7 @@ import Finalisation from './choix/Finalisation'
 import AffichageFinal from './choix/AffichageFinal'
 import { useContext } from 'react'
 import { PhaseChoixContexte } from '../utils/contexte/phaseChoix'
+import EvtsAleatoires from './choix/EvtsAleatoires'
 
 function ZoneDeChoix() {
   const { phaseChoix, majPhaseChoix } = useContext(PhaseChoixContexte)
@@ -13,8 +14,10 @@ function ZoneDeChoix() {
   const iDCaracs = 'Caracs'
   const iDFinalisation = 'Finalisation'
   const iDAffichageFinal = 'AffichageFinal'
+  const iDEvtsAleatoires = 'EvtsAleatoires'
   const ordre = [
     iDCoteries,
+    iDEvtsAleatoires,
     iDCaracs,
     iDVoies,
     iDFinalisation,
@@ -52,6 +55,13 @@ function ZoneDeChoix() {
     return (
       <div>
         <AffichageFinal />
+      </div>
+    )
+  }
+  if (ordre[phaseChoix - 1] === iDEvtsAleatoires) {
+    return (
+      <div>
+        <EvtsAleatoires />
       </div>
     )
   }
