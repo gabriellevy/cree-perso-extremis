@@ -17,9 +17,9 @@ function ZoneDeChoix() {
   const iDCaracs = 'Caracs'
   const ordre = [
     iDCoteries,
+    iDCaracs,
     iDVoies,
     iDEvtsAleatoires,
-    iDCaracs,
     iDFinalisation,
     iDAffichageFinal,
   ]

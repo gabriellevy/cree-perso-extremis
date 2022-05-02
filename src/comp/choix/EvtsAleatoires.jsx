@@ -32,10 +32,22 @@ function EvtsAleatoires() {
     texte = texte + '\n\n\nÉvénements de voie : \n'
     const evtsAleatoiresVoie = getEvtAleatoireVoie(perso.metier, 1)
     evtsAleatoiresVoie.forEach((evt) => {
-      texte =
-        texte + '\n' + evt.description + ' (+1 ' + evt.bonusCompetence + ')'
-      const idComp = getCompObjPropertyName(evt.bonusCompetence)
-      changementsAuPersoLocal[idComp] = perso[idComp] + 1
+      if (evt.bonusCompetence !== undefined) {
+        texte =
+          texte + '\n' + evt.description + ' (+1 ' + evt.bonusCompetence + ')'
+        const idComp = getCompObjPropertyName(evt.bonusCompetence)
+        changementsAuPersoLocal[idComp] = perso[idComp] + 1
+      } else {
+        texte =
+          texte +
+          '\n' +
+          evt.description +
+          ' (+ ' +
+          evt.bonusRichesse +
+          ' en niveau de vie)'
+        changementsAuPersoLocal['niveau_richesse'] =
+          perso['niveau_richesse'] + evt.bonusRichesse
+      }
     })
 
     setTexteFinal(interpreterNouvLigne(texte))
