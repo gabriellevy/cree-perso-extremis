@@ -29,7 +29,7 @@ function EvtsAleatoires() {
       changementsAuPersoLocal[idComp] = perso[idComp] + 1
     })
 
-    texte = texte + 'Événements de voie : \n'
+    texte = texte + '\n\n\nÉvénements de voie : \n'
     const evtsAleatoiresVoie = getEvtAleatoireVoie(perso.metier, 1)
     evtsAleatoiresVoie.forEach((evt) => {
       texte =

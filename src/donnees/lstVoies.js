@@ -135,6 +135,52 @@ export const lstVoies = [
     valeur: 0,
     richesse: 0,
     competences: [nomDetrousser, nomDiscretion, nomSIntroduire],
+    evts: [
+      {
+        description: "Cambrioleur de haut vol, monte en l'air",
+        bonusCompetence: nomAcrobatie,
+      },
+      {
+        description: 'Arnaqueur',
+        bonusCompetence: nomActeur,
+      },
+      {
+        description: 'Singe dressé (ou rat ou chat...)',
+        bonusCompetence: nomAnimaux,
+      },
+      {
+        description: "Voleur d'art",
+        bonusCompetence: nomArt,
+      },
+      {
+        description: 'Sait soutirer des tuyaux aux gens',
+        bonusCompetence: nomConvaincre,
+      },
+      {
+        description: "Vol à l'arraché à la brutale",
+        bonusCompetence: nomCorpsACorps,
+      },
+      {
+        description: 'Brouteur en ligne',
+        bonusCompetence: nomInformatique,
+      },
+      {
+        description: 'Tatouages de truand',
+        bonusCompetence: nomIntimider,
+      },
+      {
+        description: 'Repéreur de bons coups, apprenti fixeur',
+        bonusCompetence: nomInvestigation,
+      },
+      {
+        description: 'Repris de justice',
+        bonusCompetence: nomLoi,
+      },
+      {
+        description: 'Revendeur / receleur',
+        bonusCompetence: nomNegoce,
+      },
+    ],
     description: [''],
   },
   {
@@ -253,6 +299,28 @@ export const lstVoies = [
     valeur: 0,
     richesse: 1,
     competences: [nomScience, nomMedecine],
+    evts: [
+      {
+        description: 'Science de la magie',
+        bonusCompetence: nomAlchimie,
+      },
+      {
+        description: "Rédacteur d'articles",
+        bonusCompetence: nomConvaincre,
+      },
+      {
+        description: 'Expérimentateur en mécanique / physique',
+        bonusCompetence: nomFabricationTechnique,
+      },
+      {
+        description: 'Fait des simulations informatiques',
+        bonusCompetence: nomInformatique,
+      },
+      {
+        description: "Rafistolage lors d'expériences dangereuses",
+        bonusCompetence: nomReparer,
+      },
+    ],
     description: [''],
   },
   {
@@ -261,6 +329,48 @@ export const lstVoies = [
     valeur: 0,
     richesse: 0,
     competences: [nomAcrobatie, nomActeur, nomMusique],
+    evts: [
+      {
+        description: 'Maquilleur magique',
+        bonusCompetence: nomAlchimie,
+      },
+      {
+        description: 'Ours dressé',
+        bonusCompetence: nomAnimaux,
+      },
+      {
+        description: 'Illusionniste',
+        bonusCompetence: nomArcanes,
+      },
+      {
+        description: 'Costumier',
+        bonusCompetence: nomArt,
+      },
+      {
+        description: "Réparateur d'instruments",
+        bonusCompetence: nomArtisanat,
+      },
+      {
+        description: 'Monsieur loyal',
+        bonusCompetence: nomConvaincre,
+      },
+      {
+        description: 'Détrousseur du public',
+        bonusCompetence: nomDetrousser,
+      },
+      {
+        description: "Homme fort, porteur d'équilibristes",
+        bonusCompetence: nomForce,
+      },
+      {
+        description: 'Déforme son visage / cheveux / corps',
+        bonusCompetence: nomIntimider,
+      },
+      {
+        description: "Monte en l'air",
+        bonusCompetence: nomSIntroduire,
+      },
+    ],
     description: [''],
   },
   {
@@ -269,6 +379,48 @@ export const lstVoies = [
     valeur: 0,
     richesse: 3,
     competences: [nomMilieuHauteSociete],
+    evts: [
+      {
+        description: 'Cosmopolite',
+        bonusCompetence: nomMilieuHauteSociete,
+      },
+      {
+        description: "Expert pour s'intégrer et se faire bien voir",
+        bonusCompetence: nomActeur,
+      },
+      {
+        description: 'A un haras',
+        bonusCompetence: nomAnimaux,
+      },
+      {
+        description: "Collectionneur d'art",
+        bonusCompetence: nomArt,
+      },
+      {
+        description: 'Grand dirigeur de domestiques',
+        bonusCompetence: nomCommandement,
+      },
+      {
+        description: 'Avocat',
+        bonusCompetence: nomLoi,
+      },
+      {
+        description: 'Musicien amateur',
+        bonusCompetence: nomMusique,
+      },
+      {
+        description: 'Investisseur',
+        bonusCompetence: nomNegoce,
+      },
+      {
+        description: 'Chasseur',
+        bonusCompetence: nomTir,
+      },
+      {
+        description: 'Scientifique amateur',
+        bonusCompetence: nomScience,
+      },
+    ],
     description: [
       'Riche membre de la haute société. Peut-être un prince, un héritier...',
     ],
@@ -279,6 +431,32 @@ export const lstVoies = [
     valeur: 0,
     richesse: 0,
     competences: [nomMiracles, nomMilieuClerge],
+    evts: [
+      {
+        description: 'Moine ouvrier',
+        bonusCompetence: nomEffort,
+      },
+      {
+        description: 'Peintre de fresques sacrées',
+        bonusCompetence: nomArt,
+      },
+      {
+        description: 'Moines se fabriquant les objets de base',
+        bonusCompetence: nomArtisanat,
+      },
+      {
+        description: 'Prêcheur de sermons éclatants',
+        bonusCompetence: nomConvaincre,
+      },
+      {
+        description: 'Aura sacrée',
+        bonusCompetence: nomIntimider,
+      },
+      {
+        description: 'Organiste',
+        bonusCompetence: nomMusique,
+      },
+    ],
     description: [''],
   },
   {
@@ -389,6 +567,33 @@ export const lstVoies = [
     valeur: 0,
     richesse: 1,
     competences: [nomInformatique, nomFabricationTechnique, nomReparer],
+    evts: [
+      {
+        description: "Met la main à la pâte quand il s'agit de fabriquer",
+        bonusCompetence: nomEffort,
+      },
+      {
+        description:
+          "Investigateur d'accidents de matériel, pour une compagnie d'assurance",
+        bonusCompetence: nomInvestigation,
+      },
+      {
+        description: 'A conçu des machines médicales',
+        bonusCompetence: nomMedecine,
+      },
+      {
+        description: 'Fan de mécanique, adore trafiquer sa voiture',
+        bonusCompetence: nomPilotage,
+      },
+      {
+        description: 'Fabriqueur de passe partout',
+        bonusCompetence: nomSIntroduire,
+      },
+      {
+        description: 'Thésard reconverti',
+        bonusCompetence: nomScience,
+      },
+    ],
     description: [''],
   },
   {
@@ -397,6 +602,28 @@ export const lstVoies = [
     valeur: 0,
     richesse: 1,
     competences: [nomLangues, nomLoi, nomArt],
+    evts: [
+      {
+        description: 'Possède un précieux livre antique sur les potions',
+        bonusCompetence: nomAlchimie,
+      },
+      {
+        description: 'Passionné par son encyclopédie sur les animaux',
+        bonusCompetence: nomAnimaux,
+      },
+      {
+        description: "Argumenteur d'émission politique",
+        bonusCompetence: nomConvaincre,
+      },
+      {
+        description: 'Blogueur renommé',
+        bonusCompetence: nomInformatique,
+      },
+      {
+        description: 'Formation partiellement scientifique',
+        bonusCompetence: nomScience,
+      },
+    ],
     description: [''],
   },
   {
@@ -405,6 +632,24 @@ export const lstVoies = [
     valeur: 0,
     richesse: 0,
     competences: [nomArcanes, nomAlchimie],
+    evts: [
+      {
+        description: 'Architecte de son jardin magique des délices',
+        bonusCompetence: nomArt,
+      },
+      {
+        description: 'Cybermage',
+        bonusCompetence: nomInformatique,
+      },
+      {
+        description: 'Incandescent, sa nature magique fait briller ses yeux',
+        bonusCompetence: nomIntimider,
+      },
+      {
+        description: 'Scientisme partiel de sa magie',
+        bonusCompetence: nomScience,
+      },
+    ],
     description: [''],
   },
   {
@@ -413,6 +658,49 @@ export const lstVoies = [
     valeur: 0,
     richesse: 0,
     competences: [nomCommandement, nomTir],
+    evts: [
+      {
+        description: 'Constructeur de fortification',
+        bonusCompetence: nomEffort,
+      },
+      {
+        description: 'Cavalier des steppes',
+        bonusCompetence: nomAnimaux,
+      },
+      {
+        description: 'Fabriqueur de pièges',
+        bonusCompetence: nomFabricationTechnique,
+      },
+      {
+        description: 'Commando',
+        bonusCompetence: nomSurvie,
+      },
+      {
+        description: 'Embuscade',
+        bonusCompetence: nomDiscretion,
+      },
+      {
+        description:
+          'A bougé un paqet de trucs lourds quand il était dans la logistique',
+        bonusCompetence: nomForce,
+      },
+      {
+        description: 'A été garde de ville dans un secteur tendu',
+        bonusCompetence: nomIntimider,
+      },
+      {
+        description: 'Médecin de terrain pour les premiers secours',
+        bonusCompetence: nomMedecine,
+      },
+      {
+        description: 'Conducteur de véhicule blindé',
+        bonusCompetence: nomPilotage,
+      },
+      {
+        description: "Mécano d'appoint",
+        bonusCompetence: nomReparer,
+      },
+    ],
     description: [
       '+1 arme de tir (pistolet, fusil, fusil à pompe...) +1 armure',
     ],
@@ -423,6 +711,41 @@ export const lstVoies = [
     valeur: 0,
     richesse: 1,
     competences: [nomPilotage, nomMilieuMonde],
+    evts: [
+      {
+        description: "S'est intéressé à la faune partout",
+        bonusCompetence: nomAnimaux,
+      },
+      {
+        description: 'Connaissance des cultures',
+        bonusCompetence: nomArt,
+      },
+      {
+        description: "Chef d'un équipage",
+        bonusCompetence: nomCommandement,
+      },
+      {
+        description: 'Contrebandier',
+        bonusCompetence: nomNegoce,
+      },
+      {
+        description: 'Journaliste',
+        bonusCompetence: nomInvestigation,
+      },
+      {
+        description:
+          'Légers problèmes légaux dans différents lieux liés à sa conduite',
+        bonusCompetence: nomLoi,
+      },
+      {
+        description: 'Sait réparer sa propre machine',
+        bonusCompetence: nomReparer,
+      },
+      {
+        description: 'A visité de nombreux pays sauvages',
+        bonusCompetence: nomSurvie,
+      },
+    ],
     description: [
       "Possède au moins un des véhicules qu'il sait conduire via sa compétence pilotage. À estimer avec le maître de jeu selon la fortune du personnage.",
     ],
